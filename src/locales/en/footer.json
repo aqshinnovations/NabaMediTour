@@ -1,0 +1,42 @@
+{
+  "footer": {
+    "top_procedures": "Top Procedures",
+    "top_hospitals": "Top Hospitals",
+    "top_doctors": "Top Doctors",
+    "contact_us": "Contact Us"
+  
+  },
+   "footer_procedure":{
+     "knee_replacement": "Knee Replacement",
+    "hip_replacement_surgery": "Hip Replacement Surgery",
+    "spinal_fusion_surgery": "Spinal Fusion Surgery",
+    "brain_tumor_surgery": "Brain Tumor Surgery",
+    "kidney_transplant": "Kidney Transplant",
+    "liver_transplant": "Liver Transplant",
+    "heart_transplant": "Heart Transplant",
+    "heart_bypass_surgery": "Heart Bypass Surgery",
+    "cancer_surgeries": "Cancer Surgeries",
+    "bone_marrow_transplant": "Bone Marrow Transplant",
+    "ivf_treatment": "IVF Treatment",
+    "eye_surgeries": "Eye Surgeries"
+  },
+  "footer_doctors": {
+    "cardiacSurgeons": "Cardiac Surgeons",
+    "cardiologist": "Cardiologist",
+    "boneOrtho": "Bone & Ortho Surgeons",
+    "brainSpine": "Brain & Spine Surgeons",
+    "cancerSurgeons": "Cancer Surgeons",
+    "liverTransplant": "Liver Transplant Surgeons",
+    "kidneyTransplant": "Kidney Transplant Surgeons",
+    "heartTransplant": "Heart Transplant Surgeon",
+    "ivfInfertility": "IVF Infertility Doctors",
+    "pediatricSurgeons": "Pediatric Surgeons",
+    "hematologist": "Hematologist",
+    "kneeHipElbowShoulder": "Knee Hip Elbow Shoulder Doctors"
+  },
+  "policy": {
+    "disclaimerLabel": "Disclaimer:",
+    "disclaimerBody": "InDocsCare Medical Services serves as a medical facilitation platform and does not diagnose or treat medical conditions. We help patients connect with qualified healthcare providers and share medically reviewed information for awareness only. Decisions regarding care remain solely with the patient and their chosen doctor. All website content is protected by copyright and legal rights.",
+    "allRight": "© 2025 InDocsCare Medical Services. All rights reserved."
+  }
+}

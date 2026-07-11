@@ -1,0 +1,28 @@
+{
+  "language": {
+    "placeholder": "Choose language",
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "navbar": {
+    "home": "Home",
+    "transplants": "Transplants & Replacements",
+    "treatments": "Treatments & Surgeries",
+    "doctors": "Doctors",
+    "hospitals": "Hospitals",
+    "blogs": "Blogs",
+    "logoText": "InDocsCare Medical Services",
+    "visitHospitals": "Selected Most advanced &amp; Trusted Hospitals JUST CONTACT US",
+    "visitDoctors": "Selected Most experienced &amp; specialized Drs JUST CLICK",
+    "FreeConsultWithDRs": "free consultation with doctors",
+    "CardiacTreatmentsAndSurgeries": "Cardiac Treatments & Surgeries",
+    "PediatricCardiacTreatmentAndSurgeries": "Pediatric Cardiac Treatment & Surgeries",
+    "TreatmentsAndSurgeriesByOrthopaedists": "Treatments & Surgeries By Orthopaedists ",
+    "PediatricOrthoTreatmentAndSurgeries": "Pediatric Ortho Treatment & surgeries",
+    "BoneTumors": "Bone Tumors ",
+    "cardiacSurgeons": "Cardiac Surgeons",
+    "cardiologist": "Cardiologist",
+    "boneOrtho": "Bone & Ortho"
+  }
+  
+}

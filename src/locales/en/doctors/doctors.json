@@ -1,0 +1,609 @@
+{
+  "CardiacSurgeons": "Cardiac Surgeons",
+  "Cardiac": {
+    "Rajneesh": "Dr. Rajneesh Malhotra",
+    "Naresh": "Dr. Naresh Trehan",
+    "Bhaba": "Dr. Bhaba Nanda Das",
+    "Yugal": "Dr. Yugal Kishore Mishra",
+    "Meharwal": "Dr. Z.S Meharwal"
+  },
+
+  "DoctorRajneesh": {
+    "name": "Dr. Rajneesh Malhotra",
+    "designation": "Vice Chairman & Head – Cardiac Surgery (CTVS), Robotic Surgery",
+
+    "ProfileOverviewTitle": "Profile Overview",
+    "ProfileOverview": "Dr. Rajneesh Malhotra is one of India’s most experienced cardiothoracic and vascular surgeons with over 31 years of dedicated practice. He has led more than 12,000 heart surgeries, with particular excellence in heart transplantation, ECMO/LVAD management, and robotic cardiac surgery.",
+
+    "ClinicalExpertiseTitle": "Clinical Expertise & Surgical Numbers",
+    "HeartTransplants": "Heart Transplants: 150+",
+    "ECMOLVAD": "ECMO/LVAD Implantations: 200+",
+    "RoboticSurgeries": "Robotic Cardiac Surgeries: 500+",
+    "HeartFailure": "Heart Failure Surgeries: 1000+",
+    "ValveRepairs": "Valve Repairs & Replacements: 3000+",
+    "CABG": "CABG (Coronary Artery Bypass Graft): 4000+",
+    "ASDClosures": "ASD Closures: 350+",
+    "MinimallyInvasive": "Minimally Invasive Cardiac Surgeries: 800+",
+
+    "QualificationsTitle": "Qualifications & Training",
+    "MBBS": "MBBS – King George’s Medical College, Lucknow",
+    "MS": "MS (General Surgery) – King George’s Medical College, Lucknow",
+    "MCH": "M.Ch (Cardiothoracic & Vascular Surgery) – G.S.V.M Medical College, Kanpur",
+    "Fellowships": "Fellowships in Cardiac Surgery – Sweden, USA (Robotic & Valve Repair)",
+
+    "AcademicContributionsTitle": "Academic Contributions",
+    "ResearchPapers": "Published over 50 peer-reviewed research papers",
+    "Textbooks": "Contributed to landmark textbooks in cardiology and surgical practices",
+    "KeynoteSpeaker": "Regular keynote speaker in national and international conferences",
+
+    "AwardsTitle": "Awards & Recognitions",
+    "Award1": "Dr. J.J. Sood Oration Award (2013)",
+    "Award2": "International Best Oral Presentation – ISMICS, USA",
+    "Award3": "Lifetime Achievement in Cardiac Surgery – Indian Medical Association",
+
+    "MembershipsTitle": "Professional Memberships",
+    "STS": "Society of Thoracic Surgeons (STS)",
+    "EACTS": "European Association for Cardio-Thoracic Surgery (EACTS)",
+    "ISMICS": "International Society of Minimally Invasive Cardiac Surgery (ISMICS)",
+    "IACTS": "Indian Association of Cardiovascular & Thoracic Surgeons (IACTS)",
+    "ASI": "Association of Surgeons of India (ASI)",
+    "ICC": "Indian College of Cardiology (ICC)",
+    "IMA": "Indian Medical Association (IMA)"
+  },
+  "DoctorNaresh": {
+    "name": "Dr. Naresh Trehan",
+
+    "ProfileOverviewTitle": "Profile Overview",
+    "ProfileOverview": "Dr. Naresh Trehan is a globally acclaimed cardiovascular and cardiothoracic surgeon with over 41+ years of experience. As the founder of Medanta – The Medicity, he has performed more than 48,000 successful open-heart surgeries and led innovations in heart transplant, ECMO, and robotic cardiac surgery.",
+
+    "ClinicalExpertiseTitle": "Clinical Expertise & Surgical Statistics",
+    "HeartTransplants": "Heart Transplants: Extensive experience",
+    "ECMOLVAD": "ECMO/LVAD Procedures: 500+",
+    "RoboticSurgeries": "Robotic & Minimally Invasive Cardiac Surgeries: 1000+",
+    "HeartFailure": "Heart Failure Surgeries: 3000+",
+    "ValveRepairs": "Valve Repairs & Replacements: 8000+",
+    "CABG": "CABG (Bypass Surgeries): 48,000+",
+    "ASDClosures": "ASD Closures: Numerous cases with excellent outcomes",
+
+    "QualificationsTitle": "Qualifications & Education",
+    "MBBS": "MBBS – King George’s Medical College, Lucknow (1968)",
+    "DiplomateSurgery": "Diplomate – American Board of Surgery (1977)",
+    "DiplomateCTVS": "Diplomate – American Board of Cardiothoracic Surgery (1979)",
+
+    "AcademicAchievementsTitle": "Academic Achievements",
+    "ResearchPublications": "Authored 350+ scientific publications",
+    "KeynoteSpeaker": "Keynote speaker at major international cardiac conferences",
+    "SurgicalContributions": "Contributor to advanced surgical techniques and literature",
+
+    "AwardsTitle": "Awards & Recognitions",
+    "Award1": "Padma Shri (1991)",
+    "Award2": "Padma Bhushan (2001)",
+    "Award3": "Dr. B. C. Roy National Award (2005)",
+    "Award4": "Lifetime Achievement Award (2002)",
+
+    "MembershipsTitle": "Professional Memberships",
+    "ISMICS": "Ex-President – ISMICS",
+    "STS": "Member – Society of Thoracic Surgeons, USA",
+    "EACTS": "Member – EACTS",
+    "CII": "Chairman – CII Healthcare Committee",
+    "IHCF": "President – Indian Health Care Federation",
+    "Advisor": "Advisor – Ministry of Health & Family Welfare, Govt. of India"
+  },
+
+  "DoctorBhaba": {
+    "name": "Dr. Bhaba Nanda Das",
+
+    "ProfileOverviewTitle": "Profile Overview",
+    "ProfileOverview": "Dr. Bhaba Nanda Das is a pioneering cardiothoracic surgeon with over 35 years of surgical excellence. He has performed thousands of complex cardiac operations including CABG, valve surgeries, and congenital repairs. Dr. Das is widely respected for his dedication to advancing cardiac care in India through surgery, education, and innovation.",
+
+    "ClinicalExpertiseTitle": "Clinical Expertise",
+    "RoboticSurgeries": "Robotic Cardiac Surgeries",
+    "HeartFailure": "Heart Failure Surgeries including ECMO & LVAD",
+    "ValveRepairs": "Valve Replacement & Repair – Over 6,000 cases",
+    "CABG": "Coronary Artery Bypass Grafting (CABG) – 10,000+ cases",
+    "ASDClosures": "Atrial Septal Defect (ASD) Closure",
+    "MinimallyInvasive": "Minimally Invasive Cardiac Surgeries",
+    "TAVI": "Transcatheter Aortic Valve Implantation (TAVI)",
+
+    "QualificationsTitle": "Qualifications & Education",
+    "MBBS": "MBBS – Cuttack Medical College",
+    "MS": "MS (General Surgery)",
+    "MCH": "MCh (Cardiothoracic Surgery)",
+    "Fellowship": "Fellowship – International Cardiac Centers",
+
+    "AcademicContributionsTitle": "Academic Contributions",
+    "ResearchPapers": "Author of numerous scientific papers on cardiac surgery",
+    "Lectures": "Delivered key lectures at international cardiac conferences",
+    "Training": "Instrumental in training the next generation of cardiac surgeons",
+
+    "AwardsTitle": "Awards & Recognitions",
+    "Award1": "Lifetime Achievement Award in Cardiac Surgery",
+    "Award2": "National Honors for contribution to Indian heart care",
+
+    "MembershipsTitle": "Memberships",
+    "IACTS": "Fellow – Indian Association of Cardiothoracic Surgeons",
+    "ISHS": "Member – International Society of Heart Surgeons"
+  },
+
+  "YugalMishra": {
+    "name": "Dr. Yugal Kishore Mishra",
+    "title1": "Chairman, Manipal Institute of Cardiac Sciences",
+    "title2": "Head of Cardiac Sciences & Chief Cardiothoracic Vascular Surgeon",
+
+    "profileOverviewTitle": "Profile Overview",
+    "profileOverview": "Dr. Yugal Kishore Mishra is a distinguished cardiovascular and thoracic surgeon with over 42 years of experience. He has performed more than 22,000 open-heart surgeries and is known for his pioneering work in robotic and minimally invasive cardiac procedures.",
+
+    "clinicalExpertiseTitle": "Clinical Expertise & Surgical Statistics",
+    "heartTransplants": "Heart Transplants: Extensive experience",
+    "ecmoLvad": "ECMO/LVAD: Proficient in complex heart failure cases",
+    "roboticSurgeries": "Robotic Cardiac Surgeries: 500+",
+    "heartFailure": "Heart Failure Surgeries: 3000+",
+    "valveReplacements": "Valve Replacements & Repairs: Thousands",
+    "cabg": "CABG: Extensive experience",
+    "asdClosures": "ASD Closures: Minimally invasive techniques",
+    "minimallyInvasive": "Minimally Invasive Cardiac Surgeries: 1000+",
+    "educationTitle": "Qualifications & Education",
+    "mbbs": "MBBS – S. S. Medical College, Rewa (1980)",
+    "ms": "MS – S. S. Medical College, Rewa (1984)",
+    "phd": "PhD – Bakulev Institute, Moscow (1991)",
+    "academicTitle": "Academic Achievements",
+    "papers": "150+ scientific papers",
+    "studies": "Clinical studies including Mitral Valve Repair, CORONARY STUDY, Daffodil Bioprosthesis, EVEREST Study",
+    "speaker": "Regular speaker at global cardiac surgery events",
+
+    "awardsTitle": "Awards & Recognitions",
+    "rashtriya": "Rashtriya Ratan Award (2005)",
+    "lifetime": "Lifetime Achievement Award (2006) by Dr. A.P.J. Abdul Kalam",
+    "doctorate": "Honoris Causa Doctorate – Rani Durgavati Vishwavidyalaya",
+
+    "membershipsTitle": "Professional Memberships",
+    "president1": "President, Indian Association of Cardiovascular Thoracic Surgeons",
+    "president2": "President, Society of Minimally Invasive Cardiovascular Surgeons",
+    "council": "Council Member – ATCSA",
+    "member": "Member – STS, EACTS, ISMICS, ICC, CSI, and more"
+  },
+  "ZSMeharwal": {
+    "name": "Dr. Z.S. Meharwal",
+    "title1": "Chairman & Head – Adult Cardiac Surgery, Heart Transplantation & VAD Program",
+    "title2": "Fortis Escorts Heart Institute, New Delhi",
+    "title3": "InDocsCare Medical Services",
+
+    "profileOverviewTitle": "Profile Overview",
+    "profileOverview": "Dr. Z.S. Meharwal is a renowned cardiothoracic and vascular surgeon with over 30 years of experience. As a founding member of Fortis Escorts Heart Institute, he has performed over 30,000 cardiac surgeries including heart transplants and LVAD implantations.",
+
+    "clinicalExpertiseTitle": "Clinical Expertise & Surgical Statistics",
+    "heartTransplants": "Heart Transplants: Extensive experience",
+    "ecmoLvad": "ECMO/LVAD: Expert in end-stage heart failure management",
+    "roboticSurgeries": "Robotic & Minimally Invasive Cardiac Surgeries: 1000+",
+    "heartFailure": "Heart Failure Surgeries: 3000+",
+    "valveReplacements": "Valve Replacements & Repairs: Thousands",
+    "cabg": "CABG: Over 30,000 procedures",
+    "asdClosures": "ASD Closures: Minimally invasive techniques",
+
+    "educationTitle": "Qualifications & Education",
+    "mbbs": "MBBS – King George’s Medical College, Lucknow (1982)",
+    "ms": "MS (General Surgery) – KGMC, Lucknow (1985)",
+    "mch": "MCh (Cardiothoracic & Vascular Surgery) – KGMC, Lucknow (1987)",
+
+    "academicTitle": "Academic Achievements",
+    "papers": "40+ publications in peer-reviewed journals",
+    "faculty": "Faculty at national and international conferences",
+    "programDirector": "Program Director – DNB Cardiothoracic Surgery, Fortis Escorts",
+
+    "awardsTitle": "Awards & Recognitions",
+    "award1": "Citation Award by President Dr. A.P.J. Abdul Kalam – ISMICS (2002)",
+    "award2": "Saharanpur Aditya Samman – Govt. of Uttar Pradesh (2005)",
+    "award3": "Limca Book of Records – CABG on a 94-year-old (2008)",
+
+    "membershipsTitle": "Professional Memberships",
+    "member1": "Indian Association of Cardiovascular Thoracic Surgeons",
+    "member2": "Cardiological Society of India",
+    "member3": "Asian Society of Cardiovascular and Thoracic Surgery",
+    "member4": "International Society for Minimally Invasive Cardiac Surgery"
+  },
+
+  "cardiologist": {
+    "title": "Cardiologist",
+    "doctors": {
+      "ashokSeth": "Dr. Ashok Seth",
+      "balbirSingh": "Dr. Balbir Singh",
+      "shyamSunderBansal": "Dr. Shyam Sunder Bansal",
+      "tsKler": "Dr. T. S. Kler"
+    }
+  },
+
+  "DrAshokSeth": {
+    "name": "Dr. Ashok Seth",
+    "title1": "Chairman – Cardiac Sciences, Fortis Escorts Heart Institute, New Delhi",
+    "title2": "InDocsCare Medical Services",
+
+    "profileSummaryTitle": "Profile Summary",
+    "profileSummary": "Dr. Ashok Seth is one of the most respected names in interventional cardiology, with over 40 years of unparalleled contributions to the field. He has pioneered numerous angioplasty techniques in India and the Asia-Pacific region and has led major developments in advanced cardiac procedures such as TAVI, IVL, and Impella-supported angioplasties. He is widely recognized for his academic, clinical, and leadership roles in both national and global cardiology platforms.",
+
+    "experienceTitle": "Experience & Achievements",
+    "exp1": "40+ years of experience in Interventional Cardiology",
+    "exp2": "Performed over 25,000 angioplasties and 60,000 angiographies",
+    "exp3": "Trained over 500 cardiologists in India and abroad",
+    "exp4": "Delivered over 600 lectures at national & international platforms",
+    "exp5": "Conducted over 150 live case demonstrations worldwide",
+
+    "expertiseTitle": "Areas of Expertise",
+    "expertise1": "TAVI (Transcatheter Aortic Valve Replacement)",
+    "expertise2": "MitraClip (TMVR) and Tricuspid Valve Implantation",
+    "expertise3": "Complex & High-Risk Angioplasties (CHIP, CTO)",
+    "expertise4": "Laser, Rotational & Orbital Atherectomy",
+    "expertise5": "Shockwave Lithotripsy and IVL",
+    "expertise6": "Impella Pump Supported Angioplasty",
+    "expertise7": "Aortic Aneurysm and Carotid Stent Grafts",
+    "expertise8": "Peripheral & Structural Interventions",
+
+    "educationTitle": "Education & Academic Recognition",
+    "edu1": "FRCP (Lond, Edin, Irel), FACC, FESC, MSCAI, FAPSIC, FIMSA, FCSI",
+    "edu2": "DSc (BHU, AMU, Amity U, TMU, Shiv Nadar U), D Litt (Jamia Millia Islamia)",
+
+    "awardsTitle": "Awards & National Honours",
+    "award1": "Padma Shri (2003), Padma Bhushan (2015)",
+    "award2": "B.C. Roy National Award for Eminent Medical Person (2017)",
+    "award3": "Republic of Spain – Officer with Insignia Order of Isabella the Catholic",
+    "award4": "Lifetime Achievement Award – Chien Foundation, Singapore",
+    "award5": "100+ National and International Awards",
+
+    "contributionsTitle": "Academic Contributions",
+    "contribution1": "Over 500 peer-reviewed publications",
+    "contribution2": "Authored 30+ book chapters; Editor of 3 books",
+    "contribution3": "Principal Investigator of multiple trials for Indian medical devices",
+    "contribution4": "Founder & Director of major cardiology courses: India Live, CHIP-CTO India, AICT-Asia PCR",
+
+    "recognitionTitle": "National & Global Recognition",
+    "recognition1": "LIMCA Book of Records – High-volume angioplasties",
+    "recognition2": "Listed among 75 Changemakers of Indian Healthcare (HEAL Foundation, 2022)",
+    "recognition3": "Game Changers in Healthcare (Outlook, 2023)",
+    "recognition4": "Ranked among Top 50 Most Notable Alumni of AMU (EduRank, Notes My Foot)"
+  },
+
+  "DrBalbirSingh": {
+    "name": "Dr. Balbir Singh",
+    "title1": "Group Chairman – Cardiac Sciences",
+    "title2": "InDocsCare Medical Services",
+
+    "profileSummaryTitle": "Profile Summary",
+    "profileSummary": "Dr. Balbir Singh is an internationally acclaimed interventional cardiologist and cardiac electrophysiologist with over 34 years of clinical experience. He currently serves as Group Chairman of Cardiac Sciences across Max Hospitals. Dr. Singh is recognized for pioneering advanced angioplasty and pacemaker implantation techniques in India. He has led development, research, quality governance, and education in cardiology across multiple institutions.",
+
+    "experienceTitle": "Experience & Milestones",
+    "exp1": "34+ years of experience in cardiology and electrophysiology",
+    "exp2": "Performed over 300,000 interventional cardiology and pacemaker procedures",
+    "exp3": "Supervised and trained more than 500 cardiologists across India and abroad",
+    "exp4": "Headed cardiology departments at five major hospitals",
+
+    "expertiseTitle": "Areas of Clinical Expertise",
+    "expertise1": "Interventional Cardiology (Angioplasty, Stent Placement)",
+    "expertise2": "Cardiac Electrophysiology (Pacemaker, AICD, CRT devices)",
+    "expertise3": "Ablation techniques for arrhythmias",
+    "expertise4": "Cardiac resynchronization therapy",
+    "expertise5": "Complex rhythm disorders and device-based therapies",
+
+    "careerTimelineTitle": "Career Timeline",
+    "career1": "Chairman – Cardiac Sciences, Pan Max (Current)",
+    "career2": "Chairman – Cardiology & Electrophysiology, Medanta (2009–2019)",
+    "career3": "Senior Consultant – Apollo Hospital (2007–2009)",
+    "career4": "Principal Consultant – Fortis Heart Institute (2004–2007)",
+    "career5": "Senior Consultant – Batra Hospital (1998–2004)",
+    "career6": "Senior Professor – AIIMS, New Delhi (1993–1997)",
+
+    "educationTitle": "Education & Training",
+    "edu1": "MBBS – Maulana Azad Medical College, Delhi (1983)",
+    "edu2": "MD in Internal Medicine – Maulana Azad Medical College, Delhi (1987)",
+    "edu3": "DM in Cardiology – G.B. Pant Hospital, New Delhi (1992)",
+    "edu4": "Fellowship – American College of Cardiology, USA (2005)",
+
+    "affiliationsTitle": "Professional Affiliations & Memberships",
+    "affiliation1": "President – Delhi Chapter of Cardiological Society of India (CSI)",
+    "affiliation2": "Former President – Indian Heart Rhythm Society (IHRS)",
+
+    "awardsTitle": "Awards & Recognition",
+    "award1": "Padma Shri – Government of India (2007)",
+    "award2": "Best Operator – India Live (2016)",
+    "award3": "Golden Hand Award – AICT, Singapore (2012)",
+    "award4": "Best Late-Breaking Trial – APHRS, Taiwan (2018)",
+    "award5": "Widely published in national and international cardiology journals"
+  },
+
+  "ShyamSunderBansal": {
+    "name": "Dr. Shyam Sunder Bansal",
+    "title1": "Chairman & Managing Director – InDocsCare Medical Services",
+    "title2": "Renowned Interventional Cardiologist | 30 Years of Experience",
+
+    "profileOverviewTitle": "Profile Summary",
+    "profileOverview": "Dr. Shyam Sunder Bansal is a renowned interventional cardiologist with over 30 years of dedicated experience in managing heart diseases. Dr. Bansal is widely recognized for introducing several pioneering cardiology procedures in North India and has served as a visionary leader in cardiovascular healthcare.",
+
+    "achievementsTitle": "Key Achievements",
+    "achievement1": "First qualified DM Cardiologist of Haryana",
+    "achievement2": "Founded the first dedicated heart hospital in Haryana (2002)",
+    "achievement3": "Over 200,000 heart patients successfully treated",
+    "achievement4": "Performed more than 50,000 heart procedures",
+    "achievement5": "Specializes in complex angioplasties including left main, bifurcation blocks, CTOs",
+    "achievement6": "First in the region to use Crusade, Corsair, and Retrograde techniques",
+
+    "educationTitle": "Qualifications & Fellowships",
+    "education1": "MD (Medicine), DM (Cardiology), DNB (Cardiology)",
+    "education2": "Fellow of the American College of Cardiology (FACC)",
+    "education3": "Fellow of the Society for Cardiovascular Angiography and Interventions (FSCAI)",
+
+    "careerTitle": "Professional Journey",
+    "career1": "1994: Began career as the first cardiologist of Haryana at Escorts Hospital, Faridabad",
+    "career2": "2002: Established Haryana’s first heart hospital at Sunflag Hospital",
+    "career3": "2020: Founded SSB Heart & Multispecialty Hospital",
+
+    "awardsTitle": "Awards & Recognition",
+    "award1": "Rashtriya Gaurav Award for distinguished services to humanity",
+    "award2": "Honored by District Administration on Republic Day",
+    "award3": "IMA Award for Highest Number of Angioplasties (2011)",
+    "award4": "Entrepreneur of the Year Award",
+
+    "visionTitle": "Vision & Mission",
+    "vision1": "To provide high-quality, affordable healthcare services",
+
+    "teachingTitle": "Teaching & Mentorship",
+    "teaching1": "Trained numerous cardiologists over the past 20 years",
+    "teaching2": "Known for his dedication to quality care and clinical excellence"
+  },
+
+  "TSKler": {
+    "name": "Dr. T. S. Kler",
+    "title1": "Pioneer in Interventional Cardiology and Cardiac Electrophysiology",
+    "title2": "InDocsCare Medical Services",
+
+    "profileOverviewTitle": "Profile Summary",
+    "profileOverview": "Padma Bhushan awardee Dr. T. S. Kler is one of India’s most respected cardiologists with over 37 years of experience. He is a global pioneer in electrophysiology and interventional cardiology and was instrumental in establishing India’s first electrophysiology department. Dr. Kler has performed over 35,000 coronary, renal, carotid, and peripheral angioplasties and introduced advanced cardiac device implantations including ICD, CRT-P, CRT-D, and HIS Bundle Pacing.",
+
+    "achievementsTitle": "Career Highlights & Achievements",
+    "achievement1": "Over 37 years of clinical experience",
+    "achievement2": "35,000+ coronary and peripheral angioplasties performed",
+    "achievement3": "First in India to implant ICD, CRT-P, CRT-D",
+    "achievement4": "First in India to perform HIS Bundle Pacing (2015)",
+    "achievement5": "Initiated RF Ablation & Cardiac Device Implantation programs in South Asia",
+    "achievement6": "Trained over 300 doctors in electrophysiology and interventional cardiology",
+
+    "educationTitle": "Education & Training",
+    "education1": "MBBS, MD (Medicine), DM (Cardiology)",
+    "education2": "MRCP (UK), FRCP (UK), FACC (USA)",
+    "education3": "D.Sc (Honoris Causa) – Punjab University",
+
+    "positionsTitle": "Positions Held",
+    "position1": "Chairman, BLK-Max Heart & Vascular Institute",
+    "position2": "Chairman, Pan Max – Electrophysiology",
+    "position3": "Former Executive Director, Escorts Heart Institute",
+    "position4": "Chairman, Fortis Heart Institute (Gurgaon & Vasant Kunj)",
+    "position5": "Chairman, Pushpawati Singhania Hospital, New Delhi",
+
+    "academicTitle": "Academic Contributions",
+    "academic1": "Authored about 150 national & international journal articles",
+    "academic2": "Regular speaker at global conferences – HRS, ACC, Singapore Live, etc.",
+    "academic3": "Scientific advisor to international medical companies",
+
+    "membershipsTitle": "Memberships & Professional Affiliations",
+    "membership1": "Founding President – Heart Rhythm Society of India",
+    "membership2": "Fellow – American College of Cardiology (FACC)",
+    "membership3": "Fellow – Royal College of Physicians (FRCP, UK)",
+    "membership4": "Life Member – Cardiological Society of India, IMA, DMA, NASPE, API, ICC",
+
+    "awardsTitle": "Awards & Recognition",
+    "award1": "Padma Bhushan (2005) – Government of India",
+    "award2": "D.Sc (Honoris Causa) – Punjab University",
+    "award3": "Lifetime Achievement Award – Indian Medical Association",
+    "award4": "Legend of Medicine – Times Healthcare Achievers Awards",
+    "award5": "Centenary Award – Delhi Medical Association",
+
+    "appointmentTitle": "For Appointments & Consultation",
+    "appointment1": "InDocsCare Medical Services",
+    "appointment2": "📞 +91-9540154515 | ✉️ info@indocscare.com"
+  },
+
+  "boneAndOrtho": {
+    "title": "Bone & Ortho",
+    "anilArora": "Dr. (Prof.) Anil Arora",
+    "rohitLamba": "Dr. Rohit Lamba",
+    "ramanKantAggarwal": "Dr. Raman Kant Aggarwal",
+    "vikasGupta": "Dr. Vikas Gupta",
+    "padman": "Dr. Padman"
+  },
+
+  "AnilArora": {
+    "name": "Dr. (Prof.) Anil Arora",
+    "title1": "Orthopaedics & Joint Replacement Surgery",
+    "title2": "InDocsCare Medical Services",
+
+    "profileOverviewTitle": "Profile Summary",
+    "profileOverview": "Dr. (Prof.) Anil Arora is a globally recognized orthopedic and joint replacement surgeon with an illustrious career spanning over 37 years. A Guinness World Record and Limca Book of Records holder, he is renowned for pioneering Robotic Total Knee and Hip Replacement surgeries in India. With more than 12,000 joint replacement surgeries to his credit, Dr. Arora stands at the forefront of orthopaedic excellence.",
+
+    "academicTitle": "Academic Qualifications & Fellowships",
+    "qualification1": "MS (Orthopaedics), Dr. S.N. Medical College, Jodhpur",
+    "qualification2": "DNB (Orthopaedics), National Board of Examinations",
+    "qualification3": "Commonwealth Fellow in Joint Replacement Surgery (London, UK)",
+    "qualification4": "Joint Replacement and Arthroscopy Fellowship (Australia)",
+    "qualification5": "Diploma SIROT (USA), FAPOA (Korea), FIGOF (Germany), FJOA (Japan)",
+
+    "careerTitle": "Career Highlights",
+    "career1": "Vice Chairman & Head – Orthopaedics & Joint Replacement, Max Hospital Patparganj",
+    "career2": "Professor, University College of Medical Sciences, New Delhi",
+    "career3": "Assistant Professor, Dr. S.N. Medical College and Mahatma Gandhi Hospital, Jodhpur",
+    "career4": "Over 37 years of clinical experience",
+    "career5": "More than 12,000 joint replacement surgeries performed",
+    "career6": "Specialist in Robotic and Pinless Computer Navigated Knee Replacements",
+
+    "honorsTitle": "Honors and Awards",
+    "honor1": "Guinness World Record (2018) – Largest gathering of joint replacement patients",
+    "honor2": "Limca Book of Records (2017) – Making a patient walk after 30 years of immobility",
+    "honor3": "Top Knee & Hip Replacement Surgeon of the Year – Economic Times (2022)",
+    "honor4": "Legend in Orthopaedics – Times of India Healthcare Achievers Award (2017 & 2018)",
+    "honor5": "Over 30+ awards recognizing excellence in orthopaedics from various national and international bodies",
+
+    "membershipsTitle": "Professional Memberships & Roles",
+    "membership1": "President, Delhi Orthopaedic Association",
+    "membership2": "Chairman, Basic Sciences Committee, Indian Orthopaedic Association (2006–2009)",
+    "membership3": "Past Joint Secretary, Indian Orthopaedic Association (2009–2011)",
+    "membership4": "Member, Bureau of Indian Standards (BIS) for Orthopaedic Implants",
+    "membership5": "Member, Indo-German Orthopaedic Foundation",
+    "membership6": "National Delegate – Asia Pacific Orthopaedic Association",
+
+    "clinicalTitle": "Clinical Expertise",
+    "clinical1": "Robotic Total Knee Replacement",
+    "clinical2": "Computer Navigated Total Knee Replacement (Pinless)",
+    "clinical3": "Complex and Revision Knee and Hip Replacement",
+    "clinical4": "Custom-made Knee Replacements",
+    "clinical5": "Arthroscopic ACL Reconstruction & Meniscus Surgery",
+    "clinical6": "Shoulder and Elbow Replacement",
+
+    "researchTitle": "Research & Publications",
+    "research1": "Over 240 lectures and presentations",
+    "research2": "Around 50 published research papers",
+    "research3": "Contributed 20+ book chapters in national orthopaedic texts",
+    "research4": "Research in Osteoarticular Tuberculosis, Joint Reconstruction, and Advanced Arthroplasty Techniques"
+  },
+
+  "RohitLamba": {
+    "name": "Dr. Rohit Lamba",
+    "designation": "Head of Department – Orthopaedics & Joint Replacement",
+
+    "profileOverviewTitle": "Profile Summary",
+    "profileOverview": "Dr. Rohit Lamba is a seasoned orthopaedic surgeon specializing in Computer Navigated Joint Replacement surgeries. Dr. Lamba brings world-class expertise and precision to complex surgeries of the hip, knee, and shoulder.",
+
+    "qualificationsTitle": "Qualifications & Expertise",
+    "qualification1": "M.S. Orthopaedics",
+    "qualification2": "Specialist in Computer Navigated Joint Replacement (Stryker NAV-3 system)",
+    "qualification3": "Extensive experience in knee and shoulder arthroscopy, sports injuries, and complex hip and knee replacements",
+
+    "experienceTitle": "Professional Experience",
+    "experience1": "2013–2016: Arthroplasty and Arthroscopy Unit, Fortis Memorial Research Institute, Gurgaon",
+    "experience2": "2016–2020: W-Pratiksha Hospital, Gurgaon – Performed over 100 joint replacements per month",
+    "experience3": "Present: Head of Orthopaedics and Joint Replacement, Apollo Spectra Hospital, Gurgaon",
+    "experience4": "Present: Arthroplasty and Arthroscopy Unit, C K Birla Hospital, Gurgaon",
+
+    "trainingTitle": "International Training & Fellowships",
+    "training1": "Hip Arthroscopy Observership: Princess Alexandra Hospital, Harlow, UK (2017) with Dr. Satish Kutty",
+    "training2": "Hip Preservation Procedures: University Hospital Infanta Leonor, Madrid, Spain (2019) with Dr. Oliver Marin Pena",
+    "training3": "Joint Replacement: Helios Endoklinik, Hamburg, Germany – Training in single-stage revision of infected joint replacements",
+    "training4": "Computer Navigated Joint Replacement Fellowship: Laud Clinic, Mumbai – Pioneering joint replacement center in India",
+
+    "academicTitle": "Academic Contributions",
+    "academic1": "Co-author of a chapter in the book ‘Hip Preservation Surgery’ published by ESSKA with Dr. Oliver Marin Pena",
+
+    "surgicalTitle": "Surgical Expertise (in Numbers)",
+    "surgical1": "Joint Replacements: 6,000+ procedures",
+    "surgical2": "Arthroscopic Procedures: 3,000+ procedures",
+    "surgical3": "Joint Replacement Surgeries (2016–2020 at W-Pratiksha): 100+ per month",
+
+    "summaryTitle": "Summary",
+    "summary": "Dr. Lamba continues to evolve as a surgeon by integrating global best practices and cutting-edge surgical technology. His dedication and patient-first approach make him one of the leading orthopaedic surgeons in India today."
+  },
+
+  "RamanAggarwal": {
+    "name": "Dr. Raman Kant Aggarwal",
+    "designation": "Orthopaedics – Specialist in Shoulder, Elbow & Sports Injuries",
+
+    "profileOverviewTitle": "Profile Summary",
+    "profileOverview": "Dr. Raman Kant Aggarwal is a renowned orthopedic surgeon with over 37 years of experience, specializing in shoulder and elbow surgery, sports injuries, and joint replacement. Trained extensively in Europe and the UK, he is a pioneer in Northern India for Reverse and Anatomical Shoulder Replacements and is known for his precision in managing complex trauma and athlete rehabilitation.",
+
+    "educationTitle": "Education & Training",
+    "education1": "MBBS",
+    "education2": "MS (Orthopaedics)",
+    "education3": "Fellowship in Shoulder & Elbow Surgery",
+    "education4": "MSc in Trauma & Orthopaedics and Health Services",
+    "education5": "Fellowship in Hip & Knee Replacements",
+    "education6": "Fellowship in Advanced Orthopaedic Reconstruction for Complex Trauma",
+
+    "expertiseTitle": "Areas of Expertise",
+    "expertise1": "Reverse & Anatomical Shoulder Replacements (including revisions)",
+    "expertise2": "Total Elbow Replacement (including revisions)",
+    "expertise3": "Arthroscopic Shoulder Surgeries: Tendon tears, Bankart lesions, frozen shoulder, SLAP injuries, weightlifter’s shoulder",
+    "expertise4": "Arthroscopic Elbow Surgeries: Loose bodies, plica, stiff elbows, early arthritis",
+    "expertise5": "Sports Injury Diagnosis & Surgical Management",
+    "expertise6": "Advanced Joint Reconstruction",
+
+    "impactTitle": "Clinical Impact & Patient Outcomes",
+    "impact1": "Treated numerous professional athletes, including cricketers, golfers, badminton players, boxers, squash, judo players, and wrestlers",
+    "impact2": "Helped athletes return to competitive levels post-surgery and rehabilitation",
+    "impact3": "Transformed lives of senior citizens with shoulder arthroscopy and replacements for rotator cuff tears and arthritis, improving pain-free mobility",
+
+    "summaryTitle": "Summary",
+    "summary": "Dr. Aggarwal’s reputation as a leader in shoulder and elbow orthopaedics is backed by decades of clinical excellence, international training, and a passion for restoring function and performance—whether in elite athletes or elderly patients seeking a better quality of life."
+  },
+
+  "VikasGupta": {
+    "name": "Dr. Vikas Gupta",
+    "designation": "Hand, Wrist, Elbow & Shoulder Specialist",
+
+    "profileOverviewTitle": "Profile Summary",
+    "profileOverview": "Dr. Vikas Gupta is a globally respected orthopaedic surgeon with over 30 years of experience, specializing in Hand, Wrist, Elbow, and Shoulder surgery. As a pioneer in upper extremity procedures, he was the first in India to successfully execute a Ceramic-on-Ceramic Wrist Replacement.",
+
+    "educationTitle": "Education & Training",
+    "education1": "MBBS – All India Institute of Medical Sciences (AIIMS), New Delhi",
+    "education2": "MS (Orthopaedics) – AIIMS, New Delhi",
+    "education3": "AO Fellowship – Freiburg, Germany",
+    "education4": "Hand Surgery Fellowship – Mayo Clinic, Rochester, USA",
+
+    "experienceTitle": "Professional Experience",
+    "experience1": "Senior Director – Max Institute of Musculoskeletal Sciences & Orthopaedics, Max Healthcare",
+    "experience2": "Director – Hand & Upper Extremity Surgery, Medanta – The Medicity, Gurgaon",
+    "experience3": "Associate Director & Senior Consultant – Medanta Bone & Joint Institute, Gurgaon",
+    "experience4": "Consultant – Fortis Group of Hospitals, NCR",
+    "experience5": "Associate Professor – AIIMS, New Delhi",
+
+    "specialityTitle": "Speciality Interests",
+    "speciality1": "Hand, Wrist, Elbow, and Shoulder Surgery",
+    "speciality2": "Arthroscopy & Sports Injury Management",
+    "speciality3": "Complex Reconstructive Procedures of the Upper Extremity",
+    "speciality4": "Ceramic Wrist Replacement Surgery",
+
+    "membershipsTitle": "Professional Memberships",
+    "memberships1": "Secretary & Honorary Treasurer – Indian Society of Surgery for Hand (2012–2015)",
+    "memberships2": "Member – Indian Orthopaedic Association (IOA)",
+    "memberships3": "Member – Delhi Orthopaedic Association (DOA)",
+    "memberships4": "Member – Orthopaedic Research Society (AIIMS)",
+    "memberships5": "Member – Indian Arthroscopy Society, IFS, ASSI, Indian Society of Hip & Knee Surgeons",
+    "memberships6": "Member – Indian Federation of Sports Medicine, Indian Rheumatology Association",
+
+    "awardsTitle": "Awards & Achievements",
+    "awards1": "Best Paper Award – ‘Wrist Arthroscopy’, North Zone Indian Orthopaedic Association, Srinagar (2004)",
+    "awards2": "Nominated to 'Marquis Who’s Who in Asia' (2007)",
+    "awards3": "First Surgeon in India to perform Ceramic-on-Ceramic Wrist Replacement",
+    "awards4": "Successfully performed over 6,000 complex upper extremity surgeries"
+  },
+  "DrPadman": {
+    "name": "Dr. Padman",
+    "designation": "Senior Consultant – Paediatric Orthopaedics & Trauma",
+
+    "profileOverviewTitle": "Profile Summary",
+    "profileOverview": "Dr. Padman is a highly experienced Paediatric Orthopaedic and Trauma Surgeon with over 20 years of clinical expertise. He has practiced in some of the most reputed institutions in India and the United Kingdom, combining academic excellence with compassionate patient care.",
+
+    "educationTitle": "Academic Qualifications",
+    "education1": "MBBS – Jawaharlal Institute of Post Graduate Medical Education and Research (JIPMER), Pondicherry",
+    "education2": "DNB (Orthopaedic Surgery) – National Board of Examinations, India",
+    "education3": "FRCS – Royal College of Physicians and Surgeons of Glasgow",
+    "education4": "FRCS (Tr & Orth) – Intercollegiate Board, UK (2008)",
+    "education5": "MRes – Masters in Research, University of Leeds (2004)",
+
+    "experienceTitle": "Professional Experience",
+    "experience1": "10 years of orthopaedic practice in the UK at University Hospitals of Leeds and Sheffield",
+    "experience2": "National Fellowship in Paediatric Orthopaedics – Sheffield Children’s Hospital, UK",
+    "experience3": "Consultant – Paediatric Orthopaedics, Sheffield Children’s Hospital, UK",
+    "experience4": "Senior Consultant – Paediatric Orthopaedic Surgeon, Max Healthcare, New Delhi",
+    "experience5": "Senior Consultant – Paediatric Orthopaedics, Fortis Memorial Research Institute, Gurgaon",
+
+    "researchTitle": "Research & Fellowships",
+    "research1": "Conducted research on biological reactions to conventional and advanced polyethylene in joint replacements",
+    "research2": "Awarded Masters in Research by the University of Leeds for innovative work in arthroplasty (2004)",
+    "research3": "Comprehensive fellowship in Paediatric Orthopaedics at Sheffield Children’s Hospital, UK",
+
+    "expertiseTitle": "Areas of Expertise",
+    "expertise1": "Paediatric Orthopaedics",
+    "expertise2": "Orthopaedic Trauma Surgery",
+    "expertise3": "Joint Preservation and Reconstruction",
+    "expertise4": "Paediatric Hip Disorders",
+    "expertise5": "Clubfoot Management",
+    "expertise6": "Limb Deformity Correction",
+
+    "summaryTitle": "Summary",
+    "summary": "Dr. Padman brings unmatched global experience and a commitment to delivering world-class orthopaedic care to children and adolescents. His expertise is backed by extensive training, academic research, and years of consulting at internationally renowned institutions."
+  }
+}

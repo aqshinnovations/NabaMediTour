@@ -1,0 +1,175 @@
+{
+  "transplants_replacements": {
+    "title": "Transplants & Replacements",
+    "liver_transplant": "Liver transplant",
+    "kidney_transplant": "Kidney Transplant",
+    "heart_transplant_implant": "Heart Transplant & Implant (LVAD)"
+  },
+
+  "liver_transplant": {
+    "title": "Liver Transplant Surgery – A Complete Guide by InDocsCare",
+    "subtitle": "Discover everything about liver transplant surgery – procedure, types, indications, risks, recovery, and donor options. Learn how InDocsCare in India offers affordable and advanced liver transplant care with expert surgeons and world-class facilities.",
+
+    "what_is": {
+      "title": "What is a Liver Transplant?",
+      "description": "A liver transplant is a life-saving surgery where a diseased or damaged liver is removed and replaced with a healthy liver from a donor. This operation is usually recommended when the liver can no longer perform its essential functions.",
+      "description2": " The liver is one of the body’s most important organs – it filters toxins, produces proteins, stores nutrients, and aids digestion. When the liver stops working due to disease, conditions like<bold> liver failure, cirrhosis, or liver cancer </bold>can develop. In such cases, a liver transplant may be the only option to restore health and quality of life."
+    },
+
+    "why_needed": {
+      "title": "Why is a Liver Transplant Needed?",
+      "description": "Doctors may recommend a liver transplant when other treatments fail. Common reasons include:",
+
+      "cirrhosis": "Cirrhosis –",
+      "cirrhosisDes1": " The most common cause of liver transplants. ",
+      "cirrhosisDes2": "Results from scarring of liver tissue due to <bold>hepatitis B or C, alcohol abuse, or fatty liver disease.</bold>",
+      "acute_failure": "Acute Liver Failure –",
+      "acute_failureDes1": " A sudden loss of liver function, often caused by <bold>viral infections, medication overdoses (like paracetamol), or autoimmune diseases.</bold>",
+      "acute_failureDes2": " Can be life-threatening and requires urgent transplant.",
+      "cancer": "Liver Cancer –",
+      "cancerDes1": " When confined to the liver and not spread to other organs.",
+      "cancerDes2": "Transplant removes both the cancer and the diseased liver.",
+      "pediatric": "Pediatric Conditions – ",
+      "pediatricDes": "Children born with<bold> biliary atresia </bold>(blocked bile ducts) often need a transplant.",
+      "genetic": "Genetic & Metabolic Disorders –",
+      "geneticDes": " Conditions such as<bold> Wilson’s disease, hemochromatosis, or alpha-1 antitrypsin deficiency</bold> may damage the liver and require transplantation.",
+
+      "symptoms": {
+        "title": "Symptoms suggesting the need for a transplant:",
+        "jaundice": "Persistent<bold> jaundice </bold>(yellow eyes/skin)",
+        "fatigue": "Severe fatigue",
+        "swelling": "Swelling in abdomen or legs",
+        "bleeding": "Easy bleeding or bruising",
+        "confusion": "Confusion or memory loss"
+      }
+    },
+
+    "types": {
+      "title": "Types of Liver Transplants",
+      "living_donor": "Living Donor Liver Transplant –",
+      "living_donor_point1": " A healthy donor gives a portion of their liver to the patient.",
+      "living_donor_point2": "The liver regenerates in both donor and recipient. ",
+      "living_donor_point3": "Reduces waiting time, especially in countries like India with donor shortages.",
+      "deceased_donor": "Deceased Donor (Cadaver) Liver Transplant –",
+      "deceased_donor_point1": "The liver is taken from a brain-dead donor whose other organs still function.",
+      "deceased_donor_point2": "Most common type worldwide.",
+      "others": "Other Specialized Types – ",
+      "othersPoint1": "<bold>Auxiliary Transplant: </bold>Partial donor liver transplanted while part of patient’s own liver remains.",
+      "othersPoint2": "<bold>Pediatric Transplant:</bold> Specially designed for children with liver disorders."
+    },
+
+    "recovery": {
+      "title": "Recovery After Liver Transplant",
+      "hospital": "Hospital Stay –",
+      "hospital_point1": "ICU monitoring for 1–2 weeks,",
+      "hospital_point2": "Total hospital stay: 12–18 days",
+      "home": "At Home – ",
+      "home_point1": "Initial recovery: 4–6 weeks",
+      "home_point2": "Full recovery: 3–6 months",
+      "home_point3": "Regular follow-ups essential",
+      "RecoveryTips": "Recovery Tips:",
+      "medications": "Take medications on time",
+      "diet": "Eat a healthy diet (no alcohol, low salt)",
+      "exercise": "Exercise gradually (walking, light activity)",
+      "hygiene": "Maintain hygiene to avoid infections"
+    },
+
+    "risks": {
+      "title": "Risks & Complications of Liver Transplant",
+      "Description": "Like any major surgery, risks exist:",
+      "common": "<bold>Common:</bold> Rejection, infections, bleeding",
+      "rare": "<bold>Rare:</bold> Bile duct leaks, blood clots, graft failure",
+      "long_term": "<bold>Long-term:</bold> Chronic rejection, higher risk of cancers due to immunosuppressants"
+    },
+
+    "choose_indocscare": {
+      "title": "Why Choose InDocsCare for Liver Transplant in India?",
+      "Description": "At <bold>InDocsCare</bold>, we work with India’s best transplant hospitals and leading liver surgeons. Our services include:",
+      "hospitals": "🌍 World-class hospitals with modern ICUs",
+      "surgeons": "👨‍⚕️ Highly experienced transplant surgeons",
+      "affordable": "💰 Affordable liver transplant cost in India",
+      "review": "📑 Free medical report review & treatment plan",
+      "assistance": "✈️ Complete international patient assistance (visa, travel, stay)",
+      "support": "🧑‍🤝‍🧑 Dedicated coordinators for 24/7 support"
+    }
+  },
+
+  "kidney_transplant": {
+    "title": "Kidney Transplant Surgery in India – Procedure, Benefits, Risks & Recovery",
+    "intro_para1": "Learn everything about<bold> kidney transplant surgery in India</bold> – what it is, why it’s needed, indications, eligibility, procedure, risks, recovery process, and donor options.InDocsCare connects you with top kidney transplant hospitals and expert surgeons at affordable costs.",
+
+    "what_is_title": "What is a Kidney Transplant?",
+    "what_is_para1": "<bold>A kidney transplant</bold> is a surgical procedure in which a healthy kidney from a living or deceased donor is placed into a patient whose kidneys have lost the ability to function properly.This treatment is often recommended for patients with<bold> end-stage renal disease (ESRD) or advanced chronic kidney disease (CKD).</bold>",
+    "what_is_para2": "Healthy kidneys filter toxins and waste products, balance electrolytes, control blood pressure, and regulate body fluids.When the kidneys fail, toxins build up in the body, leading to life-threatening complications.A kidney transplant restores these vital functions, improving survival and quality of life.",
+    "what_is_para3": "Unlike dialysis, which only partially replaces kidney function, a successful transplant allows patients to live a more active and normal life.",
+
+    "why_needed_title": "Why is a Kidney Transplant Needed?",
+    "why_needed_para1": "Doctors recommend a kidney transplant when kidney damage becomes severe and other treatments are no longer effective.",
+
+    "symptoms_title": "Common Symptoms of Kidney Failure:",
+    "symptom1": "Constant tiredness and weakness",
+    "symptom2": "Swelling in the legs, ankles, or face due to fluid retention",
+    "symptom3": "Nausea, vomiting, or loss of appetite",
+    "symptom4": "Unexplained weight loss",
+    "symptom5": "Persistent itching and dry skin",
+    "symptom6": "Dark-colored or reduced urine output",
+
+    "why_needed_para2": "A transplant is usually considered when the <bold>glomerular filtration rate (GFR) falls below 20 mL/min, </bold>indicating severe kidney damage.",
+    "why_needed_note": "Note: Better to send us your medical reports and we will confirm with a doctor whether you need a transplant or not.",
+
+    "indications_title": "Indications for Kidney Transplant",
+    "indications_Des": "Several medical conditions can make a patient eligible for a kidney transplant:",
+    "indication1": "<bold>End-Stage Renal Disease (ESRD):</bold> Loss of over 90% of kidney function.",
+    "indication2": "<bold>Chronic Kidney Disease (CKD): </bold>Stage 4 or 5 CKD due to diabetes, hypertension, or polycystic kidney disease.",
+    "indication3": "<bold>Acute Kidney Injury (AKI): </bold>Severe sudden kidney failure that does not recover.",
+    "indication4": "<bold>Congenital Kidney Disorders: </bold>Structural abnormalities present since birth.",
+    "indication5": "<bold>Recurrent Kidney Disease: </bold>Previous kidney transplant failure.",
+    "indication6": "<bold>Autoimmune Diseases: </bold>Conditions like lupus or vasculitis causing kidney damage.",
+
+    "risks_title": "Risks and Complications of Kidney Transplant",
+    "risks_para1": "Like any major surgery, risks exist:",
+
+    "common_risks_title": "Common Risks:",
+    "common_risk1": "Organ rejection",
+    "common_risk2": "Infections due to immunosuppressants",
+    "common_risk3": "Bleeding or blood clots",
+
+    "rare_risks_title": "Rare Risks:",
+    "rare_risk1": "Kidney graft failure",
+    "rare_risk2": "Cancer risk (long-term immunosuppressants)",
+    "rare_risk3": "Cardiovascular complications",
+
+    "why_choose_title": "Why Choose InDocsCare for Kidney Transplant in India?",
+    "why_choose_para1": "<bold>At InDocsCare,</bold> we collaborate with India’s top kidney transplant hospitals and surgeons to ensure world-class care at affordable costs.",
+    "why_choose_keywords": "Kidney Transplant Surgery in India, Kidney Transplant Procedure, Kidney Failure Treatment, Living Donor Kidney Transplant, Kidney Transplant Recovery, Kidney Transplant Risks, Affordable Kidney Transplant India, InDocsCare Kidney Transplant.",
+
+    "services_title": "Our Services Include:",
+    "service1": "🌍 Access to leading transplant centers in India",
+    "service2": "👨‍⚕️ Expert kidney transplant surgeons",
+    "service3": "💰 Affordable transplant packages",
+    "service4": "📑 Free medical report review",
+    "service5": "✈️ Assistance with visa, travel, and accommodation",
+    "service6": "🤝 24/7 international patient support"
+  },
+
+  "heart_transplant_implant": {
+    "title": "Advanced Heart Implants & Transplants | InDocsCare Medical Services",
+    "intro_para1": "At <bold>InDocsCare,</bold> we offer cutting-edge solutions for patients with advanced heart failure — including <bold>Heart Transplants</bold> and <bold>Left Ventricular Assist Devices (LVADs)</bold>.",
+    "intro_para2": "When heart transplant isn’t immediately possible or a donor isn’t available, LVAD implants provide life-saving support. These mechanical heart pumps help your heart circulate blood, improve organ function, and restore your quality of life.",
+
+    "what_is_para1": "An<bold> LVAD (Left Ventricular Assist Device)</bold> is a mechanical heart pump that helps patients with <bold>advanced heart failure.</bold> It supports your heart in pumping blood, improving circulation and enhancing quality of life.LVAD is not a heart replacement — your heart continues to work along with the device.",
+
+    "uses_title": "Uses of LVAD:",
+    "use1": "<bold>Bridge to transplant: </bold>Keeps patients alive while waiting for a donor heart.",
+    "use2": "<bold>Bridge to recovery:</bold> Supports heart recovery, possibly avoiding transplant.",
+    "use3": "<bold>Destination therapy:</bold> Provides long-term support for patients not eligible for transplant.",
+
+    "how_it_works_title": "How it works:",
+    "how_it_works_para1": "The device is surgically implanted and connected to your heart and aorta. It is powered externally and controlled through a small controller unit.Post-surgery, patients typically experience <bold>more energy, improved mobility</bold>, and<bold> better quality of life</bold>. Most can return to normal activities, work, or school.",
+
+    "risks_title": "Risks:",
+    "risks_para1": "As with any surgery, risks include bleeding, infection, and device malfunction — but modern LVADs are highly reliable.Patients and families receive full training on device management.",
+
+    "notes": "<bold>Note:</bold> Contact us at InDocsCare and we will assist you step by step in getting back to your healthy heart."
+  }
+}

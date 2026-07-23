@@ -13,7 +13,7 @@ const Footer = () => {
     <>
       <IMCBox
         margin={spacing.none}
-        backgroundColor={colors.teal}
+        backgroundColor={colors.msBlue}
         padding={spacing.lg}
       >
         <Grid container spacing={4} sx={{ pb: 6 }}>

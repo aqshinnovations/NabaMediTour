@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar2";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { appRoutes } from "./routes";
@@ -15,10 +15,10 @@ function App() {
     <div>
       <Navbar />
 
-      <Header />
+      {/* <Header /> */}
       <ToastContainer />
 
-      <WhatsAppButton />
+      {/* <WhatsAppButton /> */}
       <Routes>
         {appRoutes.map(({ path, element }, index) => (
           <Route key={index} path={path} element={element} />

@@ -1,14 +1,11 @@
 import axios from "axios";
 import type { AxiosResponse, AxiosError } from "axios";
 
-// const baseUrl: string = "http://localhost:8000/";
-const baseUrl: string = "https://www.indocscare.com:8000/";
+const baseUrl: string = "http://localhost:8000/";
+// const baseUrl: string = "https://www.indocscare.com:8000/";
 
-
-// const imageBaseUrl: string = "http://localhost:8000";
-const imageBaseUrl: string = "https://www.indocscare.com:8000";
-
-
+const imageBaseUrl: string = "http://localhost:8000";
+// const imageBaseUrl: string = "https://www.indocscare.com:8000";
 
 const apiUrl = {
   baseUrl: `${baseUrl}`,
@@ -17,8 +14,6 @@ const apiUrl = {
   contactUs: `${baseUrl}patients/patients-data/`,
   blog: `${baseUrl}blogs/blogList/`,
   blogContent: `${baseUrl}blogs/blogContent/`,
-
-
 };
 
 export { baseUrl, apiUrl };
@@ -41,7 +36,7 @@ export function apiCallPostWithForm<T>(
   api: string,
   form: FormData,
   response: ResponseCallback<T>,
-  error: ErrorCallback
+  error: ErrorCallback,
 ): void {
   console.log("uploadFile ", api);
 
@@ -81,7 +76,7 @@ export function apiCallPostFormData<T>(
   api: string,
   formData: FormData,
   response: ResponseCallback<T>,
-  error: ErrorCallback
+  error: ErrorCallback,
 ): void {
   console.log("apiCallPostFormData ", api);
 
@@ -121,7 +116,7 @@ export function apiPostUnsecure<T>(
   api: string,
   data: Record<string, unknown>,
   response: ResponseCallback<T>,
-  error: ErrorCallback
+  error: ErrorCallback,
 ): void {
   console.log("apiPostUnsecure ", api, "data ", data);
 
@@ -162,14 +157,14 @@ interface ApiResponse<T> {
 export function apiCallUnsecureGet<T>(
   api: string,
   response: (res: ApiResponse<T>) => void,
-  error: (err: string) => void
+  error: (err: string) => void,
 ): void {
   axios
     .get<ApiResponse<T>>(api)
     .then((res: AxiosResponse<ApiResponse<T>>) => {
       const result = res.data;
       if (result.code === "200") {
-        response(result);  // ✅ works fine
+        response(result); // ✅ works fine
       } else {
         error(result.msg ?? "Unknown error");
       }

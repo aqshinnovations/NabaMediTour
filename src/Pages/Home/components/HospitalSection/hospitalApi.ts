@@ -23,7 +23,7 @@ export const getHospitals = (
   error: (message: string) => void,
 ) => {
   apiCallUnsecureGet<Hospital[]>(
-    `${apiUrl.baseUrl}hospitals/hospitals/`,
+    `${apiUrl.baseUrl}hospitals/list/`,
     (res) => {
       success(res.list ?? []);
     },

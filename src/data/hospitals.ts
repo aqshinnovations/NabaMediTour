@@ -30,7 +30,19 @@ export const hospitals: Hospital[] = [
     description_ar:
       "تُعَد فورتيس للرعاية الصحية المحدودة (Fortis Healthcare Limited) من أكبر مقدمي الرعاية الصحية الخاصة في الهند، ويقع مقرها الرئيسي في مدينة جورجاون. تأسست عام 1996 وتدير شبكة من 36 مستشفى في 11 ولاية، تشمل دلهي NCR، بنغالور، مومباي، والبنجاب. تشتهر فورتيس بنهجها المتعدد التخصصات وتقديم خدمات طبية شاملة تشمل المستشفيات، مراكز التشخيص، ومراكز الرعاية النهارية.",
     image: Fortis,
-    facilities: [],
+    facilities: [
+      {
+        id: 4,
+        name_en: "Cardiac Care 5",
+        name_ar: "رعاية القلب",
+      },
+
+      {
+        id: 8,
+        name_en: "Cardiac Care 4",
+        name_ar: "رعاية القلب",
+      },
+    ],
     created_at: "2026-07-29 17:39:35",
     updated_at: "2026-07-29 17:39:35",
   },
@@ -43,7 +55,13 @@ export const hospitals: Hospital[] = [
     description_ar:
       "تُعَد فورتيس للرعاية الصحية المحدودة (Fortis Healthcare Limited) من أكبر مقدمي الرعاية الصحية الخاصة في الهند، ويقع مقرها الرئيسي في مدينة جورجاون. تأسست عام 1996 وتدير شبكة من 36 مستشفى في 11 ولاية، تشمل دلهي NCR، بنغالور، مومباي، والبنجاب. تشتهر فورتيس بنهجها المتعدد التخصصات وتقديم خدمات طبية شاملة تشمل المستشفيات، مراكز التشخيص، ومراكز الرعاية النهارية.",
     image: Amrita,
-    facilities: [],
+    facilities: [
+      {
+        id: 8,
+        name_en: "Cardiac Care 4",
+        name_ar: "رعاية القلب",
+      },
+    ],
     created_at: "2026-07-29 17:39:29",
     updated_at: "2026-07-29 17:39:29",
   },
@@ -56,7 +74,23 @@ export const hospitals: Hospital[] = [
     description_ar:
       "تُعَد فورتيس للرعاية الصحية المحدودة (Fortis Healthcare Limited) من أكبر مقدمي الرعاية الصحية الخاصة في الهند، ويقع مقرها الرئيسي في مدينة جورجاون. تأسست عام 1996 وتدير شبكة من 36 مستشفى في 11 ولاية، تشمل دلهي NCR، بنغالور، مومباي، والبنجاب. تشتهر فورتيس بنهجها المتعدد التخصصات وتقديم خدمات طبية شاملة تشمل المستشفيات، مراكز التشخيص، ومراكز الرعاية النهارية.",
     image: MAx,
-    facilities: [],
+    facilities: [
+      {
+        id: 4,
+        name_en: "Cardiac Care 5",
+        name_ar: "رعاية القلب",
+      },
+      {
+        id: 5,
+        name_en: "Cardiac Care 4",
+        name_ar: "رعاية القلب",
+      },
+      {
+        id: 6,
+        name_en: "Cardiac Care 4",
+        name_ar: "رعاية القلب",
+      },
+    ],
     created_at: "2026-07-29 17:39:03",
     updated_at: "2026-07-29 17:39:03",
   },
@@ -77,6 +111,21 @@ export const hospitals: Hospital[] = [
       },
       {
         id: 5,
+        name_en: "Cardiac Care 4",
+        name_ar: "رعاية القلب",
+      },
+      {
+        id: 6,
+        name_en: "Cardiac Care 4",
+        name_ar: "رعاية القلب",
+      },
+      {
+        id: 7,
+        name_en: "Cardiac Care 4",
+        name_ar: "رعاية القلب",
+      },
+      {
+        id: 8,
         name_en: "Cardiac Care 4",
         name_ar: "رعاية القلب",
       },

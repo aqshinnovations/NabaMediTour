@@ -1,13 +1,10 @@
 import { useState } from "react";
 import { Box, Chip, Grid } from "@mui/material";
-import IMCBox from "../../components/IMCBox";
-import IMCTypography from "../../components/IMCTypography";
 import DoctorCard from "../../components/DoctorCard";
 import { doctors } from "../../data/doctors";
-import { colors } from "../../styles/colors";
-import { fontSizes } from "../../styles/fontSizes";
-import { fontWeights } from "../../styles/fontWeights";
 import { useNavigate } from "react-router-dom";
+import PageHero from "../../components/PageHero";
+
 const specializations = [
   "All",
   "Cardiologist",
@@ -32,35 +29,11 @@ const Doctors = () => {
   return (
     <>
       {/* Hero */}
-      <IMCBox
-        style={{
-          background: "#108a8d",
-          padding: "70px 20px",
-          textAlign: "center",
-        }}
-      >
-        <IMCTypography
-          variant="h2"
-          size={fontSizes.xxxl}
-          weight={fontWeights.bold}
-          color={colors.white}
-        >
-          Our Doctors
-        </IMCTypography>
 
-        <IMCTypography
-          color={colors.white}
-          style={{
-            marginTop: 16,
-            opacity: 0.95,
-            maxWidth: 700,
-            marginInline: "auto",
-          }}
-        >
-          Highly qualified and experienced specialists dedicated to providing
-          exceptional medical care.
-        </IMCTypography>
-      </IMCBox>
+      <PageHero
+        title="Our Doctors"
+        description="Highly qualified and experienced specialists dedicated to providing exceptional medical care."
+      />
 
       {/* Filter */}
       <Box

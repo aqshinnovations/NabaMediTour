@@ -1,6 +1,8 @@
+import { colors } from "../../../../styles/colors";
+
 export const styles = {
   section: {
-    backgroundColor: "#0F9D94",
+    backgroundColor: colors.secondaryTeal,
     py: {
       xs: 6,
       md: 8,
@@ -18,7 +20,7 @@ export const styles = {
   },
 
   number: {
-    color: "#fff",
+    color: colors.white,
     fontWeight: 700,
     fontSize: {
       xs: "2.2rem",
@@ -29,7 +31,7 @@ export const styles = {
   },
 
   title: {
-    color: "#fff",
+    color: colors.white,
     fontSize: {
       xs: "1rem",
       md: "1.2rem",

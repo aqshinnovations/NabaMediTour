@@ -59,7 +59,7 @@ const Hero = () => {
               borderRadius: "999px",
               background: "rgba(22,185,165,.15)",
               border: "1px solid rgba(22,185,165,.4)",
-              color: "#32E0D2",
+              color: colors.white,
             }}
           >
             ❤️ Trusted by 50,000+ patients globally

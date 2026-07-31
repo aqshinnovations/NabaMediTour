@@ -3,39 +3,19 @@ import IMCBox from "../../../../components/IMCBox";
 import IMCTypography from "../../../../components/IMCTypography";
 import DoctorCard from "../../../../components/DoctorCard";
 import { doctors } from "../../../../data/doctors";
-import { spacing } from "../../../../styles/spacing";
-import { fontSizes } from "../../../../styles/fontSizes";
-import { fontWeights } from "../../../../styles/fontWeights";
-import { colors } from "../../../../styles/colors";
 import { useNavigate } from "react-router-dom";
+import { commonStyles } from "../../../../constants/commonStyles";
+import { colors } from "../../../../styles/colors";
 const DoctorsSection = () => {
   const navigate = useNavigate();
 
-  // Show only first 4 cards initially
   const displayedDoctors = doctors.slice(0, 4);
   return (
     <IMCBox
-      margin={spacing.none}
-      style={{
-        width: "100%",
-        gap: 10,
-        padding: "30px",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      style={commonStyles.sectionContainer}
+      backgroundColor={colors.lightBlue}
     >
-      <IMCTypography
-        variant="h1"
-        size={fontSizes.xxl}
-        weight={fontWeights.ultraBold}
-        color={colors.msBlue}
-        style={{
-          lineHeight: 1,
-          textAlign: "center",
-          marginBottom: "32px",
-          width: "100%",
-        }}
-      >
+      <IMCTypography variant="h1" style={commonStyles.sectionTitle}>
         Doctors
       </IMCTypography>
 
@@ -61,24 +41,11 @@ const DoctorsSection = () => {
         ))}
       </Grid>
 
-      <IMCBox
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginTop: "40px",
-          width: "100%",
-        }}
-      >
+      <IMCBox style={commonStyles.exploreMoreContainer}>
         <Button
           variant="contained"
           onClick={() => navigate("/doctors")}
-          sx={{
-            px: 4,
-            py: 1.5,
-            borderRadius: "30px",
-            textTransform: "none",
-            backgroundColor: colors.msBlue,
-          }}
+          sx={commonStyles.exploreMoreButton}
         >
           Explore More
         </Button>

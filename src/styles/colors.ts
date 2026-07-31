@@ -36,11 +36,10 @@ export const colors = {
   iceBlue: "#EDF4F2",
   primary: "#005897",
   primaryLight: "#C1E4F9",
-  // secondary: "#DC3545",
-  // white: "#FFFFFF",
   textPrimary: "#3F3F3F",
   textSecondary: "#6B7280",
   border: "#D9D9D9",
-  // background: "#F8FAFC",
   lightTeal: "#c6e4eb",
+  primaryTeal: "#108a8d",
+  secondaryTeal: "#0F9D94",
 };

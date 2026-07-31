@@ -1,3 +1,5 @@
+import { colors } from "../../../../styles/colors";
+
 export const styles = {
   section: {
     background: "linear-gradient(180deg, #0F999C 0%, #0E8C97 100%)",
@@ -9,7 +11,7 @@ export const styles = {
   },
 
   stars: {
-    color: "#FFC107",
+    color: colors.msYellow,
     display: "flex",
     justifyContent: "center",
     gap: 0.5,
@@ -17,7 +19,7 @@ export const styles = {
   },
 
   title: {
-    color: "#fff",
+    color: colors.white,
     fontWeight: 700,
     fontSize: {
       xs: "2rem",
@@ -27,7 +29,7 @@ export const styles = {
   },
 
   subtitle: {
-    color: "rgba(255,255,255,0.95)",
+    color: colors.white,
     fontSize: {
       xs: "1rem",
       md: "1.35rem",
@@ -39,8 +41,8 @@ export const styles = {
   },
 
   button: {
-    backgroundColor: "#fff",
-    color: "#007C80",
+    backgroundColor: colors.white,
+    color: colors.secondaryTeal,
     borderRadius: "14px",
     px: 5,
     py: 2,
@@ -52,7 +54,7 @@ export const styles = {
     transition: "0.3s",
 
     "&:hover": {
-      backgroundColor: "#F5F5F5",
+      backgroundColor: colors.white,
       transform: "translateY(-3px)",
       boxShadow: "0 15px 35px rgba(0,0,0,0.25)",
     },

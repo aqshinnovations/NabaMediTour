@@ -1,49 +1,16 @@
 import IMCBox from "../../components/IMCBox";
-import IMCTypography from "../../components/IMCTypography";
 import HospitalCard from "../../components/HospitalCard";
 import { hospitals } from "../../data/hospitals";
-import { colors } from "../../styles/colors";
-import { fontSizes } from "../../styles/fontSizes";
-import { fontWeights } from "../../styles/fontWeights";
+import PageHero from "../../components/PageHero";
 
 const Hospitals = () => {
   return (
     <>
       {/* Hero Section */}
-      <IMCBox
-        style={{
-          width: "100%",
-          minHeight: 260,
-          background: "linear-gradient(90deg,#0c8b93 0%, #157f98 100%)",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          textAlign: "center",
-          padding: "40px 20px",
-        }}
-      >
-        <IMCTypography
-          size={fontSizes.xxxl}
-          weight={fontWeights.bold}
-          color={colors.white}
-        >
-          Partner Hospitals
-        </IMCTypography>
-
-        <IMCTypography
-          size={fontSizes.md}
-          color={colors.white}
-          style={{
-            marginTop: 16,
-            maxWidth: 700,
-            opacity: 0.95,
-          }}
-        >
-          Internationally accredited hospitals with world-class facilities and
-          patient care standards.
-        </IMCTypography>
-      </IMCBox>
+      <PageHero
+        title="Our Hospitals"
+        description="Partner hospitals equipped with world-class facilities and advanced medical technology."
+      />
 
       {/* Hospital List */}
       <IMCBox

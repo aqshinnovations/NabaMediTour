@@ -178,7 +178,7 @@ const HospitalCard: React.FC<HospitalCardProps> = ({
 }) => {
   const navigate = useNavigate();
 
-  const visible = specializations.slice(0, 3);
+  const visible = specializations.slice(0, 2);
   const remaining = specializations.length - visible.length;
 
   return (
@@ -221,7 +221,7 @@ const HospitalCard: React.FC<HospitalCardProps> = ({
         <Typography
           component="p"
           sx={{
-            fontSize: "0.875rem", // 14px
+            fontSize: "0.875rem",
             lineHeight: 1.5,
             display: "-webkit-box",
             WebkitLineClamp: 2,

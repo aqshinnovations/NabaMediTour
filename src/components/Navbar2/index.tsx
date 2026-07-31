@@ -16,8 +16,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
-
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import { navItems } from "./constants";
 
@@ -37,7 +36,7 @@ import {
 
 const Navbar = () => {
   const location = useLocation();
-
+  const navigate = useNavigate();
   const theme = useTheme();
 
   const mobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -86,7 +85,11 @@ const Navbar = () => {
                 ))}
               </Box>
 
-              <Button startIcon={<PhoneOutlinedIcon />} sx={consultationButton}>
+              <Button
+                onClick={() => navigate("/contactUs")}
+                startIcon={<PhoneOutlinedIcon />}
+                sx={consultationButton}
+              >
                 Free Consultation
               </Button>
             </>
@@ -130,6 +133,10 @@ const Navbar = () => {
               sx={{
                 ...consultationButton,
                 mt: 2,
+              }}
+              onClick={() => {
+                setOpen(false);
+                navigate("/contactUs");
               }}
             >
               Free Consultation

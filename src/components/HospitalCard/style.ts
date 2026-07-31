@@ -92,7 +92,7 @@ export const styles = {
     px: 2.25,
     py: 1,
     borderRadius: "50px",
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: 500,
   },
 

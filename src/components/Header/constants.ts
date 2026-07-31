@@ -25,7 +25,7 @@ export const navLinks: (NavLinkItem & { menuKey?: MenuKey })[] = [
   },
   {
     label: "navbar.blogs",
-    path: "/Blogs",
+    path: "/blogs",
   },
 ];
 

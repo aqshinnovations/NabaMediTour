@@ -92,7 +92,7 @@ const HospitalSection = () => {
       </IMCTypography>
 
       <Grid container spacing={2} p={4}>
-        {hospitals.slice(0, 2).map((hospital) => (
+        {hospitals.slice(0, 4).map((hospital) => (
           <Grid
             key={hospital.id}
             size={{ xs: 12, md: 6 }}

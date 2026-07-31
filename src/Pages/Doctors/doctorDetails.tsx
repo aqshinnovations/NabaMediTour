@@ -6,7 +6,8 @@ import { fontWeights } from "../../styles/fontWeights";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
-
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { useNavigate } from "react-router-dom";
 const qualifications = [
   "MD - Cardiology",
   "DM - Cardiology",
@@ -21,10 +22,11 @@ const specializations = [
 ];
 
 const DoctorsDetails = () => {
+  const navigate = useNavigate();
   return (
     <>
       {/* Hero Section */}
-      <IMCBox
+      {/* <IMCBox
         style={{
           width: "100%",
           background: "#0f8793",
@@ -89,8 +91,105 @@ const DoctorsDetails = () => {
             </IMCBox>
           </IMCBox>
         </IMCBox>
-      </IMCBox>
+      </IMCBox> */}
+      <IMCBox
+        style={{
+          width: "100%",
+          background: "#0f8793",
+          padding: "40px 0 60px",
+        }}
+      >
+        <IMCBox
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 20px",
+          }}
+        >
+          {/* Back Button */}
+          <IMCBox
+            onClick={() => navigate("/doctors")} // your doctors listing route
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              color: "#fff",
+              cursor: "pointer",
+              marginBottom: "30px",
+            }}
+          >
+            <ArrowBackIcon sx={{ fontSize: 20 }} />
 
+            <IMCTypography
+              variant="body"
+              size="18"
+              color="#fff"
+              style={{
+                opacity: 0.9,
+              }}
+            >
+              All Doctors
+            </IMCTypography>
+          </IMCBox>
+
+          {/* Doctor Info */}
+          <IMCBox
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "40px",
+              flexWrap: "wrap",
+            }}
+          >
+            <img
+              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400"
+              alt="doctor"
+              style={{
+                width: "170px",
+                height: "170px",
+                borderRadius: "50%",
+                objectFit: "cover",
+                border: "6px solid rgba(255,255,255,.2)",
+              }}
+            />
+
+            <IMCBox>
+              <IMCTypography
+                variant="h2"
+                size="42"
+                weight={fontWeights.bold}
+                color="#fff"
+              >
+                Dr. Rajesh Kumar
+              </IMCTypography>
+
+              <IMCTypography
+                variant="h3"
+                size="26"
+                color={colors.light}
+                style={{ marginTop: 8 }}
+              >
+                Cardiologist
+              </IMCTypography>
+
+              <IMCBox
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 10,
+                  marginTop: 12,
+                }}
+              >
+                <AccessTimeIcon sx={{ color: colors.light }} />
+
+                <IMCTypography variant="body" size="18" color={colors.light}>
+                  22 years experience
+                </IMCTypography>
+              </IMCBox>
+            </IMCBox>
+          </IMCBox>
+        </IMCBox>
+      </IMCBox>
       {/* Body */}
       <IMCBox
         style={{

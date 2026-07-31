@@ -223,14 +223,14 @@ const Header = () => {
                         </ListItemButton>
                       );
                     })}
-                    <ListItemButton
+                    {/* <ListItemButton
                       component={Link}
-                      to="/Blogs"
+                      to="/Blog"
                       // onClick={handleDrawerToggle}
-                      selected={location.pathname === "/Blogs"}
+                      selected={location.pathname === "/Blog"}
                     >
                       <ListItemText primary={t("navbar.blogs")} />
-                    </ListItemButton>
+                    </ListItemButton> */}
                   </List>
                 </Box>
               </Drawer>

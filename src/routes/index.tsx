@@ -4,13 +4,7 @@ import Home from "../Pages/Home";
 import Doctors from "../Pages/Doctors";
 import DoctorsDetails from "../Pages/Doctors/doctorDetails";
 import HospitalDetails from "../Pages/Hospitals/HospitalDetails";
-// export const appRoutes = [
-//   ...home,
-//   ...hospitals,
-//   ...doctors,
-//   ...Blogs
-// ];
-
+import BlogDetails from "../Pages/Blogs/BlogDetails";
 export const appRoutes = [
   { path: "/", element: <Home /> },
 
@@ -20,5 +14,6 @@ export const appRoutes = [
   { path: "/Hospitals", element: <Hospitals /> },
   { path: "/Hospitals/:id", element: <HospitalDetails /> },
 
-  { path: "/Blogs", element: <Blogs /> },
+  { path: "/blogs", element: <Blogs /> },
+  { path: "/blogs/:id", element: <BlogDetails /> },
 ];

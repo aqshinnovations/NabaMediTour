@@ -218,7 +218,17 @@ const HospitalCard: React.FC<HospitalCardProps> = ({
           <Typography variant="body2">{location}</Typography>
         </Box>
 
-        <Typography component="p" sx={styles.hospitalDescription}>
+        <Typography
+          component="p"
+          sx={{
+            fontSize: "0.875rem", // 14px
+            lineHeight: 1.5,
+            display: "-webkit-box",
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+          }}
+        >
           {description}
         </Typography>
 

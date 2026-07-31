@@ -2,26 +2,24 @@
 
 export const styles = {
   hospitalCard: {
-    width: "90%",
-    maxWidth: 860,
+    width: "100%",
     display: "flex",
+    flexDirection: {
+      xs: "column",
+      md: "row",
+    },
     alignItems: "stretch",
-    backgroundColor: "#ffffff",
-
+    background: "#fff",
     borderRadius: "18px",
     overflow: "hidden",
     border: "1px solid #ececec",
     boxShadow: "0 5px 20px rgba(0,0,0,0.05)",
-    transition: "all 0.3s ease",
-    height: 200,
+    transition: "all .3s",
+    minHeight: 220,
 
     "&:hover": {
       boxShadow: "0 12px 35px rgba(0,0,0,0.15)",
       transform: "translateY(-4px)",
-    },
-
-    "@media (max-width:768px)": {
-      flexDirection: "column",
     },
   },
 
@@ -43,30 +41,34 @@ export const styles = {
 
   hospitalContent: {
     flex: 1,
-    p: 3.5,
-
-    h2: {
-      margin: 0,
-      fontSize: 24,
-      fontWeight: 700,
-      color: "#0f172a",
-
-      "@media (max-width:768px)": {
-        fontSize: 26,
-      },
-    },
-
     p: {
-      color: "#475569",
-      fontSize: 10,
-      lineHeight: 1.7,
-      marginBottom: 3,
-
-      display: "-webkit-box",
-      WebkitLineClamp: 3,
-      WebkitBoxOrient: "vertical",
-      overflow: "hidden",
+      xs: 2,
+      sm: 3,
+      md: 3.5,
     },
+  },
+
+  hospitalTitle: {
+    m: 0,
+    fontWeight: 700,
+    color: "#0f172a",
+    fontSize: {
+      xs: "1.2rem",
+      sm: "1.4rem",
+      md: "1.5rem",
+    },
+  },
+
+  hospitalDescription: {
+    color: "#475569",
+    fontSize: 10,
+    lineHeight: 1.7,
+    marginBottom: 3,
+
+    display: "-webkit-box",
+    WebkitLineClamp: 3,
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
   },
 
   hospitalLocation: {

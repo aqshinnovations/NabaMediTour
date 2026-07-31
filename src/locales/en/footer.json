@@ -4,10 +4,9 @@
     "top_hospitals": "Top Hospitals",
     "top_doctors": "Top Doctors",
     "contact_us": "Contact Us"
-  
   },
-   "footer_procedure":{
-     "knee_replacement": "Knee Replacement",
+  "footer_procedure": {
+    "knee_replacement": "Knee Replacement",
     "hip_replacement_surgery": "Hip Replacement Surgery",
     "spinal_fusion_surgery": "Spinal Fusion Surgery",
     "brain_tumor_surgery": "Brain Tumor Surgery",
@@ -36,7 +35,7 @@
   },
   "policy": {
     "disclaimerLabel": "Disclaimer:",
-    "disclaimerBody": "InDocsCare Medical Services serves as a medical facilitation platform and does not diagnose or treat medical conditions. We help patients connect with qualified healthcare providers and share medically reviewed information for awareness only. Decisions regarding care remain solely with the patient and their chosen doctor. All website content is protected by copyright and legal rights.",
-    "allRight": "© 2025 InDocsCare Medical Services. All rights reserved."
+    "disclaimerBody": "Nabameditour Medical Services serves as a medical facilitation platform and does not diagnose or treat medical conditions. We help patients connect with qualified healthcare providers and share medically reviewed information for awareness only. Decisions regarding care remain solely with the patient and their chosen doctor. All website content is protected by copyright and legal rights.",
+    "allRight": "© 2025 Nabameditour Medical Services. All rights reserved."
   }
 }

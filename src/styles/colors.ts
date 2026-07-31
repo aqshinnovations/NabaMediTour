@@ -42,4 +42,5 @@ export const colors = {
   textSecondary: "#6B7280",
   border: "#D9D9D9",
   // background: "#F8FAFC",
+  lightTeal: "#c6e4eb",
 };

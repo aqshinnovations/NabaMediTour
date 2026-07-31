@@ -3,6 +3,11 @@ import Amrita from "../assets/hospitals/AmritaHospital.jpg";
 import MAx from "../assets/hospitals/MaxNoida.jpg";
 import MAnipal from "../assets/hospitals/ManipalHospitalDwarka.jpg";
 
+export interface Facility {
+  id: number;
+  name_en: string;
+  name_ar: string;
+}
 export interface Hospital {
   id: number;
   name_en: string;
@@ -10,8 +15,7 @@ export interface Hospital {
   description_en: string;
   description_ar: string;
   image: string;
-  specializations: string[];
-  facilities: string[];
+  facilities: Facility[];
   created_at: string;
   updated_at: string;
 }
@@ -26,7 +30,6 @@ export const hospitals: Hospital[] = [
     description_ar:
       "تُعَد فورتيس للرعاية الصحية المحدودة (Fortis Healthcare Limited) من أكبر مقدمي الرعاية الصحية الخاصة في الهند، ويقع مقرها الرئيسي في مدينة جورجاون. تأسست عام 1996 وتدير شبكة من 36 مستشفى في 11 ولاية، تشمل دلهي NCR، بنغالور، مومباي، والبنجاب. تشتهر فورتيس بنهجها المتعدد التخصصات وتقديم خدمات طبية شاملة تشمل المستشفيات، مراكز التشخيص، ومراكز الرعاية النهارية.",
     image: Fortis,
-    specializations: [],
     facilities: [],
     created_at: "2026-07-29 17:39:35",
     updated_at: "2026-07-29 17:39:35",
@@ -40,7 +43,6 @@ export const hospitals: Hospital[] = [
     description_ar:
       "تُعَد فورتيس للرعاية الصحية المحدودة (Fortis Healthcare Limited) من أكبر مقدمي الرعاية الصحية الخاصة في الهند، ويقع مقرها الرئيسي في مدينة جورجاون. تأسست عام 1996 وتدير شبكة من 36 مستشفى في 11 ولاية، تشمل دلهي NCR، بنغالور، مومباي، والبنجاب. تشتهر فورتيس بنهجها المتعدد التخصصات وتقديم خدمات طبية شاملة تشمل المستشفيات، مراكز التشخيص، ومراكز الرعاية النهارية.",
     image: Amrita,
-    specializations: [],
     facilities: [],
     created_at: "2026-07-29 17:39:29",
     updated_at: "2026-07-29 17:39:29",
@@ -54,7 +56,6 @@ export const hospitals: Hospital[] = [
     description_ar:
       "تُعَد فورتيس للرعاية الصحية المحدودة (Fortis Healthcare Limited) من أكبر مقدمي الرعاية الصحية الخاصة في الهند، ويقع مقرها الرئيسي في مدينة جورجاون. تأسست عام 1996 وتدير شبكة من 36 مستشفى في 11 ولاية، تشمل دلهي NCR، بنغالور، مومباي، والبنجاب. تشتهر فورتيس بنهجها المتعدد التخصصات وتقديم خدمات طبية شاملة تشمل المستشفيات، مراكز التشخيص، ومراكز الرعاية النهارية.",
     image: MAx,
-    specializations: [],
     facilities: [],
     created_at: "2026-07-29 17:39:03",
     updated_at: "2026-07-29 17:39:03",
@@ -68,8 +69,18 @@ export const hospitals: Hospital[] = [
     description_ar:
       "تُعَد فورتيس للرعاية الصحية المحدودة (Fortis Healthcare Limited) من أكبر مقدمي الرعاية الصحية الخاصة في الهند، ويقع مقرها الرئيسي في مدينة جورجاون. تأسست عام 1996 وتدير شبكة من 36 مستشفى في 11 ولاية، تشمل دلهي NCR، بنغالور، مومباي، والبنجاب. تشتهر فورتيس بنهجها المتعدد التخصصات وتقديم خدمات طبية شاملة تشمل المستشفيات، مراكز التشخيص، ومراكز الرعاية النهارية.",
     image: MAnipal,
-    specializations: [],
-    facilities: [],
+    facilities: [
+      {
+        id: 4,
+        name_en: "Cardiac Care 5",
+        name_ar: "رعاية القلب",
+      },
+      {
+        id: 5,
+        name_en: "Cardiac Care 4",
+        name_ar: "رعاية القلب",
+      },
+    ],
     created_at: "2026-07-29 17:39:03",
     updated_at: "2026-07-29 17:39:03",
   },

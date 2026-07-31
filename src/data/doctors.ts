@@ -22,85 +22,275 @@ export interface Doctor {
   image: string;
 }
 
-export const doctors: Doctor[] = [
+export const doctors = [
   {
-    id: 14,
+    id: 1,
     category: {
       id: 2,
-      name_en: "Cardiac Care",
+      name_en: "Cardiology",
       name_ar: "رعاية القلب",
     },
     name_en: "Dr. Rajneesh Malhotra",
-    name_ar: "rahul",
+    name_ar: "د. راجنيش مالهوترا",
     about_en:
-      "Dr. Rajneesh Malhotra is one of India’s most experienced cardiothoracic and vascular surgeons with over 31 years of dedicated practice. He has led more than 12,000 heart surgeries, with particular excellence in heart transplantation, ECMO/LVAD management, and robotic cardiac surgery",
-    about_ar: "i am dr",
-    experience_en: "30 +",
+      "Dr. Rajneesh Malhotra is one of India's most experienced cardiothoracic and vascular surgeons with over 31 years of dedicated practice. He has led more than 12,000 heart surgeries, with particular excellence in heart transplantation, ECMO/LVAD management, and robotic cardiac surgery.",
+    about_ar: "نبذة عن الطبيب",
+
+    experience_en: "31",
     experience_ar: "31",
-    qualification_en: "MBBS – King George’s Medical College, Lucknow",
-    qualification_ar: "MBBS – King George's Medical College, Lucknow",
-    specialist_en: "ASD Closures: 350+",
-    specialist_ar: "CABG (Coronary Artery Bypass Graft): 4000+",
+
+    qualifications: [
+      {
+        id: 1,
+        name_en: "MBBS - King's George Medical College",
+        name_ar: "بكالوريوس الطب والجراحة",
+      },
+      {
+        id: 2,
+        name_en: "MCh - Cardiothoracic Surgery",
+        name_ar: "جراحة القلب والصدر",
+      },
+      {
+        id: 3,
+        name_en: "Fellowship - Cardiac Surgery",
+        name_ar: "زمالة جراحة القلب",
+      },
+    ],
+
+    specialists: [
+      {
+        id: 1,
+        name_en: "Heart Transplant",
+        name_ar: "زراعة القلب",
+      },
+      {
+        id: 2,
+        name_en: "Robotic Cardiac Surgery",
+        name_ar: "جراحة القلب الروبوتية",
+      },
+      {
+        id: 3,
+        name_en: "ECMO",
+        name_ar: "إيكمو",
+      },
+    ],
+
     image: DoctorImage,
   },
   {
-    id: 12,
+    id: 2,
     category: {
       id: 2,
-      name_en: "Cardiac Care",
+      name_en: "Cardiology",
       name_ar: "رعاية القلب",
     },
-    name_en: "Dr. Bhaba Nanda Das",
-    name_ar: "rahul",
+    name_en: "Dr. Rajneesh Malhotra",
+    name_ar: "د. راجنيش مالهوترا",
     about_en:
-      "Dr. Bhaba Nanda Das is a pioneering cardiothoracic surgeon with over 35 years of surgical excellence. He has performed thousands of complex cardiac operations including CABG, valve surgeries, and congenital repairs. Dr. Das is widely respected for his dedication to advancing cardiac care in India through surgery, education, and innovation",
-    about_ar: "i am dr",
-    experience_en: "28",
-    experience_ar: "28",
-    qualification_en: "MBBS – Cuttack Medical College",
-    qualification_ar: "MBBS – King George's Medical College, Lucknow",
-    specialist_en: "Robotic Cardiac Surgeries",
-    specialist_ar: "Heart Transplant",
+      "Dr. Rajneesh Malhotra is one of India's most experienced cardiothoracic and vascular surgeons with over 31 years of dedicated practice. He has led more than 12,000 heart surgeries, with particular excellence in heart transplantation, ECMO/LVAD management, and robotic cardiac surgery.",
+    about_ar: "نبذة عن الطبيب",
+
+    experience_en: "31",
+    experience_ar: "31",
+
+    qualifications: [
+      {
+        id: 1,
+        name_en: "MBBS - King's George Medical College",
+        name_ar: "بكالوريوس الطب والجراحة",
+      },
+      {
+        id: 2,
+        name_en: "MCh - Cardiothoracic Surgery",
+        name_ar: "جراحة القلب والصدر",
+      },
+      {
+        id: 3,
+        name_en: "Fellowship - Cardiac Surgery",
+        name_ar: "زمالة جراحة القلب",
+      },
+    ],
+
+    specialists: [
+      {
+        id: 1,
+        name_en: "Heart Transplant",
+        name_ar: "زراعة القلب",
+      },
+      {
+        id: 2,
+        name_en: "Robotic Cardiac Surgery",
+        name_ar: "جراحة القلب الروبوتية",
+      },
+      {
+        id: 3,
+        name_en: "ECMO",
+        name_ar: "إيكمو",
+      },
+    ],
+
     image: DoctorImage,
   },
   {
-    id: 11,
+    id: 3,
     category: {
       id: 2,
-      name_en: "Cardiac Care",
+      name_en: "Cardiology",
       name_ar: "رعاية القلب",
     },
-    name_en: "Dr. Shyam Sunder Bansal",
-    name_ar: "rahul",
+    name_en: "Dr. Rajneesh Malhotra",
+    name_ar: "د. راجنيش مالهوترا",
     about_en:
-      "Dr. Shyam Sunder Bansal is a renowned interventional cardiologist with over 30 years of dedicated experience in managing heart diseases. Dr. Bansal is widely recognized for introducing several pioneering cardiology procedures in North India and has served as a visionary leader in cardiovascular healthcare",
-    about_ar: "i am dr",
-    experience_en: "24",
-    experience_ar: "24",
-    qualification_en: "MBBS",
-    qualification_ar: "MBBS",
-    specialist_en: "Robotic Cardiac Surgery",
-    specialist_ar: "Robotic Cardiac Surgery",
+      "Dr. Rajneesh Malhotra is one of India's most experienced cardiothoracic and vascular surgeons with over 31 years of dedicated practice. He has led more than 12,000 heart surgeries, with particular excellence in heart transplantation, ECMO/LVAD management, and robotic cardiac surgery.",
+    about_ar: "نبذة عن الطبيب",
+
+    experience_en: "31",
+    experience_ar: "31",
+
+    qualifications: [
+      {
+        id: 1,
+        name_en: "MBBS - King's George Medical College",
+        name_ar: "بكالوريوس الطب والجراحة",
+      },
+      {
+        id: 2,
+        name_en: "MCh - Cardiothoracic Surgery",
+        name_ar: "جراحة القلب والصدر",
+      },
+      {
+        id: 3,
+        name_en: "Fellowship - Cardiac Surgery",
+        name_ar: "زمالة جراحة القلب",
+      },
+    ],
+
+    specialists: [
+      {
+        id: 1,
+        name_en: "Heart Transplant",
+        name_ar: "زراعة القلب",
+      },
+      {
+        id: 2,
+        name_en: "Robotic Cardiac Surgery",
+        name_ar: "جراحة القلب الروبوتية",
+      },
+      {
+        id: 3,
+        name_en: "ECMO",
+        name_ar: "إيكمو",
+      },
+    ],
+
     image: DoctorImage,
   },
   {
-    id: 10,
+    id: 4,
     category: {
       id: 2,
-      name_en: "Cardiac Care",
+      name_en: "Cardiology",
       name_ar: "رعاية القلب",
     },
-    name_en: "Dr. Z.S. Meharwal",
-    name_ar: "rahul u",
+    name_en: "Dr. Rajneesh Malhotra",
+    name_ar: "د. راجنيش مالهوترا",
     about_en:
-      "Dr. Z.S. Meharwal is a renowned cardiothoracic and vascular surgeon with over 30 years of experience. As a founding member of Fortis Escorts Heart Institute, he has performed over 30,000 cardiac surgeries including heart transplants and LVAD implantation",
-    about_ar: "i am dr u",
-    experience_en: "8",
-    experience_ar: "8",
-    qualification_en: "MBBS",
-    qualification_ar: "MBBS",
-    specialist_en: "Cardiology",
-    specialist_ar: "Cardiology",
+      "Dr. Rajneesh Malhotra is one of India's most experienced cardiothoracic and vascular surgeons with over 31 years of dedicated practice. He has led more than 12,000 heart surgeries, with particular excellence in heart transplantation, ECMO/LVAD management, and robotic cardiac surgery.",
+    about_ar: "نبذة عن الطبيب",
+
+    experience_en: "31",
+    experience_ar: "31",
+
+    qualifications: [
+      {
+        id: 1,
+        name_en: "MBBS - King's George Medical College",
+        name_ar: "بكالوريوس الطب والجراحة",
+      },
+      {
+        id: 2,
+        name_en: "MCh - Cardiothoracic Surgery",
+        name_ar: "جراحة القلب والصدر",
+      },
+      {
+        id: 3,
+        name_en: "Fellowship - Cardiac Surgery",
+        name_ar: "زمالة جراحة القلب",
+      },
+    ],
+
+    specialists: [
+      {
+        id: 1,
+        name_en: "Heart Transplant",
+        name_ar: "زراعة القلب",
+      },
+      {
+        id: 2,
+        name_en: "Robotic Cardiac Surgery",
+        name_ar: "جراحة القلب الروبوتية",
+      },
+      {
+        id: 3,
+        name_en: "ECMO",
+        name_ar: "إيكمو",
+      },
+    ],
+
+    image: DoctorImage,
+  },
+  {
+    id: 5,
+    category: {
+      id: 2,
+      name_en: "Cardiology",
+      name_ar: "رعاية القلب",
+    },
+    name_en: "Dr. Rajneesh Malhotra",
+    name_ar: "د. راجنيش مالهوترا",
+    about_en:
+      "Dr. Rajneesh Malhotra is one of India's most experienced cardiothoracic and vascular surgeons with over 31 years of dedicated practice. He has led more than 12,000 heart surgeries, with particular excellence in heart transplantation, ECMO/LVAD management, and robotic cardiac surgery.",
+    about_ar: "نبذة عن الطبيب",
+
+    experience_en: "31",
+    experience_ar: "31",
+
+    qualifications: [
+      {
+        id: 1,
+        name_en: "MBBS - King's George Medical College",
+        name_ar: "بكالوريوس الطب والجراحة",
+      },
+      {
+        id: 2,
+        name_en: "MCh - Cardiothoracic Surgery",
+        name_ar: "جراحة القلب والصدر",
+      },
+      {
+        id: 3,
+        name_en: "Fellowship - Cardiac Surgery",
+        name_ar: "زمالة جراحة القلب",
+      },
+    ],
+
+    specialists: [
+      {
+        id: 1,
+        name_en: "Heart Transplant",
+        name_ar: "زراعة القلب",
+      },
+      {
+        id: 2,
+        name_en: "Robotic Cardiac Surgery",
+        name_ar: "جراحة القلب الروبوتية",
+      },
+      {
+        id: 3,
+        name_en: "ECMO",
+        name_ar: "إيكمو",
+      },
+    ],
+
     image: DoctorImage,
   },
 ];

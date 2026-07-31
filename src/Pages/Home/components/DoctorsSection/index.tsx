@@ -1,92 +1,4 @@
-// import { useEffect, useState } from "react";
-// import { Grid } from "@mui/material";
-
-// import IMCBox from "../../../../components/IMCBox";
-// import IMCTypography from "../../../../components/IMCTypography";
-
-// import { spacing } from "../../../../styles/spacing";
-// import { fontSizes } from "../../../../styles/fontSizes";
-// import { fontWeights } from "../../../../styles/fontWeights";
-// import { colors } from "../../../../styles/colors";
-// import DoctorCard from "../../../../components/DoctorCard";
-// import { getDoctors } from "./doctorApi";
-// import type { Doctor } from "./doctorApi";
-
-// const DoctorsSection = () => {
-//   const [doctors, setDoctors] = useState<Doctor[]>([]);
-//   const [loading, setLoading] = useState(true);
-
-//   // Change this based on selected category
-//   const categoryId = 2;
-
-//   useEffect(() => {
-//     fetchDoctors();
-//   }, []);
-
-//   const fetchDoctors = async () => {
-//     try {
-//       const data = await getDoctors(categoryId);
-//       console.log("Doctors:", data);
-
-//       setDoctors(data);
-//     } catch (error) {
-//       console.error("Error fetching doctors:", error);
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   return (
-//     <>
-//       <IMCBox
-//         margin={spacing.none}
-//         style={{
-//           width: "100%",
-//           gap: 10,
-//           padding: "30px",
-//           justifyContent: "center",
-//           alignItems: "center",
-//         }}
-//       >
-//         <IMCTypography
-//           variant="h1"
-//           size={fontSizes.xxl}
-//           weight={fontWeights.ultraBold}
-//           color={colors.msBlue}
-//           style={{
-//             lineHeight: 1,
-//             textAlign: "center",
-//             marginBottom: "32px",
-//             width: "100%",
-//           }}
-//         >
-//           Doctors
-//         </IMCTypography>
-
-//         {loading ? (
-//           <IMCTypography>Loading...</IMCTypography>
-//         ) : (
-//           <Grid container spacing={4}>
-//             {doctors.map((doctor: any) => (
-//               <Grid size={{ xs: 12, sm: 6, md: 3 }} key={doctor.id}>
-//                 <DoctorCard
-//                   image={doctor.image}
-//                   name={doctor.name_en}
-//                   specialization={doctor.category?.name ?? ""}
-//                   experience={Number(doctor.experience_en)}
-//                   onViewProfile={() => console.log(doctor.id)}
-//                 />
-//               </Grid>
-//             ))}
-//           </Grid>
-//         )}
-//       </IMCBox>
-//     </>
-//   );
-// };
-
-// export default DoctorsSection;
-import { Grid } from "@mui/material";
+import { Grid, Button } from "@mui/material";
 import IMCBox from "../../../../components/IMCBox";
 import IMCTypography from "../../../../components/IMCTypography";
 import DoctorCard from "../../../../components/DoctorCard";
@@ -95,8 +7,12 @@ import { spacing } from "../../../../styles/spacing";
 import { fontSizes } from "../../../../styles/fontSizes";
 import { fontWeights } from "../../../../styles/fontWeights";
 import { colors } from "../../../../styles/colors";
-
+import { useNavigate } from "react-router-dom";
 const DoctorsSection = () => {
+  const navigate = useNavigate();
+
+  // Show only first 4 cards initially
+  const displayedDoctors = doctors.slice(0, 4);
   return (
     <IMCBox
       margin={spacing.none}
@@ -124,19 +40,49 @@ const DoctorsSection = () => {
       </IMCTypography>
 
       <Grid container spacing={4}>
-        {doctors.map((doctor) => (
+        {displayedDoctors.map((doctor) => (
           <Grid size={{ xs: 12, sm: 6, md: 3 }} key={doctor.id}>
             <DoctorCard
+              id={doctor.id}
               image={doctor.image}
-              name={doctor.name_en}
-              about={doctor.about_en}
-              specialization={doctor.category.name_en}
-              experience={Number(doctor.experience_en)}
-              onViewProfile={() => console.log(doctor.id)}
+              name_en={doctor.name_en}
+              name_ar={doctor.name_ar}
+              about_en={doctor.about_en}
+              about_ar={doctor.about_ar}
+              experience_en={doctor.experience_en}
+              experience_ar={doctor.experience_ar}
+              category={doctor.category}
+              qualifications={doctor.qualifications}
+              specialists={doctor.specialists}
+              // onViewProfile={() => console.log(doctor.id)}
+              onViewProfile={() => navigate(`/Doctors/${doctor.id}`)}
             />
           </Grid>
         ))}
       </Grid>
+
+      <IMCBox
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "40px",
+          width: "100%",
+        }}
+      >
+        <Button
+          variant="contained"
+          onClick={() => navigate("/doctors")}
+          sx={{
+            px: 4,
+            py: 1.5,
+            borderRadius: "30px",
+            textTransform: "none",
+            backgroundColor: colors.msBlue,
+          }}
+        >
+          Explore More
+        </Button>
+      </IMCBox>
     </IMCBox>
   );
 };

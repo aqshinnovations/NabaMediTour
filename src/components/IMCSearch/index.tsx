@@ -3,7 +3,7 @@ import { Box, TextField, InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import type { CSSProperties } from "react";
 import { sizes } from "../../styles/sizes";
-import { borderRadius } from "../../styles/borderRadius";
+import { borderRadius } from "../../styles/borders";
 import { fontSizes } from "../../styles/fontSizes";
 import { borders } from "../../styles/borders";
 import { colors } from "../../styles/colors";

@@ -1,18 +1,24 @@
 import { colors } from "../../../../styles/colors";
+import { fontSizes } from "../../../../styles/fontSizes";
+import { fontWeights } from "../../../../styles/fontWeights";
+import { spacing } from "../../../../styles/spacing";
 
 export const styles = {
   section: {
     backgroundColor: colors.secondaryTeal,
     py: {
-      xs: 6,
-      md: 8,
+      xs: spacing.xxl,
+      md: spacing.xxxl,
     },
   },
 
   container: {
     maxWidth: "1200px",
     mx: "auto",
-    px: 2,
+    px: {
+      xs: spacing.md,
+      md: spacing.xl,
+    },
   },
 
   item: {
@@ -21,22 +27,22 @@ export const styles = {
 
   number: {
     color: colors.white,
-    fontWeight: 700,
+    fontWeight: fontWeights.bold,
     fontSize: {
-      xs: "2.2rem",
-      md: "3.2rem",
+      xs: fontSizes.xl,
+      md: fontSizes.xxl,
     },
     lineHeight: 1,
-    mb: 1,
+    mb: spacing.sm,
   },
 
   title: {
     color: colors.white,
     fontSize: {
-      xs: "1rem",
-      md: "1.2rem",
+      xs: fontSizes.base,
+      md: fontSizes.md,
     },
-    fontWeight: 400,
+    fontWeight: fontWeights.regular,
     opacity: 0.95,
   },
 };

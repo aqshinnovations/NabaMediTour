@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { borders } from "../../styles/borders";
-import { borderRadius } from "../../styles/borderRadius";
+import { borderRadius } from "../../styles/borders";
 import { spacing } from "../../styles/spacing";
 import { colors } from "../../styles/colors";
 import { Icons } from "../../styles/icons";
@@ -32,7 +32,7 @@ const IMCDropDown: React.FC<DropdownButtonProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState<string | number | undefined>(
-    defaultValue
+    defaultValue,
   );
 
   const handleSelect = (value: string | number) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Icons } from "../../styles/icons";
 import { colors } from "../../styles/colors";
-import { borderRadius } from "../../styles/borderRadius";
+import { borderRadius } from "../../styles/borders";
 import { shadows } from "../../styles/shadows";
 import { fontSizes } from "../../styles/fontSizes";
 import { fontWeights } from "../../styles/fontWeights";
@@ -16,7 +16,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
   message = "Hello, I want to get in touch with you!",
 }) => {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-    message
+    message,
   )}`;
 
   return (

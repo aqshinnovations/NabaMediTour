@@ -1,15 +1,17 @@
 import { Box, Button, Container, Typography } from "@mui/material";
-import StarIcon from "@mui/icons-material/Star";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import StarIcon from "@mui/icons-material/Star";
+import { useNavigate } from "react-router-dom";
 import { styles } from "./styles";
 
 const CTASection = () => {
+  const navigate = useNavigate();
   return (
     <Box sx={styles.section}>
-      <Container maxWidth="lg">
+      <Container sx={styles.container}>
         <Box sx={styles.stars}>
-          {[...Array(5)].map((_, i) => (
-            <StarIcon key={i} />
+          {[...Array(5)].map((_, index) => (
+            <StarIcon key={index} />
           ))}
         </Box>
 
@@ -24,8 +26,9 @@ const CTASection = () => {
 
         <Button
           variant="contained"
-          endIcon={<ArrowForwardIcon />}
+          endIcon={<ArrowForwardIcon sx={styles.arrow} />}
           sx={styles.button}
+          onClick={() => navigate("/contactUs")}
         >
           Get Free Consultation
         </Button>

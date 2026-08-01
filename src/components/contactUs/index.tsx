@@ -8,7 +8,7 @@ import { spacing } from "../../styles/spacing";
 import IMCBox from "../IMCBox";
 import { colors } from "../../styles/colors";
 import IMCButton from "../IMCButton";
-import { borderRadius } from "../../styles/borderRadius";
+import { borderRadius } from "../../styles/borders";
 import { shadows } from "../../styles/shadows";
 import { apiCallPostFormData, apiUrl } from "../../utils/api";
 import { showSuccess, showError } from "../../utils/toast";
@@ -26,7 +26,7 @@ const ContactUs: React.FC = () => {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
 
@@ -56,7 +56,7 @@ const ContactUs: React.FC = () => {
     } else if (!phone) {
       showError("Phone number is required.");
       return;
-    } 
+    }
 
     const formDetails = new FormData();
     formDetails.append("name", name);
@@ -89,7 +89,7 @@ const ContactUs: React.FC = () => {
       (err) => {
         console.error("Error:", err);
         showError("Something went wrong.Please try again!");
-      }
+      },
     );
   };
 

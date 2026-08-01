@@ -1,23 +1,18 @@
 import { useState } from "react";
 import { Box, Chip, Grid } from "@mui/material";
-import DoctorCard from "../../components/DoctorCard";
-import { doctors } from "../../data/doctors";
 import { useNavigate } from "react-router-dom";
+
+import DoctorCard from "../../components/DoctorCard";
 import PageHero from "../../components/PageHero";
 
-const specializations = [
-  "All",
-  "Cardiologist",
-  "Oncologist",
-  "Neurosurgeon",
-  "Orthopedic Surgeon",
-  "Plastic Surgeon",
-  "Dental Surgeon",
-];
+import { doctors } from "../../data/doctors";
+import { specializations } from "../../data/specializations";
+import { styles } from "./styles";
 
 const Doctors = () => {
   const [selected, setSelected] = useState("All");
   const navigate = useNavigate();
+
   const filteredDoctors =
     selected === "All"
       ? doctors
@@ -26,50 +21,28 @@ const Doctors = () => {
             (specialist) => specialist.name_en === selected,
           ),
         );
+
   return (
     <>
-      {/* Hero */}
-
       <PageHero
         title="Our Doctors"
         description="Highly qualified and experienced specialists dedicated to providing exceptional medical care."
       />
 
-      {/* Filter */}
-      <Box
-        sx={{
-          py: 5,
-          display: "flex",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          gap: 2,
-          background: "#fff",
-        }}
-      >
+      <Box sx={styles.filterSection}>
         {specializations.map((item) => (
           <Chip
             key={item}
             label={item}
             onClick={() => setSelected(item)}
             color={selected === item ? "primary" : "default"}
-            sx={{
-              borderRadius: "30px",
-              px: 1,
-              py: 2.8,
-              fontSize: "15px",
-            }}
+            sx={styles.chip}
           />
         ))}
       </Box>
 
-      {/* Doctors */}
-      <Box
-        sx={{
-          background: "#f7f9fc",
-          py: 8,
-        }}
-      >
-        <Grid container spacing={4} maxWidth="1200px" mx="auto">
+      <Box sx={styles.doctorsSection}>
+        <Grid container spacing={4} sx={styles.grid}>
           {filteredDoctors.map((doctor) => (
             <Grid
               key={doctor.id}

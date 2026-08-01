@@ -21,6 +21,7 @@ export const commonStyles = {
     justifyContent: "center",
     alignItems: "center",
     gap: "10px",
+    background: "#000",
   },
   exploreMoreContainer: {
     display: "flex",

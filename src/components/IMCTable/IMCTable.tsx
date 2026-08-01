@@ -8,7 +8,7 @@ import {
   Paper,
 } from "@mui/material";
 import { colors } from "../../styles/colors";
-import { borderRadius } from "../../styles/borderRadius";
+import { borderRadius } from "../../styles/borders";
 
 export interface Column<T> {
   id: keyof T;

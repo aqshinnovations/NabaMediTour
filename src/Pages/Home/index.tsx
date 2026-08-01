@@ -8,7 +8,6 @@ const Home = () => {
     <>
       <Hero />
       <StatsSection />
-
       <HospitalSection />
       <DoctorsSection />
       <CTASection />

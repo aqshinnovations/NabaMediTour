@@ -1,5 +1,5 @@
 import type { SxProps, Theme } from "@mui/material";
-import { borderRadius } from "../../styles/borderRadius";
+import { borderRadius } from "../../styles/borders";
 import { colors } from "../../styles/colors";
 import { fontWeights } from "../../styles/fontWeights";
 import { sizes } from "../../styles/sizes";

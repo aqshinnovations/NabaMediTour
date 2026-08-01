@@ -1,67 +1,76 @@
+import { borderRadius } from "../../../../styles/borders";
 import { colors } from "../../../../styles/colors";
+import { fontSizes } from "../../../../styles/fontSizes";
+import { fontWeights } from "../../../../styles/fontWeights";
+import { shadows } from "../../../../styles/shadows";
+import { spacing } from "../../../../styles/spacing";
 
 export const styles = {
   section: {
     background: "linear-gradient(180deg, #0F999C 0%, #0E8C97 100%)",
     py: {
-      xs: 8,
-      md: 10,
+      xs: spacing.xxxl,
+      md: "80px", // spacing doesn't have 80px
     },
     textAlign: "center",
+  },
+
+  container: {
+    maxWidth: "1200px",
   },
 
   stars: {
     color: colors.msYellow,
     display: "flex",
     justifyContent: "center",
-    gap: 0.5,
-    mb: 3,
+    gap: spacing.xs,
+    mb: spacing.lg,
   },
 
   title: {
     color: colors.white,
-    fontWeight: 700,
+    fontWeight: fontWeights.bold,
     fontSize: {
-      xs: "2rem",
-      md: "3rem",
+      xs: fontSizes.lg,
+      md: fontSizes.xl,
     },
-    mb: 2,
+    mb: spacing.md,
   },
 
   subtitle: {
     color: colors.white,
     fontSize: {
-      xs: "1rem",
-      md: "1.35rem",
+      xs: fontSizes.md,
+      md: fontSizes.md,
     },
-    maxWidth: 850,
+    maxWidth: "850px",
     mx: "auto",
-    mb: 5,
+    mb: spacing.xxl,
     lineHeight: 1.6,
   },
 
   button: {
     backgroundColor: colors.white,
     color: colors.secondaryTeal,
-    borderRadius: "14px",
-    px: 5,
-    py: 2,
-    fontSize: "1.15rem",
-    fontWeight: 600,
+    borderRadius: borderRadius.lg,
+    px: spacing.sm,
+    py: spacing.sm,
+    fontSize: fontSizes.md,
+    fontWeight: fontWeights.semiBold,
     textTransform: "none",
-    minWidth: 310,
-    boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+    minWidth: "250px",
+    boxShadow: shadows.heavy,
     transition: "0.3s",
 
     "&:hover": {
       backgroundColor: colors.white,
       transform: "translateY(-3px)",
-      boxShadow: "0 15px 35px rgba(0,0,0,0.25)",
+      boxShadow: shadows.heavy,
     },
   },
 
   arrow: {
-    ml: 1,
-    fontSize: 24,
+    ml: spacing.xs,
+    fontSize: fontSizes.lg,
   },
 };

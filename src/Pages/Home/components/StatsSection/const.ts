@@ -6,18 +6,18 @@ export interface StatItem {
 export const stats: StatItem[] = [
   {
     number: "50,000+",
-    title: "Patients Served",
+    title: "section.patientsServed",
   },
   {
     number: "120+",
-    title: "Partner Hospitals",
+    title: "section.partnerHospitals",
   },
   {
     number: "45+",
-    title: "Countries",
+    title: "section.countries",
   },
   {
     number: "98%",
-    title: "Success Rate",
+    title: "section.satisfactionRate",
   },
 ];

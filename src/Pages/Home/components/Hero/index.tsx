@@ -5,16 +5,16 @@ import { fontSizes } from "../../../../styles/fontSizes";
 import { fontWeights } from "../../../../styles/fontWeights";
 import { spacing } from "../../../../styles/spacing";
 import { styles } from "./style";
-
+import { useTranslation } from "react-i18next";
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <IMCBox margin={spacing.none} style={styles.hero}>
       <IMCBox style={styles.container}>
         <IMCBox style={styles.content}>
           {/* Badge */}
-          <IMCBox style={styles.badge}>
-            ❤️ Trusted by 50,000+ patients globally
-          </IMCBox>
+          <IMCBox style={styles.badge}>{t("section.trusted")} </IMCBox>
 
           {/* Heading */}
           <IMCTypography
@@ -24,9 +24,13 @@ const Hero = () => {
             color={colors.white}
             style={styles.heading}
           >
-            World-Class Healthcare,
+            {t("section.heroTitle")}
+
             <br />
-            <span style={styles.headingHighlight}>Anywhere in the World</span>
+            <span style={styles.headingHighlight}>
+              {" "}
+              {t("section.heroSubtitle")}
+            </span>
           </IMCTypography>
 
           {/* Description */}
@@ -37,18 +41,19 @@ const Hero = () => {
             weight={fontWeights.regular}
             style={styles.description}
           >
-            Connect with internationally accredited hospitals and renowned
-            specialists. We handle every detail of your medical journey—from
-            consultation to recovery.
+            {t("section.heroDescription")}
           </IMCTypography>
 
           {/* Buttons */}
           <IMCBox style={styles.buttonContainer}>
             <button style={styles.primaryButton}>
-              Get Free Consultation →
+              {t("section.getFreeConsultation")}
             </button>
 
-            <button style={styles.secondaryButton}>Explore Treatments</button>
+            <button style={styles.secondaryButton}>
+              {" "}
+              {t("section.exploreTreatments")}
+            </button>
           </IMCBox>
         </IMCBox>
       </IMCBox>

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import IMCBox from "../../../../components/IMCBox";
 import IMCTypography from "../../../../components/IMCTypography";
 import HospitalCard from "../../../../components/HospitalCard";
+import { useTranslation } from "react-i18next";
 
 import { hospitals } from "../../../../data/hospitals";
 import { commonStyles } from "../../../../constants/commonStyles";
@@ -12,11 +13,12 @@ import { spacing } from "../../../../styles/spacing";
 
 const HospitalSection = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <IMCBox style={styles.section} margin={spacing.none}>
       <IMCTypography variant="h2" style={commonStyles.sectionTitle}>
-        Hospitals
+        {t("section.hospitals")}
       </IMCTypography>
 
       <Grid container spacing={2} sx={styles.grid}>
@@ -43,7 +45,7 @@ const HospitalSection = () => {
             onClick={() => navigate("/hospitals")}
             sx={commonStyles.exploreMoreButton}
           >
-            Explore More
+            {t("section.exploreMore")}
           </Button>
         </IMCBox>
       )}

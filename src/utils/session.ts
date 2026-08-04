@@ -1,13 +1,12 @@
-const LANGUAGE_KEY = "language";
+const LANGUAGE = "language";
 
-export const setLanguage = (lang: string): void => {
-  localStorage.setItem(LANGUAGE_KEY, lang);
+export const getLanguage = () => {
+  return localStorage.getItem(LANGUAGE) || "en";
 };
 
-export const getLanguage = (): string => {
-  return localStorage.getItem(LANGUAGE_KEY) || "en";
+export const setLanguage = (lang: string) => {
+  localStorage.setItem(LANGUAGE, lang);
 };
-
 export const removeLanguage = (): void => {
-  localStorage.removeItem(LANGUAGE_KEY);
+  localStorage.removeItem(LANGUAGE);
 };

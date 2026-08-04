@@ -1,18 +1,23 @@
 import { Grid, Stack, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const items = [
-  "Cardiology",
-  "Orthopedics",
-  "Oncology",
-  "Neurology",
-  "Cosmetic Surgery",
+  "footer.cardiology",
+  "footer.orthopedics",
+  "footer.oncology",
+  "footer.neurology",
+  "footer.cosmeticSurgery",
 ];
 
 const TreatmentsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <Grid size={{ xs: 6, md: 2 }}>
       <Stack spacing={2}>
-        <Typography fontWeight={700}>Treatments</Typography>
+        <Typography variant="h6" color="#fff" fontWeight={600}>
+          {t("footer.treatments")}
+        </Typography>
 
         {items.map((item) => (
           <Typography
@@ -25,7 +30,7 @@ const TreatmentsSection = () => {
               },
             }}
           >
-            {item}
+            {t(item)}
           </Typography>
         ))}
       </Stack>

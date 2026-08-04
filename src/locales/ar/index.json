@@ -1,0 +1,58 @@
+{
+  "navbar": {
+    "home": "الرئيسية",
+    "treatments": "العلاجات",
+    "doctors": "الأطباء",
+    "hospitals": "المستشفيات",
+    "blog": "المدونة",
+    "services": "الخدمات",
+    "consultation": "استشارة مجانية",
+    "brand": "نابا ميدي تور",
+    "title": "اتصل بنا"
+  },
+  "section": {
+    "hospitals": "المستشفيات",
+    "doctors": "الأطباء",
+    "ctaTitle": "ابدأ رحلتك العلاجية اليوم",
+    "ctaDescription": "احصل على استشارة مجانية مع خبرائنا الطبيين. بدون رسوم، وبدون أي التزامات.",
+    "exploreMore": "استكشف المزيد",
+    "patientsServed": "المرضى الذين تمت خدمتهم",
+    "partnerHospitals": "المستشفيات الشريكة",
+    "countries": "الدول",
+    "satisfactionRate": "معدل رضا المرضى",
+    "trusted": "❤️ موثوق به من أكثر من 50,000 مريض حول العالم",
+    "heroTitle": "رعاية صحية عالمية المستوى",
+    "heroSubtitle": "في أي مكان حول العالم",
+    "heroDescription": "تواصل مع مستشفيات معتمدة دوليًا وأطباء متخصصين ذوي خبرة. نحن نهتم بكل تفاصيل رحلتك العلاجية، من الاستشارة وحتى التعافي.",
+    "getFreeConsultation": "احصل على استشارة مجانية",
+    "exploreTreatments": "استكشف العلاجات"
+  },
+
+  "footer": {
+    "brand": "نابا ميدي تور",
+    "description": "نربط المرضى حول العالم برعاية طبية عالمية المستوى. رحلتك الصحية هي أولويتنا.",
+
+    "treatments": "العلاجات",
+    "cardiology": "أمراض القلب",
+    "orthopedics": "جراحة العظام",
+    "oncology": "طب الأورام",
+    "neurology": "طب الأعصاب",
+    "cosmeticSurgery": "الجراحة التجميلية",
+
+    "company": "الشركة",
+    "hospitals": "المستشفيات",
+    "doctors": "الأطباء",
+    "technology": "التقنيات",
+    "blog": "المدونة",
+    "contact": "اتصل بنا",
+
+    "getInTouch": "تواصل معنا",
+    "address": "نيودلهي، الهند",
+    "phone": "+91 98915 67245",
+    "email": "nabameditour@gmail.com",
+
+    "copyright": "© 2026 نابا ميدي تور. جميع الحقوق محفوظة.",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة"
+  }
+}

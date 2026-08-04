@@ -5,32 +5,29 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   {
-    label: "Home",
+    label: "navbar.home",
     path: "/",
   },
   {
-    label: "Treatments",
+    label: "navbar.treatments",
     path: "/treatments",
   },
 
   {
-    label: "Doctors",
+    label: "navbar.doctors",
     path: "/doctors",
   },
   {
-    label: "Hospitals",
+    label: "navbar.hospitals",
     path: "/hospitals",
   },
-  // {
-  //   label: "Technology",
-  //   path: "/technology",
-  // },
+
   {
-    label: "Blog",
+    label: "navbar.blog",
     path: "/blogs",
   },
-  // {
-  //   label: "Contact",
-  //   path: "/contact",
-  // },
+  {
+    label: "navbar.services",
+    path: "/Services",
+  },
 ];

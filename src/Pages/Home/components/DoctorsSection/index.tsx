@@ -9,16 +9,18 @@ import { doctors } from "../../../../data/doctors";
 import { commonStyles } from "../../../../constants/commonStyles";
 import { styles } from "./styles";
 import { spacing } from "../../../../styles/spacing";
+import { useTranslation } from "react-i18next";
 
 const DoctorsSection = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const displayedDoctors = doctors.slice(0, 4);
 
   return (
     <IMCBox style={styles.section} margin={spacing.none}>
       <IMCTypography variant="h2" style={commonStyles.sectionTitle}>
-        Doctors
+        {t("section.doctors")}
       </IMCTypography>
 
       <Grid container spacing={4} sx={styles.grid}>
@@ -49,7 +51,7 @@ const DoctorsSection = () => {
             onClick={() => navigate("/doctors")}
             sx={commonStyles.exploreMoreButton}
           >
-            Explore More
+            {t("section.exploreMore")}
           </Button>
         </IMCBox>
       )}

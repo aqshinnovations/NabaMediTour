@@ -5,6 +5,7 @@ import { borderRadius } from "../../styles/borders";
 import { shadows } from "../../styles/shadows";
 import { fontSizes } from "../../styles/fontSizes";
 import { fontWeights } from "../../styles/fontWeights";
+import { useTranslation } from "react-i18next";
 
 interface WhatsAppButtonProps {
   phoneNumber?: string;
@@ -12,9 +13,11 @@ interface WhatsAppButtonProps {
 }
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
-  phoneNumber = "919211924515",
+  phoneNumber = "9198915 67245",
   message = "Hello, I want to get in touch with you!",
 }) => {
+  const { t } = useTranslation();
+
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message,
   )}`;
@@ -29,7 +32,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
       onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
     >
       <Icons.WhatsAppIcon style={iconStyle} />
-      <span style={textStyle}>Contact Us/ اتصلوابنا</span>
+      <span style={textStyle}>{t("navbar.title")}</span>
     </a>
   );
 };

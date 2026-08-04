@@ -19,7 +19,7 @@ import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import { navItems } from "./constants";
-
+import LanguageSwitcher from "../LanguageSwitcher";
 import {
   navbarStyle,
   navContainer,
@@ -33,11 +33,14 @@ import {
   drawerItem,
   activeDrawer,
 } from "./styles";
+import { useTranslation } from "react-i18next";
+import { spacing } from "../../styles/spacing";
 
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const theme = useTheme();
+  const { t } = useTranslation();
 
   const mobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -63,7 +66,7 @@ const Navbar = () => {
             />
 
             <Typography fontWeight={700} color="#1F2937">
-              Nabameditour
+              {t("navbar.brand")}
             </Typography>
           </Box>
 
@@ -80,17 +83,26 @@ const Navbar = () => {
                       ...(location.pathname === item.path ? activeButton : {}),
                     }}
                   >
-                    {item.label}
+                    {t(item.label)}
                   </Button>
                 ))}
               </Box>
-
+              <Box
+                sx={{
+                  mt: 2,
+                  mb: 2,
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <LanguageSwitcher />
+              </Box>
               <Button
                 onClick={() => navigate("/contactUs")}
-                startIcon={<PhoneOutlinedIcon />}
+                startIcon={<PhoneOutlinedIcon style={{ margin: spacing.sm }} />}
                 sx={consultationButton}
               >
-                Free Consultation
+                {t("navbar.consultation")}
               </Button>
             </>
           )}
@@ -123,10 +135,19 @@ const Navbar = () => {
                   ...(location.pathname === item.path ? activeDrawer : {}),
                 }}
               >
-                <ListItemText primary={item.label} />
+                <ListItemText primary={t(item.label)} />
               </ListItemButton>
             ))}
-
+            <Box
+              sx={{
+                mt: 2,
+                mb: 2,
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <LanguageSwitcher />
+            </Box>
             <Button
               fullWidth
               startIcon={<PhoneOutlinedIcon />}
@@ -139,7 +160,7 @@ const Navbar = () => {
                 navigate("/contactUs");
               }}
             >
-              Free Consultation
+              {t("navbar.consultation")}
             </Button>
           </List>
         </Box>

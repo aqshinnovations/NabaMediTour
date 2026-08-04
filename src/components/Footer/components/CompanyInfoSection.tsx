@@ -5,7 +5,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { colors } from "../../../styles/colors";
 import FavoriteImg from "../../../assets/images/logo.jpeg";
+
+import { useTranslation } from "react-i18next";
+
 const CompanyInfoSection = () => {
+  const { t } = useTranslation();
+
   return (
     <Grid size={{ xs: 12, md: 4 }}>
       {" "}
@@ -24,7 +29,7 @@ const CompanyInfoSection = () => {
           {/* </Stack> */}
 
           <Typography fontWeight={700} fontSize={30} color={colors.white}>
-            Nabameditour
+            {t("footer.brand")}
           </Typography>
         </Stack>
 
@@ -35,8 +40,7 @@ const CompanyInfoSection = () => {
             maxWidth: 330,
           }}
         >
-          Connecting patients worldwide with world-class medical care. Your
-          health journey, our priority.
+          {t("footer.description")}
         </Typography>
 
         <Stack direction="row" spacing={2}>

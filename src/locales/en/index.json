@@ -1,0 +1,58 @@
+{
+  "navbar": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "doctors": "Doctors",
+    "hospitals": "Hospitals",
+    "blog": "Blog",
+    "services": "Services",
+    "consultation": "Free Consultation",
+    "brand": "NabaMediTour",
+    "title": "Contact Us"
+  },
+  "section": {
+    "hospitals": "Hospitals",
+    "doctors": "Doctors",
+    "ctaTitle": "Start Your Healing Journey Today",
+    "ctaDescription": "Get a free consultation with our medical experts. No fees, no obligations.",
+    "exploreMore": "Explore More",
+    "patientsServed": "Patients Served",
+    "partnerHospitals": "Partner Hospitals",
+    "countries": "Countries",
+    "satisfactionRate": "Satisfaction Rate",
+    "trusted": "❤️ Trusted by 50,000+ patients globally",
+    "heroTitle": "World-Class Healthcare",
+    "heroSubtitle": "Anywhere in the World",
+    "heroDescription": "Connect with internationally accredited hospitals and renowned specialists. We handle every detail of your medical journey—from consultation to recovery.",
+    "getFreeConsultation": "Get Free Consultation",
+    "exploreTreatments": "Explore Treatments"
+  },
+
+  "footer": {
+    "brand": "نابا ميدي تور",
+    "description": "نربط المرضى حول العالم برعاية طبية عالمية المستوى. رحلتك الصحية هي أولويتنا.",
+
+    "treatments": "العلاجات",
+    "cardiology": "أمراض القلب",
+    "orthopedics": "جراحة العظام",
+    "oncology": "طب الأورام",
+    "neurology": "طب الأعصاب",
+    "cosmeticSurgery": "الجراحة التجميلية",
+
+    "company": "الشركة",
+    "hospitals": "المستشفيات",
+    "doctors": "الأطباء",
+    "technology": "التقنيات",
+    "blog": "المدونة",
+    "contact": "اتصل بنا",
+
+    "getInTouch": "تواصل معنا",
+    "address": "نيودلهي، الهند",
+    "phone": "+91 98915 67245",
+    "email": "nabameditour@gmail.com",
+
+    "copyright": "© 2026 نابا ميدي تور. جميع الحقوق محفوظة.",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة"
+  }
+}

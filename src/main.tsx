@@ -27,7 +27,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         </BrowserRouter>
       </ThemeProvider>
     </CacheProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
-
-

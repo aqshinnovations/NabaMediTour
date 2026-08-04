@@ -127,4 +127,43 @@ export const hospitals: Hospital[] = [
     created_at: "2026-07-29 17:39:03",
     updated_at: "2026-07-29 17:39:03",
   },
+  {
+    id: 7,
+    name_en: "Manipal Hospitals",
+    name_ar: "مستشفي فورتس1",
+    description_en:
+      "Manipal Hospitals is one of India’s leading private healthcare chains, renowned for delivering high-quality, patient-centric care across multiple specialties. Established with a vision to provide accessible, world-class medical services, Manipal Hospitals has a presence in multiple cities across India and overseas. With modern infrastructure, advanced medical technologies, and a large pool of experienced specialists, it offers comprehensive care for complex medical conditions.",
+    description_ar:
+      "تُعَد فورتيس للرعاية الصحية المحدودة (Fortis Healthcare Limited) من أكبر مقدمي الرعاية الصحية الخاصة في الهند، ويقع مقرها الرئيسي في مدينة جورجاون. تأسست عام 1996 وتدير شبكة من 36 مستشفى في 11 ولاية، تشمل دلهي NCR، بنغالور، مومباي، والبنجاب. تشتهر فورتيس بنهجها المتعدد التخصصات وتقديم خدمات طبية شاملة تشمل المستشفيات، مراكز التشخيص، ومراكز الرعاية النهارية.",
+    image: MAnipal,
+    facilities: [
+      {
+        id: 4,
+        name_en: "Cardiac Care 5",
+        name_ar: "رعاية القلب",
+      },
+      {
+        id: 5,
+        name_en: "Cardiac Care 4",
+        name_ar: "رعاية القلب",
+      },
+      {
+        id: 6,
+        name_en: "Cardiac Care 4",
+        name_ar: "رعاية القلب",
+      },
+      {
+        id: 7,
+        name_en: "Cardiac Care 4",
+        name_ar: "رعاية القلب",
+      },
+      {
+        id: 8,
+        name_en: "Cardiac Care 4",
+        name_ar: "رعاية القلب",
+      },
+    ],
+    created_at: "2026-07-29 17:39:03",
+    updated_at: "2026-07-29 17:39:03",
+  },
 ];

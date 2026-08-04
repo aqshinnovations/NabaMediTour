@@ -3,8 +3,11 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import StarIcon from "@mui/icons-material/Star";
 import { useNavigate } from "react-router-dom";
 import { styles } from "./styles";
+import { useTranslation } from "react-i18next";
 
 const CTASection = () => {
+  const { t } = useTranslation();
+
   const navigate = useNavigate();
   return (
     <Box sx={styles.section}>
@@ -15,13 +18,10 @@ const CTASection = () => {
           ))}
         </Box>
 
-        <Typography sx={styles.title}>
-          Start Your Healing Journey Today
-        </Typography>
+        <Typography sx={styles.title}>{t("section.ctaTitle")}</Typography>
 
         <Typography sx={styles.subtitle}>
-          Get a free consultation with our medical experts. No fees, no
-          obligations.
+          {t("section.ctaDescription")}
         </Typography>
 
         <Button
@@ -30,7 +30,7 @@ const CTASection = () => {
           sx={styles.button}
           onClick={() => navigate("/contactUs")}
         >
-          Get Free Consultation
+          {t("section.getFreeConsultation")}
         </Button>
       </Container>
     </Box>

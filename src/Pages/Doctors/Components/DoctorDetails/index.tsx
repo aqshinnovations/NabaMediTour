@@ -10,6 +10,12 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { fontSizes } from "../../../../styles/fontSizes";
 import { doctors } from "../../../../data/doctors";
 import { useNavigate, useParams } from "react-router-dom";
+import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
+import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
+import { commonStyles } from "../../../../constants/commonStyles";
+import { spacing } from "../../../../styles/spacing";
+import ContactCTA from "../../../../components/ContactCTA";
 
 const DoctorsDetails = () => {
   const navigate = useNavigate();
@@ -92,7 +98,6 @@ const DoctorsDetails = () => {
           >
             About
           </IMCTypography>
-
           <IMCTypography
             variant="body"
             size={fontSizes.md}
@@ -101,11 +106,9 @@ const DoctorsDetails = () => {
           >
             {doctor.about_en}
           </IMCTypography>
-
-          {/* Specializations */}
-          <IMCBox style={styles.infoGrid}>
+          <Grid container spacing={4}>
             {/* Qualifications */}
-            <IMCBox>
+            <Grid size={{ xs: 12, md: 4 }}>
               <IMCTypography
                 variant="h3"
                 weight={fontWeights.bold}
@@ -118,16 +121,15 @@ const DoctorsDetails = () => {
               {doctor.qualifications.map((qualification) => (
                 <IMCBox key={qualification.id} style={styles.infoItem}>
                   <SchoolOutlinedIcon sx={{ color: colors.primary }} />
-
                   <IMCTypography variant="body" size={fontSizes.md}>
                     {qualification.name_en}
                   </IMCTypography>
                 </IMCBox>
               ))}
-            </IMCBox>
+            </Grid>
 
             {/* Specializations */}
-            <IMCBox>
+            <Grid size={{ xs: 12, md: 4 }}>
               <IMCTypography
                 variant="h3"
                 weight={fontWeights.bold}
@@ -140,18 +142,91 @@ const DoctorsDetails = () => {
               {doctor.specialists.map((specialist) => (
                 <IMCBox key={specialist.id} style={styles.infoItem}>
                   <BookmarkBorderIcon sx={{ color: colors.primary }} />
-
                   <IMCTypography variant="body" size={fontSizes.md}>
                     {specialist.name_en}
                   </IMCTypography>
                 </IMCBox>
               ))}
-            </IMCBox>
-          </IMCBox>
+            </Grid>
+
+            {/* Awards */}
+            <Grid size={{ xs: 12, md: 4 }}>
+              <IMCTypography
+                variant="h3"
+                weight={fontWeights.bold}
+                size="30"
+                style={{ marginBottom: 20 }}
+              >
+                Awards
+              </IMCTypography>
+
+              {doctor.awards.map((award) => (
+                <IMCBox key={award.id} style={styles.infoItem}>
+                  <EmojiEventsOutlinedIcon sx={{ color: colors.primary }} />
+                  <IMCTypography variant="body" size={fontSizes.md}>
+                    {award.name_en}
+                  </IMCTypography>
+                </IMCBox>
+              ))}
+            </Grid>
+          </Grid>
         </IMCBox>
 
         {/* Right Card */}
       </IMCBox>
+      {/* Gallery */}
+      <IMCBox
+        backgroundColor={colors.iceBlue}
+        padding={spacing.md}
+        margin={spacing.none}
+      >
+        <IMCTypography variant="h3" style={commonStyles.sectionTitle}>
+          Gallery
+        </IMCTypography>
+
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "repeat(2, 1fr)",
+              sm: "repeat(3, 1fr)",
+              md: "repeat(4, 1fr)",
+            },
+            gap: 2,
+          }}
+        >
+          {doctor.images.map((img) => (
+            <Box
+              key={img.id}
+              sx={{
+                overflow: "hidden",
+                borderRadius: 2,
+                boxShadow: 2,
+                cursor: "pointer",
+              }}
+            >
+              <img
+                src={img.image}
+                alt={`Gallery ${img.id}`}
+                style={{
+                  width: "100%",
+                  height: "220px",
+                  objectFit: "cover",
+                  display: "block",
+                  transition: "transform .3s ease",
+                }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.05)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
+              />
+            </Box>
+          ))}
+        </Box>
+      </IMCBox>
+      <ContactCTA />
     </>
   );
 };

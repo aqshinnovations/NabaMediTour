@@ -55,11 +55,11 @@ export const styles = {
   },
 
   body: {
-    maxWidth: "1200px",
-    margin: `${spacing.xxxl} auto`,
+    maxWidth: "1400px",
+    margin: `${spacing.md} auto`,
     display: "grid",
     gridTemplateColumns: "2fr 1fr",
-    gap: spacing.xxxl,
+    gap: spacing.xl,
     padding: `0 ${spacing.base}`,
   },
 
@@ -72,17 +72,9 @@ export const styles = {
     marginBottom: spacing.xxxl,
   },
 
-  infoGrid: {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: spacing.xxxl,
-    marginTop: spacing.xl,
-  },
-
   infoItem: {
     display: "flex",
     alignItems: "center",
-    gap: spacing.md,
-    marginBottom: spacing.md,
+    gap: spacing.xs,
   },
 };

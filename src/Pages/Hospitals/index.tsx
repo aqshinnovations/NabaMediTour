@@ -1,6 +1,6 @@
-import IMCBox from "../../components/IMCBox";
 import HospitalCard from "../../components/HospitalCard";
 import PageHero from "../../components/PageHero";
+import { Grid } from "@mui/material";
 
 import { hospitals } from "../../data/hospitals";
 import { styles } from "./styles";
@@ -12,22 +12,45 @@ const Hospitals = () => {
         title="Our Hospitals"
         description="Partner hospitals equipped with world-class facilities and advanced medical technology."
       />
-
-      <IMCBox style={styles.hospitalsContainer}>
+      <Grid container spacing={3} sx={styles.grid}>
         {hospitals.map((hospital) => (
-          <HospitalCard
+          <Grid
             key={hospital.id}
-            id={hospital.id}
-            image={hospital.image}
-            name={hospital.name_en}
-            location="India"
-            description={hospital.description_en}
-            specializations={hospital.facilities.map(
-              (facility) => facility.name_en,
-            )}
-          />
+            size={{ xs: 12, md: 6 }}
+            sx={{ display: "flex" }}
+          >
+            <HospitalCard
+              id={hospital.id}
+              image={hospital.image}
+              name={hospital.name_en}
+              location="India"
+              description={hospital.description_en}
+              specializations={hospital.facilities.map(
+                (facility) => facility.name_en,
+              )}
+            />
+          </Grid>
         ))}
-      </IMCBox>
+      </Grid>
+      {/* <Grid container spacing={3} sx={styles.grid}>
+        {hospitals.map((hospital) => (
+          <Grid
+            key={hospital.id}
+            size={{ xs: 12, md: 6 }} // MUI v7
+          >
+            <HospitalCard
+              id={hospital.id}
+              image={hospital.image}
+              name={hospital.name_en}
+              location="India"
+              description={hospital.description_en}
+              specializations={hospital.facilities.map(
+                (facility) => facility.name_en,
+              )}
+            />
+          </Grid>
+        ))}
+      </Grid> */}
     </>
   );
 };

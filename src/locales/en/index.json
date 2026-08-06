@@ -27,6 +27,15 @@
     "getFreeConsultation": "Get Free Consultation",
     "exploreTreatments": "Explore Treatments"
   },
+  "contactCTA": {
+    "title": "Get in Touch",
+    "description": "Speak with our experienced medical coordinators today. Receive a FREE consultation, personalized treatment guidance, hospital recommendations, and cost estimates.",
+    "consultationButton": "Free Consultation",
+    "whatsappButton": "WhatsApp"
+  },
+  "testimonials": {
+    "title": "Patient Testimonials"
+  },
 
   "footer": {
     "brand": "نابا ميدي تور",

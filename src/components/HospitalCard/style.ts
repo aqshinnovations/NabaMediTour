@@ -3,6 +3,7 @@
 export const styles = {
   hospitalCard: {
     width: "100%",
+    height: "100%", // <-- add
     display: "flex",
     flexDirection: {
       xs: "column",
@@ -14,9 +15,6 @@ export const styles = {
     overflow: "hidden",
     border: "1px solid #ececec",
     boxShadow: "0 5px 20px rgba(0,0,0,0.05)",
-    transition: "all .3s",
-    minHeight: 220,
-
     "&:hover": {
       boxShadow: "0 12px 35px rgba(0,0,0,0.15)",
       transform: "translateY(-4px)",

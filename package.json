@@ -28,7 +28,7 @@
     "react-router-dom": "^7.18.1",
     "react-toastify": "^11.1.0",
     "stylis-plugin-rtl": "^2.1.1",
-    "swiper": "^14.0.2"
+    "swiper": "^14.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

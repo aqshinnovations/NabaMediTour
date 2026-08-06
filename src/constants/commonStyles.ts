@@ -10,7 +10,7 @@ export const commonStyles = {
     lineHeight: 1,
     textAlign: "center" as const,
     marginTop: "14px",
-    marginBottom: "14px",
+    marginBottom: "20px",
     width: "100%",
   },
   sectionContainer: {

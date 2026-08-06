@@ -58,8 +58,9 @@ export const styles = {
   grid: {
     display: "grid",
     gridTemplateColumns: {
-      xs: "1fr",
-      md: "1fr 1fr",
+      xs: "1fr", // 1 column on mobile
+      sm: "repeat(2, 1fr)", // 2 columns on small screens
+      md: "repeat(3, 1fr)", // 3 columns on medium and above
     },
     gap: spacing.xxxl,
     mt: spacing.xxxl,

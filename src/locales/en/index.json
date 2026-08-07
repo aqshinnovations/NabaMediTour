@@ -63,5 +63,61 @@
     "copyright": "© 2026 نابا ميدي تور. جميع الحقوق محفوظة.",
     "privacyPolicy": "سياسة الخصوصية",
     "termsOfService": "شروط الخدمة"
+  },
+  "serviceLocations": {
+    "title": "Service Locations",
+    "description": "Our medical tourism services are available across major cities in India, connecting patients with trusted hospitals and healthcare providers.",
+    "cities": {
+      "delhi": "Delhi",
+      "mumbai": "Mumbai",
+      "chennai": "Chennai",
+      "hyderabad": "Hyderabad"
+    }
+  },
+  "doctors": {
+    "title": "Our Doctors",
+    "description": "Meet our experienced doctors and medical specialists.",
+    "all": "All",
+    "viewProfile": "View Profile"
+  },
+  "doctorsDetails": {
+    "notFound": "Doctor not found.",
+    "allDoctors": "All Doctors",
+    "yearsExperience": "Years Experience",
+    "about": "About",
+    "qualifications": "Qualifications",
+    "specializations": "Specializations",
+    "awards": "Awards",
+    "gallery": "Gallery"
+  },
+  "hospitals": {
+    "title": "Our Hospitals",
+    "description": "Partner hospitals equipped with world-class facilities and advanced medical technology.",
+    "location": "India"
+  },
+  "hospitalDetails": {
+    "notFound": "Hospital not found.",
+    "allHospitals": "All Hospitals",
+    "location": "India",
+    "facilities": "Facilities",
+    "specialties": "Specialties",
+    "procedures": "Procedures",
+    "ourDoctors": "Our Doctors"
+  },
+  "blogs": {
+    "title": "Our Blogs",
+    "description": "Stay updated with the latest healthcare insights, medical news, and wellness tips from our experts."
+  },
+  "blogDetails": {
+    "backToBlogs": "Back to Blogs",
+    "blogNotFound": "Blog not found."
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Explore our comprehensive healthcare services designed to provide you with quality medical care and personalized support."
+  },
+  "doctorCard": {
+    "yearsExperience": "years experience",
+    "viewProfile": "View profile"
   }
 }

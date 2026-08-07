@@ -13,8 +13,8 @@ import { spacing } from "../../../../styles/spacing";
 
 const HospitalSection = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
   return (
     <IMCBox style={styles.section} margin={spacing.none}>
       <IMCTypography variant="h2" style={commonStyles.sectionTitle}>
@@ -27,11 +27,13 @@ const HospitalSection = () => {
             <HospitalCard
               id={hospital.id}
               image={hospital.image}
-              name={hospital.name_en}
-              location="Chennai, India"
-              description={hospital.description_en}
-              specializations={hospital.facilities.map(
-                (facility) => facility.name_en,
+              name={isArabic ? hospital.name_ar : hospital.name_en}
+              location={isArabic ? hospital.location_ar : hospital.location_en}
+              description={
+                isArabic ? hospital.description_ar : hospital.description_en
+              }
+              specializations={hospital.facilities.map((facility) =>
+                isArabic ? facility.name_ar : facility.name_en,
               )}
             />
           </Grid>

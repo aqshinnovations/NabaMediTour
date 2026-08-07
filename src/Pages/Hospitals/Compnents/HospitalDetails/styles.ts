@@ -48,7 +48,17 @@ export const styles = {
     margin: `${spacing.xxxl} auto`,
     px: spacing.base,
   },
-
+  backButton: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: spacing.sm,
+    color: colors.white,
+    cursor: "pointer",
+    marginBottom: spacing.xl,
+  },
+  backText: {
+    opacity: 0.9,
+  },
   description: {
     fontSize: fontSizes.base,
     lineHeight: 1.8,
@@ -76,7 +86,6 @@ export const styles = {
   },
 
   facility: {
-    mb: spacing.md,
     fontSize: fontSizes.base,
   },
 

@@ -1,6 +1,6 @@
 import { Box, Chip, Typography } from "@mui/material";
 import { FiCheckCircle, FiMapPin, FiHeart } from "react-icons/fi";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { hospitals } from "../../../../data/hospitals";
 import { styles } from "./styles";
 import { commonStyles } from "../../../../constants/commonStyles";
@@ -10,31 +10,26 @@ import { fontWeights } from "../../../../styles/fontWeights";
 import { colors } from "../../../../styles/colors";
 import ProcedureCard from "../../../../components/ProcedureCard";
 import { spacing } from "../../../../styles/spacing";
+import { useTranslation } from "react-i18next";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { fontSizes } from "../../../../styles/fontSizes";
+import { useNavigate } from "react-router-dom";
+import IMCBox from "../../../../components/IMCBox";
+import IMCTypography from "../../../../components/IMCTypography";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 const HospitalDetails = () => {
   const { id } = useParams();
-
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
   const hospital = hospitals.find((item) => item.id === Number(id));
+  const navigate = useNavigate();
 
-  if (!hospital) return <>Hospital not found</>;
-
+  if (!hospital) {
+    return <>{t("hospitalDetails.notFound")}</>;
+  }
   return (
     <>
-      {/* <Box sx={styles.hero(hospital.image)}>
-        <Box sx={styles.heroContainer}>
-          <Typography component={Link} to="/hospitals" sx={styles.backLink}>
-            ← All Hospitals
-          </Typography>
-
-          <Typography variant="h2" sx={styles.heroTitle}>
-            {hospital.name_en}
-          </Typography>
-
-          <Box sx={styles.location}>
-            <FiMapPin />
-            <Typography>India</Typography>
-          </Box>
-        </Box>
-      </Box> */}
       <Box sx={{ maxWidth: 1200, mx: "auto", px: 3, py: 5 }}>
         <Box
           sx={{
@@ -51,7 +46,7 @@ const HospitalDetails = () => {
           <Box
             component="img"
             src={hospital.image}
-            alt={hospital.name_en}
+            alt={isArabic ? hospital.name_ar : hospital.name_en}
             sx={{
               width: "100%",
               height: {
@@ -66,15 +61,38 @@ const HospitalDetails = () => {
 
           {/* Hospital Details */}
           <Box>
-            <Link to="/Hospitals" style={{ textDecoration: "none" }}>
-              ← All Hospitals
-            </Link>
+            {/*  */}
+            <IMCBox
+              onClick={() => navigate("/hospitals")}
+              style={styles.backButton}
+            >
+              {isArabic ? (
+                <ArrowForwardIcon
+                  sx={{ fontSize: fontSizes.md, color: colors.primaryDarkBlue }}
+                />
+              ) : (
+                <ArrowBackIcon
+                  sx={{ fontSize: fontSizes.md, color: colors.primaryDarkBlue }}
+                />
+              )}
+
+              <IMCTypography
+                variant="body"
+                size={fontSizes.md}
+                color={colors.primaryDarkBlue}
+                style={styles.backText}
+              >
+                {t("hospitalDetails.allHospitals")}
+              </IMCTypography>
+            </IMCBox>
+
+            {/*  */}
 
             <Typography
               variant="h2"
               sx={{ fontWeight: fontWeights.bold, color: colors.mintGreen }}
             >
-              {hospital.name_en}
+              {isArabic ? hospital.name_ar : hospital.name_en}{" "}
             </Typography>
 
             <Box
@@ -86,46 +104,59 @@ const HospitalDetails = () => {
               }}
             >
               <FiMapPin />
-              <Typography>India</Typography>
+              <Typography>{t("hospitalDetails.location")}</Typography>
             </Box>
-
-            {/* <Typography sx={styles.description}>
-              {hospital.description_en}
-            </Typography> */}
           </Box>
         </Box>
       </Box>
       <Box sx={styles.content}>
         <Typography sx={styles.description}>
-          {hospital.description_en}
+          {isArabic ? hospital.description_ar : hospital.description_en}{" "}
         </Typography>
 
         <Box sx={styles.grid}>
           <Box>
             <Typography sx={styles.sectionTitle}>
               <FiCheckCircle style={styles.facilityIcon} />
-              Facilities
+              {t("hospitalDetails.facilities")}
             </Typography>
-
             {hospital.facilities.length > 0 &&
               hospital.facilities.map((item) => (
-                <Typography key={item.id} sx={styles.facility}>
-                  • {item.name_en}
-                </Typography>
+                <Box
+                  key={item.id}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    mb: 1,
+                  }}
+                >
+                  <CheckCircleOutlineIcon
+                    sx={{
+                      color: colors.primary,
+                      fontSize: 20,
+                      flexShrink: 0,
+                    }}
+                  />
+
+                  <Typography sx={styles.facility}>
+                    {isArabic ? item.name_ar : item.name_en}
+                  </Typography>
+                </Box>
               ))}
           </Box>
 
           <Box>
             <Typography sx={styles.sectionTitle}>
               <FiHeart style={styles.facilityIcon} />
-              Specialties
+              {t("hospitalDetails.specialties")}
             </Typography>
 
             <Box sx={styles.chips}>
               {hospital.specializations.map((item) => (
                 <Chip
                   key={item.id}
-                  label={item.name_en} // or item.name_ar for Arabic
+                  label={isArabic ? item.name_ar : item.name_en}
                   sx={styles.chip}
                 />
               ))}
@@ -136,7 +167,9 @@ const HospitalDetails = () => {
       {/* ----------------------------------Procedures----------------------------------- */}
       <Box sx={{ padding: spacing.base, background: colors.lightBlue }}>
         <Box>
-          <Typography sx={commonStyles.sectionTitle}>Procedures</Typography>
+          <Typography sx={commonStyles.sectionTitle}>
+            {t("hospitalDetails.procedures")}
+          </Typography>
 
           <Box
             sx={{
@@ -155,8 +188,10 @@ const HospitalDetails = () => {
               <ProcedureCard
                 key={procedure.id}
                 image={procedure.image}
-                name={procedure.name_en}
-                description={procedure.description_en}
+                name={isArabic ? procedure.name_ar : procedure.name_en}
+                description={
+                  isArabic ? procedure.description_ar : procedure.description_en
+                }
               />
             ))}
           </Box>
@@ -164,7 +199,9 @@ const HospitalDetails = () => {
       </Box>
       {/* -------------------------------------------doctor ----------------------------------- */}
       <Box sx={{ padding: spacing.base }}>
-        <Typography sx={commonStyles.sectionTitle}>Our Doctors</Typography>
+        <Typography sx={commonStyles.sectionTitle}>
+          {t("hospitalDetails.ourDoctors")}
+        </Typography>
 
         <Box
           sx={{
@@ -183,8 +220,10 @@ const HospitalDetails = () => {
             <HospitalDoctorCard
               key={doctor.id}
               image={doctor.image}
-              name={doctor.name_en}
-              specialization={doctor.specialist_en}
+              name={isArabic ? doctor.name_ar : doctor.name_en}
+              specialization={
+                isArabic ? doctor.specialist_ar : doctor.specialist_en
+              }
             />
           ))}
         </Box>

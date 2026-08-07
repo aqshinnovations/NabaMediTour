@@ -4,14 +4,18 @@ import { Grid } from "@mui/material";
 import { services } from "../../data/services";
 import ServiceCard from "../../components/ServiceCard";
 import IMCBox from "../../components/IMCBox";
-
+import { useTranslation } from "react-i18next";
 import { styles } from "./styles";
 const Services = () => {
+  const { i18n, t } = useTranslation();
+
+  const isArabic = i18n.language === "ar";
+
   return (
     <>
       <PageHero
-        title="Our Services"
-        description="Highly qualified and experienced specialists dedicated to providing exceptional medical care."
+        title={t("services.title")}
+        description={t("services.description")}
       />
 
       <IMCBox style={styles.section}>
@@ -26,11 +30,12 @@ const Services = () => {
               }}
             >
               <ServiceCard
-                // id={service.id}
-                title={service.title}
-                description={service.description}
+                key={service.id}
+                title={isArabic ? service.name_ar : service.name_en}
+                description={
+                  isArabic ? service.description_ar : service.description_en
+                }
                 image={service.image}
-                // path={service.path}
               />
             </Grid>
           ))}

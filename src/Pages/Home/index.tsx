@@ -5,10 +5,12 @@ import StatsSection from "./components/StatsSection";
 import CTASection from "./components/CTASection";
 import ContactCTA from "../../components/ContactCTA";
 import TestimonySection from "./components/TestimonySection";
+import ServiceLocations from "../../components/ServiceLocations";
 const Home = () => {
   return (
     <>
       <Hero />
+      <ServiceLocations />
       <StatsSection />
       <DoctorsSection />
       <HospitalSection />

@@ -16,15 +16,18 @@ import { Grid } from "@mui/material";
 import { commonStyles } from "../../../../constants/commonStyles";
 import { spacing } from "../../../../styles/spacing";
 import ContactCTA from "../../../../components/ContactCTA";
-
+import { useTranslation } from "react-i18next";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 const DoctorsDetails = () => {
   const navigate = useNavigate();
   const { id } = useParams();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
 
   const doctor = doctors.find((item) => item.id === Number(id));
 
   if (!doctor) {
-    return <IMCTypography>Doctor not found.</IMCTypography>;
+    return <IMCTypography>{t("doctorsDetails.notFound")}</IMCTypography>;
   }
   return (
     <>
@@ -35,12 +38,15 @@ const DoctorsDetails = () => {
             onClick={() => navigate("/doctors")}
             style={styles.backButton}
           >
-            <ArrowBackIcon
-              sx={{
-                fontSize: fontSizes.md,
-                color: colors.white,
-              }}
-            />
+            {isArabic ? (
+              <ArrowForwardIcon
+                sx={{ fontSize: fontSizes.md, color: colors.white }}
+              />
+            ) : (
+              <ArrowBackIcon
+                sx={{ fontSize: fontSizes.md, color: colors.white }}
+              />
+            )}
 
             <IMCTypography
               variant="body"
@@ -48,7 +54,7 @@ const DoctorsDetails = () => {
               color={colors.white}
               style={styles.backText}
             >
-              All Doctors
+              {t("doctorsDetails.allDoctors")}
             </IMCTypography>
           </IMCBox>
 
@@ -63,7 +69,7 @@ const DoctorsDetails = () => {
                 weight={fontWeights.bold}
                 color="#fff"
               >
-                {doctor.name_en}{" "}
+                {isArabic ? doctor.name_ar : doctor.name_en}
               </IMCTypography>
 
               <IMCTypography
@@ -72,14 +78,17 @@ const DoctorsDetails = () => {
                 color={colors.light}
                 style={styles.speciality}
               >
-                {doctor.category.name_en}{" "}
+                {isArabic
+                  ? doctor.category.name_ar
+                  : doctor.category.name_en}{" "}
               </IMCTypography>
 
               <IMCBox style={styles.experience}>
                 <AccessTimeIcon sx={{ color: colors.light }} />
 
                 <IMCTypography variant="body" size="18" color={colors.light}>
-                  {doctor.experience_en} Years Experience{" "}
+                  {isArabic ? doctor.experience_ar : doctor.experience_en}{" "}
+                  {t("doctorsDetails.yearsExperience")}{" "}
                 </IMCTypography>
               </IMCBox>
             </IMCBox>
@@ -96,7 +105,7 @@ const DoctorsDetails = () => {
             weight={fontWeights.bold}
             style={styles.sectionTitle}
           >
-            About
+            {t("doctorsDetails.about")}
           </IMCTypography>
           <IMCTypography
             variant="body"
@@ -104,7 +113,7 @@ const DoctorsDetails = () => {
             color={colors.textSecondary}
             style={styles.about}
           >
-            {doctor.about_en}
+            {isArabic ? doctor.about_ar : doctor.about_en}
           </IMCTypography>
           <Grid container spacing={4}>
             {/* Qualifications */}
@@ -115,14 +124,16 @@ const DoctorsDetails = () => {
                 size="30"
                 style={{ marginBottom: 20 }}
               >
-                Qualifications
+                {t("doctorsDetails.qualifications")}
               </IMCTypography>
 
               {doctor.qualifications.map((qualification) => (
                 <IMCBox key={qualification.id} style={styles.infoItem}>
                   <SchoolOutlinedIcon sx={{ color: colors.primary }} />
                   <IMCTypography variant="body" size={fontSizes.md}>
-                    {qualification.name_en}
+                    {isArabic
+                      ? qualification.name_ar
+                      : qualification.name_en}{" "}
                   </IMCTypography>
                 </IMCBox>
               ))}
@@ -136,14 +147,14 @@ const DoctorsDetails = () => {
                 size="30"
                 style={{ marginBottom: 20 }}
               >
-                Specializations
+                {t("doctorsDetails.specializations")}
               </IMCTypography>
 
               {doctor.specialists.map((specialist) => (
                 <IMCBox key={specialist.id} style={styles.infoItem}>
                   <BookmarkBorderIcon sx={{ color: colors.primary }} />
                   <IMCTypography variant="body" size={fontSizes.md}>
-                    {specialist.name_en}
+                    {isArabic ? specialist.name_ar : specialist.name_en}{" "}
                   </IMCTypography>
                 </IMCBox>
               ))}
@@ -157,14 +168,14 @@ const DoctorsDetails = () => {
                 size="30"
                 style={{ marginBottom: 20 }}
               >
-                Awards
+                {t("doctorsDetails.awards")}
               </IMCTypography>
 
               {doctor.awards.map((award) => (
                 <IMCBox key={award.id} style={styles.infoItem}>
                   <EmojiEventsOutlinedIcon sx={{ color: colors.primary }} />
                   <IMCTypography variant="body" size={fontSizes.md}>
-                    {award.name_en}
+                    {isArabic ? award.name_ar : award.name_en}{" "}
                   </IMCTypography>
                 </IMCBox>
               ))}
@@ -181,7 +192,7 @@ const DoctorsDetails = () => {
         margin={spacing.none}
       >
         <IMCTypography variant="h3" style={commonStyles.sectionTitle}>
-          Gallery
+          {t("doctorsDetails.gallery")}
         </IMCTypography>
 
         <Box

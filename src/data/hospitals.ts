@@ -4,6 +4,7 @@ import Max from "../assets/hospitals/MaxNoida.jpg";
 import Amrita from "../assets/hospitals/FortisMemorial.jpg";
 import Rahul from "../assets/DR/dr1.jpeg";
 import PRocedure from "../assets/PRocedure/PRocedure.png";
+
 export interface Facility {
   id: number;
   name_en: string;
@@ -41,7 +42,8 @@ export interface Hospital {
   description_en: string;
   description_ar: string;
   image: string;
-
+  location_en: string;
+  location_ar: string;
   specializations: Specialization[];
   facilities: Facility[];
   doctors: Doctor[];
@@ -60,6 +62,8 @@ export const hospitals: Hospital[] = [
     description_ar:
       "يُعد مستشفى فورتيس جورجاون من أبرز المستشفيات متعددة التخصصات في الهند، ويقدم خدمات رعاية صحية عالمية المستوى باستخدام أحدث التقنيات وفريق طبي متخصص ورعاية شاملة للمرضى.",
     image: Fortis,
+    location_en: "Gurgaon, Haryana, India",
+    location_ar: "جورجاون، هاريانا، الهند",
 
     specializations: [
       {
@@ -233,6 +237,8 @@ export const hospitals: Hospital[] = [
     description_ar:
       "يعد مستشفى أمريتا من أبرز المستشفيات متعددة التخصصات في الهند، ويقدم رعاية صحية متقدمة باستخدام أحدث التقنيات الطبية.",
     image: Amrita,
+    location_en: "Faridabad, Haryana, India",
+    location_ar: "فريد آباد، هاريانا، الهند",
     specializations: [
       { id: 1, name_en: "Cardiology", name_ar: "أمراض القلب" },
       { id: 2, name_en: "Neurology", name_ar: "طب الأعصاب" },
@@ -283,6 +289,8 @@ export const hospitals: Hospital[] = [
     description_ar:
       "يقدم مستشفى ماكس خدمات صحية متكاملة بأطباء ذوي خبرة عالمية وتقنيات حديثة.",
     image: Max,
+    location_en: "Noida, Uttar Pradesh, India",
+    location_ar: "نويدا، أوتار براديش، الهند",
     specializations: [
       { id: 4, name_en: "Oncology", name_ar: "الأورام" },
       { id: 5, name_en: "Urology", name_ar: "المسالك البولية" },
@@ -324,6 +332,8 @@ export const hospitals: Hospital[] = [
     description_ar:
       "يوفر مستشفى مانيبال خدمات رعاية صحية متقدمة مع نخبة من الأطباء المتخصصين.",
     image: Manipal,
+    location_en: "Noida, Uttar Pradesh, India",
+    location_ar: "نويدا، أوتار براديش، الهند",
     specializations: [
       { id: 6, name_en: "Gastroenterology", name_ar: "الجهاز الهضمي" },
       { id: 7, name_en: "Nephrology", name_ar: "الكلى" },
@@ -364,6 +374,8 @@ export const hospitals: Hospital[] = [
     description_ar:
       "تعد مستشفيات أبولو من أبرز مقدمي الرعاية الصحية مع أحدث مرافق التشخيص والعلاج.",
     image: Fortis,
+    location_en: "Dwarka, New Delhi, India",
+    location_ar: "دواركا، نيودلهي، الهند",
     specializations: [
       { id: 8, name_en: "Pulmonology", name_ar: "أمراض الرئة" },
       { id: 9, name_en: "ENT", name_ar: "الأنف والأذن والحنجرة" },
@@ -379,7 +391,7 @@ export const hospitals: Hospital[] = [
         name_ar: "د. أرجون راو",
         specialist_en: "Pulmonologist",
         specialist_ar: "طبيب رئة",
-        image: "http://localhost:8000/media/doctors/doctor5.jpg",
+        image: Rahul,
       },
     ],
     procedures: [
@@ -389,7 +401,7 @@ export const hospitals: Hospital[] = [
         name_ar: "جراحة الرئة",
         description_en: "Minimally invasive lung surgery.",
         description_ar: "جراحة رئة طفيفة التوغل.",
-        image: "http://localhost:8000/media/procedures/lung.jpg",
+        image: PRocedure,
       },
     ],
     created_at: "2026-07-29 17:39:35",
@@ -404,6 +416,8 @@ export const hospitals: Hospital[] = [
     description_ar:
       "يعد مستشفى ميدانتا من المستشفيات الرائدة متعددة التخصصات ويقدم رعاية طبية وجراحية متقدمة.",
     image: Max,
+    location_en: "Dwarka, New Delhi, India",
+    location_ar: "دواركا، نيودلهي، الهند",
     specializations: [
       { id: 10, name_en: "Cardiac Surgery", name_ar: "جراحة القلب" },
       { id: 11, name_en: "Plastic Surgery", name_ar: "جراحة التجميل" },

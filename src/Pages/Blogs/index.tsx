@@ -6,14 +6,14 @@ import PageHero from "../../components/PageHero";
 
 import { blogs } from "../../data/blogs";
 import { styles } from "./styles";
+import { useTranslation } from "react-i18next";
 
 const Blogs = () => {
+  const { i18n, t } = useTranslation();
+
   return (
     <>
-      <PageHero
-        title="Our Blogs"
-        description="Stay updated with the latest healthcare insights, medical news, and wellness tips from our experts."
-      />
+      <PageHero title={t("blogs.title")} description={t("blogs.description")} />
 
       <IMCBox style={styles.section}>
         <Grid container spacing={4} sx={styles.grid}>

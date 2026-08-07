@@ -13,8 +13,8 @@ import { useTranslation } from "react-i18next";
 
 const DoctorsSection = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
   const displayedDoctors = doctors.slice(0, 4);
 
   return (
@@ -29,16 +29,15 @@ const DoctorsSection = () => {
             <DoctorCard
               id={doctor.id}
               image={doctor.image}
-              name_en={doctor.name_en}
-              name_ar={doctor.name_ar}
-              about_en={doctor.about_en}
-              about_ar={doctor.about_ar}
-              experience_en={doctor.experience_en}
-              experience_ar={doctor.experience_ar}
-              category={doctor.category}
-              qualifications={doctor.qualifications}
-              specialists={doctor.specialists}
-              onViewProfile={() => navigate(`/Doctors/${doctor.id}`)}
+              name={isArabic ? doctor.name_ar : doctor.name_en}
+              category={
+                isArabic ? doctor.category.name_ar : doctor.category.name_en
+              }
+              experience={
+                isArabic ? doctor.experience_ar : doctor.experience_en
+              }
+              about={isArabic ? doctor.about_ar : doctor.about_en}
+              onViewProfile={() => navigate(`/doctors/${doctor.id}`)}
             />
           </Grid>
         ))}

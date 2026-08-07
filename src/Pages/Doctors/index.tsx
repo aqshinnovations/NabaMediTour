@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Box, Chip, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import DoctorCard from "../../components/DoctorCard";
 import PageHero from "../../components/PageHero";
@@ -8,11 +9,13 @@ import PageHero from "../../components/PageHero";
 import { doctors } from "../../data/doctors";
 import { specializations } from "../../data/specializations";
 import { styles } from "./styles";
+import ContactCTA from "../../components/ContactCTA";
 
 const Doctors = () => {
   const [selected, setSelected] = useState("All");
   const navigate = useNavigate();
-
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
   const filteredDoctors =
     selected === "All"
       ? doctors
@@ -25,8 +28,8 @@ const Doctors = () => {
   return (
     <>
       <PageHero
-        title="Our Doctors"
-        description="Highly qualified and experienced specialists dedicated to providing exceptional medical care."
+        title={t("doctors.title")}
+        description={t("doctors.description")}
       />
 
       <Box sx={styles.filterSection}>
@@ -53,13 +56,23 @@ const Doctors = () => {
               }}
             >
               <DoctorCard
-                {...doctor}
-                onViewProfile={() => navigate(`/Doctors/${doctor.id}`)}
+                id={doctor.id}
+                image={doctor.image}
+                name={isArabic ? doctor.name_ar : doctor.name_en}
+                category={
+                  isArabic ? doctor.category.name_ar : doctor.category.name_en
+                }
+                experience={
+                  isArabic ? doctor.experience_ar : doctor.experience_en
+                }
+                about={isArabic ? doctor.about_ar : doctor.about_en}
+                onViewProfile={() => navigate(`/doctors/${doctor.id}`)}
               />
             </Grid>
           ))}
         </Grid>
       </Box>
+      <ContactCTA />
     </>
   );
 };

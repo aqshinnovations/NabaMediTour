@@ -4,13 +4,18 @@ import { Grid } from "@mui/material";
 
 import { hospitals } from "../../data/hospitals";
 import { styles } from "./styles";
+import { useTranslation } from "react-i18next";
+import ContactCTA from "../../components/ContactCTA";
 
 const Hospitals = () => {
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
+
   return (
     <>
       <PageHero
-        title="Our Hospitals"
-        description="Partner hospitals equipped with world-class facilities and advanced medical technology."
+        title={t("hospitals.title")}
+        description={t("hospitals.description")}
       />
       <Grid container spacing={3} sx={styles.grid}>
         {hospitals.map((hospital) => (
@@ -22,35 +27,19 @@ const Hospitals = () => {
             <HospitalCard
               id={hospital.id}
               image={hospital.image}
-              name={hospital.name_en}
-              location="India"
-              description={hospital.description_en}
-              specializations={hospital.facilities.map(
-                (facility) => facility.name_en,
+              name={isArabic ? hospital.name_ar : hospital.name_en}
+              location={t("hospitals.location")}
+              description={
+                isArabic ? hospital.description_ar : hospital.description_en
+              }
+              specializations={hospital.facilities.map((facility) =>
+                isArabic ? facility.name_ar : facility.name_en,
               )}
             />
           </Grid>
         ))}
       </Grid>
-      {/* <Grid container spacing={3} sx={styles.grid}>
-        {hospitals.map((hospital) => (
-          <Grid
-            key={hospital.id}
-            size={{ xs: 12, md: 6 }} // MUI v7
-          >
-            <HospitalCard
-              id={hospital.id}
-              image={hospital.image}
-              name={hospital.name_en}
-              location="India"
-              description={hospital.description_en}
-              specializations={hospital.facilities.map(
-                (facility) => facility.name_en,
-              )}
-            />
-          </Grid>
-        ))}
-      </Grid> */}
+      <ContactCTA />
     </>
   );
 };

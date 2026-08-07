@@ -49,104 +49,212 @@ export interface Doctor {
 
 export const doctors: Doctor[] = [
   {
-    id: 15,
+    id: 16,
     category: {
-      id: 2,
-      name_en: "category 1",
-      name_ar: "رعاية القلب",
+      id: 3,
+      name_en: "Neurology",
+      name_ar: "طب الأعصاب",
     },
-    name_en: "Dr. Rajneesh Malhotra121",
-    name_ar: "rahul",
+    name_en: "Dr. Anil Sharma",
+    name_ar: "د. أنيل شارما",
     about_en:
-      "Dr. Rajneesh Malhotra is one of India’s most experienced cardiothoracic and vascular surgeons with over 31 years of dedicated practice. He has led more than 12,000 heart surgeries, with particular excellence in heart transplantation, ECMO/LVAD management, and robotic cardiac surgery.",
-    about_ar: "i am dr",
-    position_ar: "1",
-    position_en: "2",
-    experience_en: "8",
-    experience_ar: "8",
+      "Dr. Anil Sharma is an experienced neurologist specializing in the diagnosis and treatment of complex neurological disorders, stroke management, epilepsy, and movement disorders.",
+    about_ar:
+      "الدكتور أنيل شارما طبيب أعصاب ذو خبرة، متخصص في تشخيص وعلاج اضطرابات الجهاز العصبي المعقدة والسكتات الدماغية والصرع واضطرابات الحركة.",
+    position_en: "Senior Consultant Neurologist",
+    position_ar: "استشاري أول في طب الأعصاب",
+    experience_en: "18+ years",
+    experience_ar: "أكثر من 18 عامًا",
     qualifications: [
       {
-        id: 5,
-        name_en: "MCh - Cardiothoracic Surgery",
-        name_ar: "جراحة القلب والصدر",
-      },
-      {
-        id: 6,
+        id: 9,
         name_en: "MBBS",
         name_ar: "بكالوريوس الطب والجراحة",
       },
       {
-        id: 7,
+        id: 10,
         name_en: "MD - General Medicine",
         name_ar: "دكتوراه في الطب - الطب العام",
       },
       {
-        id: 8,
-        name_en: "MS - General Surgery",
-        name_ar: "ماجستير الجراحة العامة",
+        id: 11,
+        name_en: "DM - Neurology",
+        name_ar: "دكتوراه في طب الأعصاب",
       },
     ],
     specialists: [
       {
-        id: 7,
-        name_en: "Robotic Cardiac Surgery",
-        name_ar: "جراحة القلب الروبوتية",
+        id: 12,
+        name_en: "Neurology",
+        name_ar: "طب الأعصاب",
       },
       {
-        id: 8,
-        name_en: "Cardiology",
-        name_ar: "أمراض القلب",
+        id: 13,
+        name_en: "Stroke Management",
+        name_ar: "علاج السكتات الدماغية",
       },
       {
-        id: 9,
-        name_en: "Cardiothoracic Surgery",
-        name_ar: "جراحة القلب والصدر",
+        id: 14,
+        name_en: "Epilepsy",
+        name_ar: "الصرع",
       },
       {
-        id: 10,
-        name_en: "Interventional Cardiology",
-        name_ar: "القسطرة القلبية",
-      },
-      {
-        id: 11,
-        name_en: "Pediatric Cardiology",
-        name_ar: "أمراض قلب الأطفال",
+        id: 15,
+        name_en: "Movement Disorders",
+        name_ar: "اضطرابات الحركة",
       },
     ],
     awards: [
       {
-        id: 3,
-        name_en: "Noble AWards",
-        name_ar: "جراحة القلب الروبوتية",
+        id: 4,
+        name_en: "Excellence in Neurology Award",
+        name_ar: "جائزة التميز في طب الأعصاب",
       },
     ],
     image: DoctorImage1,
     images: [
       {
+        id: 1,
+        image: DoctorImage1,
+      },
+      {
         id: 2,
-        image:
-          "http://localhost:8000/media/doctor_images/Testimony_BBXSPug.jpeg",
-      },
-      {
-        id: 3,
-        image:
-          "http://localhost:8000/media/doctor_images/Testimony_30VpAJw.jpeg",
-      },
-      {
-        id: 4,
-        image:
-          "http://localhost:8000/media/doctor_images/Testimony_MrngqgH.jpeg",
-      },
-      {
-        id: 5,
-        image:
-          "http://localhost:8000/media/doctor_images/Testimony_uEItIPp.jpeg",
-      },
-      {
-        id: 6,
-        image:
-          "http://localhost:8000/media/doctor_images/Testimony_ksbSiku.jpeg",
+        image: DoctorImage1,
       },
     ],
+  },
+
+  {
+    id: 17,
+    category: {
+      id: 4,
+      name_en: "Orthopedics",
+      name_ar: "جراحة العظام",
+    },
+    name_en: "Dr. Priya Mehta",
+    name_ar: "د. بريا ميهتا",
+    about_en:
+      "Dr. Priya Mehta is a skilled orthopedic surgeon with extensive experience in joint replacement, sports injuries, arthroscopy, and minimally invasive orthopedic procedures.",
+    about_ar:
+      "الدكتورة بريا ميهتا جراحة عظام متمرسة تتمتع بخبرة واسعة في استبدال المفاصل وإصابات الملاعب وتنظير المفاصل وإجراءات جراحة العظام طفيفة التوغل.",
+    position_en: "Consultant Orthopedic Surgeon",
+    position_ar: "استشاري جراحة العظام",
+    experience_en: "15+ years",
+    experience_ar: "أكثر من 15 عامًا",
+    qualifications: [
+      {
+        id: 12,
+        name_en: "MBBS",
+        name_ar: "بكالوريوس الطب والجراحة",
+      },
+      {
+        id: 13,
+        name_en: "MS - Orthopedics",
+        name_ar: "ماجستير جراحة العظام",
+      },
+      {
+        id: 14,
+        name_en: "Fellowship in Joint Replacement",
+        name_ar: "زمالة في استبدال المفاصل",
+      },
+    ],
+    specialists: [
+      {
+        id: 16,
+        name_en: "Joint Replacement",
+        name_ar: "استبدال المفاصل",
+      },
+      {
+        id: 17,
+        name_en: "Sports Medicine",
+        name_ar: "الطب الرياضي",
+      },
+      {
+        id: 18,
+        name_en: "Arthroscopy",
+        name_ar: "تنظير المفاصل",
+      },
+      {
+        id: 19,
+        name_en: "Knee Surgery",
+        name_ar: "جراحة الركبة",
+      },
+    ],
+    awards: [
+      {
+        id: 5,
+        name_en: "Best Orthopedic Surgeon Award",
+        name_ar: "جائزة أفضل جراح عظام",
+      },
+    ],
+    image: DoctorImage1,
+    images: [],
+  },
+
+  {
+    id: 18,
+    category: {
+      id: 5,
+      name_en: "Oncology",
+      name_ar: "علم الأورام",
+    },
+    name_en: "Dr. Arjun Kapoor",
+    name_ar: "د. أرجون كابور",
+    about_en:
+      "Dr. Arjun Kapoor is a dedicated medical oncologist specializing in comprehensive cancer care, chemotherapy, targeted therapy, immunotherapy, and personalized treatment planning.",
+    about_ar:
+      "الدكتور أرجون كابور طبيب متخصص في علاج الأورام، ويقدم رعاية شاملة لمرضى السرطان تشمل العلاج الكيميائي والعلاج الموجه والعلاج المناعي وخطط العلاج الشخصية.",
+    position_en: "Senior Consultant Medical Oncologist",
+    position_ar: "استشاري أول في طب الأورام",
+    experience_en: "20+ years",
+    experience_ar: "أكثر من 20 عامًا",
+    qualifications: [
+      {
+        id: 15,
+        name_en: "MBBS",
+        name_ar: "بكالوريوس الطب والجراحة",
+      },
+      {
+        id: 16,
+        name_en: "MD - Internal Medicine",
+        name_ar: "دكتوراه في الطب الباطني",
+      },
+      {
+        id: 17,
+        name_en: "DM - Medical Oncology",
+        name_ar: "دكتوراه في طب الأورام",
+      },
+    ],
+    specialists: [
+      {
+        id: 20,
+        name_en: "Medical Oncology",
+        name_ar: "طب الأورام",
+      },
+      {
+        id: 21,
+        name_en: "Chemotherapy",
+        name_ar: "العلاج الكيميائي",
+      },
+      {
+        id: 22,
+        name_en: "Immunotherapy",
+        name_ar: "العلاج المناعي",
+      },
+      {
+        id: 23,
+        name_en: "Targeted Therapy",
+        name_ar: "العلاج الموجه",
+      },
+    ],
+    awards: [
+      {
+        id: 6,
+        name_en: "Outstanding Cancer Care Award",
+        name_ar: "جائزة التميز في رعاية مرضى السرطان",
+      },
+    ],
+    image: DoctorImage1,
+    images: [],
   },
 ];

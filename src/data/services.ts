@@ -2,112 +2,110 @@ import ServiceImage from "../assets/services/services.jpg";
 
 export interface Service {
   id: number;
-  title: string;
-  description: string;
+  name_en: string;
+  name_ar: string;
+  description_en: string;
+  description_ar: string;
   image: string;
-  path: string;
+  created_at: string;
+  updated_at: string;
 }
 
 export const services: Service[] = [
   {
     id: 1,
-    title: "Airport Pickup & Drop",
-    description:
-      "Complete guidance and support for obtaining a medical visa, including documentation, Comfortable airport pickup and drop-off services to ensure a smooth and hassle-free journey from arrival to your accommodation or hospital.",
+    name_en: "Hospital Selection",
+    name_ar: "اختيار المستشفى",
+    description_en:
+      "We help you choose the right hospital based on your medical condition, treatment requirements, and personal preferences.",
+    description_ar:
+      "نساعدك في اختيار المستشفى المناسب بناءً على حالتك الطبية ومتطلبات العلاج وتفضيلاتك الشخصية.",
     image: ServiceImage,
-    path: "/services/airport-pickup-drop",
+    created_at: "2026-08-03 17:45:52",
+    updated_at: "2026-08-03 17:45:52",
   },
   {
     id: 2,
-    title: "Medical Visa Assistance",
-    description:
-      "Complete guidance and support for obtaining a medical visa, including documentation, application assistance, and travel planning.",
+    name_en: "Doctor Consultation",
+    name_ar: "استشارة الطبيب",
+    description_en:
+      "Connect with experienced and highly qualified doctors for expert medical consultations and treatment recommendations.",
+    description_ar:
+      "تواصل مع أطباء ذوي خبرة ومؤهلات عالية للحصول على استشارات طبية متخصصة وتوصيات علاجية.",
     image: ServiceImage,
-    path: "/services/medical-visa-assistance",
+    created_at: "2026-08-03 17:45:52",
+    updated_at: "2026-08-03 17:45:52",
   },
   {
     id: 3,
-    title: "Interpreter Services",
-    description:
-      "Professional interpreters are available to help you communicate effectively with doctors, hospital staff, and local service providers.",
+    name_en: "Medical Treatment Planning",
+    name_ar: "تخطيط العلاج الطبي",
+    description_en:
+      "Personalized treatment planning with detailed guidance to help patients understand their treatment options and medical journey.",
+    description_ar:
+      "تخطيط علاجي مخصص مع إرشادات تفصيلية لمساعدة المرضى على فهم خيارات العلاج ورحلتهم الطبية.",
     image: ServiceImage,
-    path: "/services/interpreter",
+    created_at: "2026-08-03 17:45:52",
+    updated_at: "2026-08-03 17:45:52",
   },
   {
     id: 4,
-    title: "Doctor Appointment Arrangement",
-    description:
-      "We schedule appointments with experienced specialists and coordinate your consultations to ensure timely medical care.",
+    name_en: "Medical Visa Assistance",
+    name_ar: "المساعدة في الحصول على التأشيرة الطبية",
+    description_en:
+      "Complete guidance and support for obtaining a medical visa, including documentation and application assistance.",
+    description_ar:
+      "إرشادات ودعم كامل للحصول على التأشيرة الطبية، بما في ذلك تجهيز المستندات والمساعدة في تقديم الطلب.",
     image: ServiceImage,
-    path: "/services/doctor-appointment",
+    created_at: "2026-08-03 17:45:52",
+    updated_at: "2026-08-03 17:45:52",
   },
   {
     id: 5,
-    title: "Pre-Travel Video Consultation",
-    description:
-      "Connect with leading doctors through secure video consultations before your trip to discuss your medical condition and treatment options.",
+    name_en: "Airport Pickup & Transfer",
+    name_ar: "الاستقبال من المطار والنقل",
+    description_en:
+      "Convenient airport pickup and transportation services to ensure a smooth and comfortable arrival at your destination.",
+    description_ar:
+      "خدمات استقبال ونقل مريحة من المطار لضمان وصول سلس ومريح إلى وجهتك.",
     image: ServiceImage,
-    path: "/services/pre-travel-video-consultation",
+    created_at: "2026-08-03 17:45:52",
+    updated_at: "2026-08-03 17:45:52",
   },
   {
     id: 6,
-    title: "Budget Accommodation",
-    description:
-      "Affordable and comfortable accommodation options near hospitals, carefully selected to match your budget and preferences.",
+    name_en: "Accommodation Assistance",
+    name_ar: "المساعدة في الإقامة",
+    description_en:
+      "We assist patients and their families in finding comfortable and convenient accommodation close to the hospital.",
+    description_ar:
+      "نساعد المرضى وعائلاتهم في العثور على أماكن إقامة مريحة ومناسبة بالقرب من المستشفى.",
     image: ServiceImage,
-    path: "/services/budget-accommodation",
+    created_at: "2026-08-03 17:45:52",
+    updated_at: "2026-08-03 17:45:52",
   },
   {
     id: 7,
-    title: "Second Opinion",
-    description:
-      "Receive expert second opinions from renowned specialists to help you make informed decisions about your diagnosis and treatment plan.",
+    name_en: "Patient & Attendant Support",
+    name_ar: "دعم المرضى والمرافقين",
+    description_en:
+      "Dedicated support for patients and their attendants throughout their medical travel journey, from arrival to treatment completion.",
+    description_ar:
+      "دعم مخصص للمرضى ومرافقيهم طوال رحلة العلاج، من الوصول وحتى إتمام العلاج.",
     image: ServiceImage,
-    path: "/services/second-opinion",
+    created_at: "2026-08-03 17:45:52",
+    updated_at: "2026-08-03 17:45:52",
   },
   {
     id: 8,
-    title: "Financial Services",
-    description:
-      "Assistance with treatment cost estimates, payment planning, insurance guidance, and financial support throughout your medical journey.",
+    name_en: "Post-Treatment Follow-up",
+    name_ar: "المتابعة بعد العلاج",
+    description_en:
+      "Continued assistance and follow-up after treatment to help patients manage their recovery and future medical needs.",
+    description_ar:
+      "مساعدة ومتابعة مستمرة بعد العلاج لمساعدة المرضى في التعافي وتلبية احتياجاتهم الطبية المستقبلية.",
     image: ServiceImage,
-    path: "/services/financial-services",
+    created_at: "2026-08-03 17:45:52",
+    updated_at: "2026-08-03 17:45:52",
   },
-]; // import Cardiology from "../assets/dr.jpeg";
-// import Orthopedics from "../assets/dr.jpeg";
-// import Oncology from "../assets/dr.jpeg";
-
-// export interface Service {
-//   id: number;
-//   title: string;
-//   description: string;
-//   image: string;
-//   path: string;
-// }
-
-// export const services: Service[] = [
-//   {
-//     id: 1,
-//     title: "Cardiology",
-//     description:
-//       "Comprehensive cardiac care including coronary artery bypass grafting (CABG), angioplasty, heart valve surgery, treatment of arrhythmias, heart failure management, and preventive cardiology.",
-//     image: Cardiology,
-//     path: "/services/cardiology",
-//   },
-//   {
-//     id: 2,
-//     title: "Orthopedics",
-//     description:
-//       "Joint replacement surgery, sports medicine, spine surgery, arthroscopy, trauma care, arthritis treatment, fracture management, and rehabilitation.",
-//     image: Orthopedics,
-//     path: "/services/orthopedics",
-//   },
-//   {
-//     id: 3,
-//     title: "Oncology",
-//     description:
-//       "Advanced cancer treatment including chemotherapy, immunotherapy, targeted therapy, radiation therapy, surgical oncology, and personalized cancer care.",
-//     image: Oncology,
-//     path: "/services/oncology",
-//   },
-// ];
+];

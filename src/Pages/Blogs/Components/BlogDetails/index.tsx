@@ -1,7 +1,9 @@
 import { useNavigate, useParams } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+import { useTranslation } from "react-i18next";
 
 import IMCBox from "../../../../components/IMCBox";
 import IMCTypography from "../../../../components/IMCTypography";
@@ -15,25 +17,49 @@ import { styles } from "./styles";
 const BlogDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const blog = blogs.find((item) => item.id === Number(id));
 
   if (!blog) {
     return (
-      <IMCBox style={styles.notFound}>
-        <IMCTypography>Blog not found.</IMCTypography>
+      <IMCBox style={styles.container}>
+        <IMCTypography>{t("blogDetails.blogNotFound")}</IMCTypography>
       </IMCBox>
     );
   }
 
-  return (
-    <IMCBox style={styles.container}>
-      {/* Back */}
-      <IMCBox onClick={() => navigate("/blogs")} style={styles.backButton}>
-        <ArrowBackIcon fontSize="small" />
+  // Use the blog's language field
+  const isArabic = blog.language === "ar";
 
-        <IMCTypography weight={fontWeights.medium} color={colors.primary}>
-          Back to Blogs
+  return (
+    <IMCBox
+      style={{
+        ...styles.container,
+
+        // RTL/LTR based on blog.language
+        direction: isArabic ? "rtl" : "ltr",
+
+        // Optional: make text alignment match language
+        textAlign: isArabic ? "right" : "left",
+      }}
+    >
+      {/* Back */}
+      <IMCBox
+        onClick={() => navigate("/blogs")}
+        style={{
+          ...styles.backButton,
+          flexDirection: isArabic ? "row-reverse" : "row",
+        }}
+      >
+        {isArabic ? (
+          <ArrowForwardIcon fontSize="small" sx={{ color: colors.primary }} />
+        ) : (
+          <ArrowBackIcon fontSize="small" sx={{ color: colors.primary }} />
+        )}
+
+        <IMCTypography color={colors.primary}>
+          {t("blogDetails.backToBlogs")}
         </IMCTypography>
       </IMCBox>
 
@@ -41,7 +67,12 @@ const BlogDetails = () => {
       <img src={blog.cover_image} alt={blog.title} style={styles.image} />
 
       {/* Meta */}
-      <IMCBox style={styles.metaContainer}>
+      <IMCBox
+        style={{
+          ...styles.metaContainer,
+          flexDirection: isArabic ? "row-reverse" : "row",
+        }}
+      >
         <IMCBox style={styles.metaItem}>
           <PersonOutlineIcon fontSize="small" />
 
@@ -64,13 +95,24 @@ const BlogDetails = () => {
         variant="h3"
         size={fontSizes.xxl}
         weight={fontWeights.bold}
-        style={styles.title}
+        style={{
+          ...styles.title,
+          textAlign: isArabic ? "right" : "left",
+        }}
       >
         {blog.title}
       </IMCTypography>
 
       {/* Content */}
-      <IMCTypography style={styles.content}>{blog.content}</IMCTypography>
+      <IMCTypography
+        style={{
+          ...styles.content,
+          direction: isArabic ? "rtl" : "ltr",
+          textAlign: isArabic ? "right" : "left",
+        }}
+      >
+        {blog.content}
+      </IMCTypography>
     </IMCBox>
   );
 };

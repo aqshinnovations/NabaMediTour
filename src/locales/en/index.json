@@ -78,7 +78,9 @@
     "title": "Our Doctors",
     "description": "Meet our experienced doctors and medical specialists.",
     "all": "All",
-    "viewProfile": "View Profile"
+    "viewProfile": "View Profile",
+    "noCategory": "No category found",
+    "noDoctor": "No Doctors found"
   },
   "doctorsDetails": {
     "notFound": "Doctor not found.",
@@ -119,5 +121,6 @@
   "doctorCard": {
     "yearsExperience": "years experience",
     "viewProfile": "View profile"
-  }
+  },
+  "noData": "No data found."
 }

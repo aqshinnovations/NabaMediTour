@@ -14,7 +14,7 @@ export const styles = {
   },
 
   image: {
-    height: 220,
+    height: 320,
     objectFit: "cover",
   },
 

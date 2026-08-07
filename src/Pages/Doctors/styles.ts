@@ -1,3 +1,4 @@
+import { borderRadius } from "../../styles/borders";
 import { colors } from "../../styles/colors";
 import { fontSizes } from "../../styles/fontSizes";
 import { spacing } from "../../styles/spacing";
@@ -13,7 +14,7 @@ export const styles = {
   },
 
   chip: {
-    borderRadius: "30px",
+    borderRadius: borderRadius.lg,
     px: spacing.sm,
     py: spacing.base,
     fontSize: fontSizes.sm,
@@ -21,7 +22,7 @@ export const styles = {
 
   doctorsSection: {
     backgroundColor: colors.light,
-    py: "80px", // spacing doesn't have 80px
+    py: spacing.sm,
   },
 
   grid: {

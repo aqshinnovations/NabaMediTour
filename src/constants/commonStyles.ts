@@ -1,6 +1,8 @@
 import { colors } from "../styles/colors";
 import { fontWeights } from "../styles/fontWeights";
 import { fontSizes } from "../styles/fontSizes";
+import type { CSSProperties } from "react";
+import { spacing } from "../styles/spacing";
 
 export const commonStyles = {
   sectionTitle: {
@@ -39,4 +41,10 @@ export const commonStyles = {
       backgroundColor: colors.msBlue,
     },
   },
+  noData: {
+    width: "100%",
+    display: "flex",
+
+    padding: spacing.base,
+  } satisfies CSSProperties,
 };

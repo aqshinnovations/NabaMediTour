@@ -8,192 +8,236 @@ import {
   Button,
 } from "@mui/material";
 
-import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
-import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import CloudUploadOutlinedIcon from "@mui/icons-material/CloudUploadOutlined";
-import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+
+import { apiCallPostWithForm, apiUrl } from "../../utils/api";
+import { infoCards } from "./const";
+import { showError, showSuccess } from "../../utils/toast";
+import { styles } from "./style";
 import PageHero from "../../components/PageHero";
-import { colors } from "../../styles/colors";
 
-const infoCards = [
-  {
-    icon: <PhoneOutlinedIcon />,
-    title: "Call Us",
-    line1: "+91 98915 67245",
-    line2: "Mon - Fri, 9am - 6pm EST",
-  },
-  {
-    icon: <MailOutlineOutlinedIcon />,
-    title: "Email Us",
-    line1: "nabameditour@gmail.com",
-    line2: "We reply within 24 hours",
-  },
-  {
-    icon: <LocationOnOutlinedIcon />,
-    title: "Visit Us",
-    line1: "New Delhi",
-    line2: "India,  10025",
-  },
-];
+interface ContactForm {
+  name: string;
+  mobile: string;
+  email: string;
+  aboutHealth: string;
+}
 
 export default function ContactUs() {
+  const { t } = useTranslation();
+
+  const [formData, setFormData] = useState<ContactForm>({
+    name: "",
+    mobile: "",
+    email: "",
+    aboutHealth: "",
+  });
+
+  const [report, setReport] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = event.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0] ?? null;
+    setReport(file);
+  };
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+
+    const form = new FormData();
+
+    form.append("name", formData.name);
+    form.append("mobile", formData.mobile);
+    form.append("email", formData.email);
+    form.append("aboutHealth", formData.aboutHealth);
+
+    if (report) {
+      form.append("report", report);
+    }
+
+    setLoading(true);
+
+    apiCallPostWithForm(
+      apiUrl.contactUs,
+      form,
+      (response) => {
+        console.log("Contact API Response:", response);
+
+        setLoading(false);
+
+        setFormData({
+          name: "",
+          mobile: "",
+          email: "",
+          aboutHealth: "",
+        });
+
+        setReport(null);
+
+        showSuccess(response.msg ?? t("requestSent"));
+      },
+      (error) => {
+        console.error("Contact API Error:", error);
+
+        setLoading(false);
+
+        showError(t("somethingWentWrong"));
+      },
+    );
+  };
+
   return (
     <>
       <PageHero
-        title="Get a Free Consultation"
-        description="Share your health concerns with our medical experts and receive personalized guidance within 24 hours."
+        title={t("contact.heroTitle")}
+        description={t("contact.description")}
       />
-
-      <Box
-        sx={{
-          background: "#F7F9FC",
-          py: { xs: 6, md: 8 },
-        }}
-      >
-        <Container maxWidth="lg">
+      <Box sx={styles.section}>
+        <Container>
           <Grid container spacing={4}>
-            {/* Left */}
+            {/* Information Cards */}
             <Grid size={{ xs: 12, md: 4 }}>
-              {infoCards.map((item) => (
-                <Card
-                  key={item.title}
-                  sx={{
-                    p: 4,
-                    borderRadius: 4,
-                    mb: 3,
-                    boxShadow: "0 6px 20px rgba(0,0,0,.05)",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: 42,
-                      height: 42,
-                      borderRadius: 2,
-                      background: "#EAF8F8",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: colors.msBlue,
-                      mb: 2,
-                    }}
-                  >
-                    {item.icon}
-                  </Box>
+              {infoCards.map((item) => {
+                const Icon = item.icon;
 
-                  <Typography fontWeight={700} fontSize={16} mb={1}>
-                    {item.title}
-                  </Typography>
+                return (
+                  <Card key={item.title} sx={styles.infoCard}>
+                    <Box sx={styles.iconBox}>
+                      <Icon />
+                    </Box>
 
-                  <Typography>{item.line1}</Typography>
+                    <Typography sx={styles.cardTitle}>
+                      {t(item.title)}
+                    </Typography>
 
-                  <Typography color="text.secondary" mt={1}>
-                    {item.line2}
-                  </Typography>
-                </Card>
-              ))}
+                    <Typography>{t(item.line1)}</Typography>
+
+                    <Typography sx={styles.cardSubtitle}>
+                      {t(item.line2)}
+                    </Typography>
+                  </Card>
+                );
+              })}
             </Grid>
 
-            {/* Right */}
+            {/* Contact Form */}
             <Grid size={{ xs: 12, md: 8 }}>
               <Card
-                sx={{
-                  p: { xs: 3, md: 5 },
-                  borderRadius: 4,
-                  boxShadow: "0 6px 20px rgba(0,0,0,.05)",
-                }}
+                component="form"
+                onSubmit={handleSubmit}
+                sx={styles.formCard}
               >
-                <Typography fontSize={24} fontWeight={700}>
-                  Tell Us About Your Health
+                <Typography sx={styles.formTitle}>
+                  {t("contact.title")}
                 </Typography>
 
-                <Typography color="text.secondary" mb={4}>
-                  All fields marked with * are required.
+                <Typography sx={styles.formDescription}>
+                  {t("contact.requiredNote")}
                 </Typography>
 
                 <Grid container spacing={3}>
+                  {/* Name */}
                   <Grid size={12}>
                     <TextField
                       fullWidth
-                      label="Full Name *"
-                      placeholder="John Doe"
+                      required
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      label={t("contact.fullName")}
+                      placeholder={t("contact.fullNamePlaceholder")}
                     />
                   </Grid>
 
+                  {/* Email */}
                   <Grid size={{ xs: 12, md: 6 }}>
                     <TextField
                       fullWidth
-                      label="Email *"
-                      placeholder="john@example.com"
+                      required
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      label={t("contact.emailLabel")}
+                      placeholder={t("contact.emailPlaceholder")}
                     />
                   </Grid>
 
+                  {/* Mobile */}
                   <Grid size={{ xs: 12, md: 6 }}>
                     <TextField
                       fullWidth
-                      label="Mobile *"
-                      placeholder="+1 (555) 000-0000"
+                      required
+                      name="mobile"
+                      value={formData.mobile}
+                      onChange={handleChange}
+                      label={t("contact.mobile")}
+                      placeholder={t("contact.mobilePlaceholder")}
                     />
                   </Grid>
 
+                  {/* Health */}
                   <Grid size={12}>
                     <TextField
                       fullWidth
+                      required
                       multiline
                       rows={6}
-                      label="About Your Health *"
-                      placeholder="Describe your condition, symptoms, and what treatment you're seeking..."
+                      name="aboutHealth"
+                      value={formData.aboutHealth}
+                      onChange={handleChange}
+                      label={t("contact.health")}
+                      placeholder={t("contact.healthPlaceholder")}
                     />
                   </Grid>
 
+                  {/* Medical Reports */}
                   <Grid size={12}>
-                    <Typography fontWeight={600} mb={1}>
-                      Medical Reports (Optional)
+                    <Typography sx={styles.uploadTitle}>
+                      {t("contact.medicalReports")}
                     </Typography>
 
-                    <Box
-                      component="label"
-                      sx={{
-                        border: "2px dashed #D8DEE8",
-                        borderRadius: 2,
-                        py: 2.5,
-                        px: 3,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 2,
-                        cursor: "pointer",
-                      }}
-                    >
+                    <Box component="label" sx={styles.uploadBox}>
                       <CloudUploadOutlinedIcon color="action" />
 
-                      <Typography color="text.secondary">
-                        Click to upload medical reports (PDF, images)
+                      <Typography sx={styles.uploadText}>
+                        {report ? report.name : t("contact.uploadReports")}
                       </Typography>
 
-                      <input hidden type="file" multiple />
+                      <input
+                        hidden
+                        type="file"
+                        accept=".pdf,image/*"
+                        onChange={handleFileChange}
+                      />
                     </Box>
                   </Grid>
 
+                  {/* Submit */}
                   <Grid size={12}>
                     <Button
                       fullWidth
+                      type="submit"
                       size="large"
                       variant="contained"
-                      endIcon={<SendOutlinedIcon />}
-                      sx={{
-                        mt: 1,
-                        py: 2,
-                        borderRadius: 2,
-                        background: colors.msBlue,
-                        textTransform: "none",
-                        fontSize: 18,
-                        "&:hover": {
-                          background: colors.msBlue,
-                        },
-                      }}
+                      disabled={loading}
+                      sx={styles.submitButton}
                     >
-                      Submit Inquiry
+                      {loading ? t("contact.submitting") : t("contact.submit")}
                     </Button>
                   </Grid>
                 </Grid>

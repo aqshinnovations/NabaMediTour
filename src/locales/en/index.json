@@ -38,31 +38,31 @@
   },
 
   "footer": {
-    "brand": "نابا ميدي تور",
-    "description": "نربط المرضى حول العالم برعاية طبية عالمية المستوى. رحلتك الصحية هي أولويتنا.",
+    "brand": "Naba Medi Tour",
+    "description": "We connect patients around the world with world-class medical care. Your health journey is our priority.",
 
-    "treatments": "العلاجات",
-    "cardiology": "أمراض القلب",
-    "orthopedics": "جراحة العظام",
-    "oncology": "طب الأورام",
-    "neurology": "طب الأعصاب",
-    "cosmeticSurgery": "الجراحة التجميلية",
+    "treatments": "Treatments",
+    "cardiology": "Cardiology",
+    "orthopedics": "Orthopedics",
+    "oncology": "Oncology",
+    "neurology": "Neurology",
+    "cosmeticSurgery": "Cosmetic Surgery",
 
-    "company": "الشركة",
-    "hospitals": "المستشفيات",
-    "doctors": "الأطباء",
-    "technology": "التقنيات",
-    "blog": "المدونة",
-    "contact": "اتصل بنا",
+    "company": "Company",
+    "hospitals": "Hospitals",
+    "doctors": "Doctors",
+    "technology": "Technology",
+    "blog": "Blog",
+    "contact": "Contact Us",
 
-    "getInTouch": "تواصل معنا",
-    "address": "نيودلهي، الهند",
+    "getInTouch": "Get in Touch",
+    "address": "New Delhi, India",
     "phone": "+91 98915 67245",
     "email": "nabameditour@gmail.com",
 
-    "copyright": "© 2026 نابا ميدي تور. جميع الحقوق محفوظة.",
-    "privacyPolicy": "سياسة الخصوصية",
-    "termsOfService": "شروط الخدمة"
+    "copyright": "© 2026 Naba Medi Tour. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
   },
   "serviceLocations": {
     "title": "Service Locations",
@@ -123,5 +123,33 @@
     "yearsExperience": "years experience",
     "viewProfile": "View profile"
   },
-  "noData": "No data found."
+  "noData": "No data found.",
+  "requestSent": "Your request has been sent successfully. We will contact you soon.",
+  "somethingWentWrong": "Something went wrong. Please try again.",
+  "contact": {
+    "callUs": "Call Us",
+    "phone": "+91 98915 67245",
+    "workingHours": "Mon - Fri, 9am - 6pm EST",
+    "emailUs": "Email Us",
+    "email": "nabameditour@gmail.com",
+    "emailResponse": "We reply within 24 hours",
+    "visitUs": "Visit Us",
+    "city": "New Delhi",
+    "country": "India, 10025",
+    "title": "Tell Us About Your Health",
+    "requiredNote": "All fields marked with * are required.",
+    "fullName": "Full Name *",
+    "fullNamePlaceholder": "John Doe",
+    "emailLabel": "Email *",
+    "emailPlaceholder": "john@example.com",
+    "mobile": "Mobile *",
+    "mobilePlaceholder": "+1 (555) 000-0000",
+    "health": "About Your Health *",
+    "healthPlaceholder": "Describe your condition, symptoms, and what treatment you're seeking...",
+    "medicalReports": "Medical Reports (Optional)",
+    "uploadReports": "Click to upload medical reports (PDF, images)",
+    "submit": "Submit Inquiry",
+    "heroTitle": "Contact Us",
+    "description": "Have a question or need assistance? Send us your request and our team will contact you soon."
+  }
 }

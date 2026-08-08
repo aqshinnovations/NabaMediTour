@@ -123,5 +123,33 @@
     "yearsExperience": "سنوات من الخبرة",
     "viewProfile": "عرض الملف الشخصي"
   },
-  "noData": "لم يتم العثور على بيانات."
+  "noData": "لم يتم العثور على بيانات.",
+  "requestSent": "تم إرسال طلبك بنجاح. سنتواصل معك قريبًا.",
+  "somethingWentWrong": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+  "contact": {
+    "callUs": "اتصل بنا",
+    "phone": "+٩١ ٩٨٩١٥ ٦٧٢٤٥",
+    "workingHours": "الإثنين - الجمعة، 9 صباحًا - 6 مساءً بتوقيت EST",
+    "emailUs": "راسلنا عبر البريد الإلكتروني",
+    "email": "nabameditour@gmail.com",
+    "emailResponse": "نرد خلال 24 ساعة",
+    "visitUs": "قم بزيارتنا",
+    "city": "نيودلهي",
+    "country": "الهند، 10025",
+    "title": "أخبرنا عن حالتك الصحية",
+    "requiredNote": "جميع الحقول التي تحتوي على * مطلوبة.",
+    "fullName": "الاسم الكامل *",
+    "fullNamePlaceholder": "محمد أحمد",
+    "emailLabel": "البريد الإلكتروني *",
+    "emailPlaceholder": "john@example.com",
+    "mobile": "رقم الهاتف *",
+    "mobilePlaceholder": "+٩١ ٠٠٠٠٠ ٠٠٠٠٠",
+    "health": "حول حالتك الصحية *",
+    "healthPlaceholder": "صف حالتك والأعراض والعلاج الذي تبحث عنه...",
+    "medicalReports": "التقارير الطبية (اختياري)",
+    "uploadReports": "اضغط لرفع التقارير الطبية (PDF، صور)",
+    "submit": "إرسال الاستفسار",
+    "heroTitle": "اتصل بنا",
+    "description": "هل لديك سؤال أو تحتاج إلى مساعدة؟ أرسل طلبك وسيتواصل معك فريقنا قريبًا."
+  }
 }

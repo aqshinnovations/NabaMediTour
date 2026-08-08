@@ -9,13 +9,10 @@ export const showToast = (type: TypeOptions = "success", msg: string): void => {
       theme: "colored",
       toastId: customId,
     });
-  } else if (type === "error") {
+  }
+
+  if (type === "error") {
     toast.error(msg, {
-      theme: "colored",
-      toastId: customId,
-    });
-  } else if (type === "warning") {
-    toast.warn(msg, {
       theme: "colored",
       toastId: customId,
     });
@@ -28,8 +25,4 @@ export const showSuccess = (msg: string): void => {
 
 export const showError = (msg: string): void => {
   showToast("error", msg);
-};
-
-export const showWarning = (msg: string): void => {
-  showToast("warning", msg);
 };

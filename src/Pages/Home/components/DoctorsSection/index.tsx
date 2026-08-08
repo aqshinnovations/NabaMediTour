@@ -5,17 +5,41 @@ import IMCBox from "../../../../components/IMCBox";
 import IMCTypography from "../../../../components/IMCTypography";
 import DoctorCard from "../../../../components/DoctorCard";
 
-import { doctors } from "../../../../data/doctors";
 import { commonStyles } from "../../../../constants/commonStyles";
 import { styles } from "./styles";
 import { spacing } from "../../../../styles/spacing";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import apiCallUnsecureGet, { apiUrl } from "../../../../utils/api";
+import type { Doctor } from "./types";
 
 const DoctorsSection = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
-  const displayedDoctors = doctors.slice(0, 4);
+  // const displayedDoctors = doctors.slice(0, 4);
+  const [doctors, setDoctors] = useState<Doctor[]>([]);
+
+  const fetchDoctors = () => {
+    apiCallUnsecureGet<Doctor[]>(
+      apiUrl.doctorList,
+      (response) => {
+        console.log("response:", response);
+        if (response?.code === "200") {
+          setDoctors(response.list || []);
+        } else {
+          setDoctors([]);
+        }
+      },
+      (error) => {
+        console.error("Doctor List API error:", error);
+      },
+    );
+  };
+  // Fetch doctors
+  useEffect(() => {
+    fetchDoctors();
+  }, []);
 
   return (
     <IMCBox style={styles.section} margin={spacing.none}>
@@ -24,7 +48,7 @@ const DoctorsSection = () => {
       </IMCTypography>
 
       <Grid container spacing={4} sx={styles.grid}>
-        {displayedDoctors.map((doctor) => (
+        {doctors.map((doctor) => (
           <Grid key={doctor.id} size={{ xs: 12, sm: 6, md: 3 }}>
             <DoctorCard
               id={doctor.id}

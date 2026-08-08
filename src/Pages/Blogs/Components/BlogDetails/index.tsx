@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 import IMCBox from "../../../../components/IMCBox";
 import IMCTypography from "../../../../components/IMCTypography";
 
-import { blogs } from "../../../../data/blogs";
 import { colors } from "../../../../styles/colors";
 import { fontSizes } from "../../../../styles/fontSizes";
 import { fontWeights } from "../../../../styles/fontWeights";
@@ -25,10 +24,6 @@ interface Blog {
   created_at: string;
   language: string;
 }
-interface BlogResponse {
-  code: string;
-  data: Blog;
-}
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -38,15 +33,16 @@ const BlogDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!id) {
-      setLoading(false);
-      return;
-    }
-    apiCallUnsecureGet(
+    if (!id) return;
+
+    apiCallUnsecureGet<Blog>(
       `${apiUrl.blogDetails}?id=${id}`,
       (res) => {
         console.log("Blog Details API Response:", res);
-        setBlog(res.list);
+
+        if (res.list) {
+          setBlog(res.list);
+        }
         setLoading(false);
       },
       (error) => {

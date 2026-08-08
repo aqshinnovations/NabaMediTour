@@ -19,6 +19,9 @@ const apiUrl = {
 
   blogList: `${baseUrl}/blogs/list/`,
   blogDetails: `${baseUrl}/blogs/blog-data/`,
+
+  servicesList: `${baseUrl}/services/list/`,
+  contactUs: `${baseUrl}/services/list/`,
 };
 
 export { baseUrl, apiUrl };

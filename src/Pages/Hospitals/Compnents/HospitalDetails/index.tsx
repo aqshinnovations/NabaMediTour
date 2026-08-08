@@ -122,8 +122,10 @@ const HospitalDetails = () => {
             </Typography>
 
             <Box sx={styles.location}>
-              <FiMapPin />
-              <Typography>{t("hospitalDetails.location")}</Typography>
+              <FiMapPin color={colors.white} />
+              <Typography style={{ color: colors.white }}>
+                {t("hospitalDetails.location")}
+              </Typography>
             </Box>
           </Box>
         </Box>

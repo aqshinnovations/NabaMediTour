@@ -66,6 +66,7 @@ export const styles: Record<string, SxProps<Theme>> = {
     alignItems: "center",
     gap: 1,
     mb: 2,
+    mt: 2,
   },
 
   content: {

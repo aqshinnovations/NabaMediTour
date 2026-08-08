@@ -9,6 +9,7 @@ import ContactCTA from "../../components/ContactCTA";
 import { useEffect, useState } from "react";
 import apiCallUnsecureGet, { apiUrl } from "../../utils/api";
 import NoDataFound from "../../components/NoDataFound";
+import type { Hospital } from "./types";
 
 const Hospitals = () => {
   const { t, i18n } = useTranslation();
@@ -22,7 +23,7 @@ const Hospitals = () => {
         console.log("Hospital API Response:", res);
         console.log("Hospital List:", res.list);
 
-        setHospitals(res.list);
+        setHospitals(res.list as Hospital[]);
       },
       (err) => {
         console.error("Hospital API Error:", err);

@@ -41,9 +41,9 @@ const HospitalDoctorCard = ({
 
       <Box sx={{ p: 2 }}>
         <Typography
-          variant="h6"
+          variant="body2"
           sx={{
-            fontWeight: 700,
+            fontWeight: 600,
             mb: 0.5,
           }}
         >

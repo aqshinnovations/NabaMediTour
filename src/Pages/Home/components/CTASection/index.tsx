@@ -1,5 +1,4 @@
 import { Box, Button, Container, Typography } from "@mui/material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import StarIcon from "@mui/icons-material/Star";
 import { useNavigate } from "react-router-dom";
 import { styles } from "./styles";
@@ -26,7 +25,6 @@ const CTASection = () => {
 
         <Button
           variant="contained"
-          endIcon={<ArrowForwardIcon sx={styles.arrow} />}
           sx={styles.button}
           onClick={() => navigate("/contactUs")}
         >

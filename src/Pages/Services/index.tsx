@@ -1,15 +1,44 @@
 import PageHero from "../../components/PageHero";
 
 import { Grid } from "@mui/material";
-import { services } from "../../data/services";
 import ServiceCard from "../../components/ServiceCard";
 import IMCBox from "../../components/IMCBox";
 import { useTranslation } from "react-i18next";
 import { styles } from "./styles";
+import { useEffect, useState } from "react";
+import apiCallUnsecureGet, { apiUrl } from "../../utils/api";
+
+export interface Service {
+  id: number;
+  name_en: string;
+  name_ar: string;
+  description_en: string;
+  description_ar: string;
+  image: string;
+  created_at: string;
+  updated_at: string;
+}
+
 const Services = () => {
   const { i18n, t } = useTranslation();
+  const [services, setServices] = useState<Service[]>([]);
 
   const isArabic = i18n.language === "ar";
+  useEffect(() => {
+    apiCallUnsecureGet<Service[]>(
+      apiUrl.servicesList,
+      (res) => {
+        console.log("Blogs API Response:", res);
+
+        if (res.list) {
+          setServices(res.list);
+        }
+      },
+      (error) => {
+        console.error("Blogs API Error:", error);
+      },
+    );
+  }, []);
 
   return (
     <>

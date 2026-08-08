@@ -6,15 +6,43 @@ import IMCTypography from "../../../../components/IMCTypography";
 import HospitalCard from "../../../../components/HospitalCard";
 import { useTranslation } from "react-i18next";
 
-import { hospitals } from "../../../../data/hospitals";
 import { commonStyles } from "../../../../constants/commonStyles";
 import { styles } from "./styles";
 import { spacing } from "../../../../styles/spacing";
+import { useEffect, useState } from "react";
+import apiCallUnsecureGet, { apiUrl } from "../../../../utils/api";
+import type { Hospital } from "./types";
 
 const HospitalSection = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
+
+  const [hospitals, setHospitals] = useState<Hospital[]>([]);
+
+  const fetchHospitals = () => {
+    apiCallUnsecureGet<Hospital[]>(
+      apiUrl.hospitalList,
+      (response) => {
+        console.log("Hospital API Response:", response);
+
+        if (response.code === "200") {
+          setHospitals(response.list || []);
+        } else {
+          setHospitals([]);
+        }
+      },
+      (error) => {
+        console.error("Hospital List API error:", error);
+        setHospitals([]);
+      },
+    );
+  };
+
+  useEffect(() => {
+    fetchHospitals();
+  }, []);
+
   return (
     <IMCBox style={styles.section} margin={spacing.none}>
       <IMCTypography variant="h2" style={commonStyles.sectionTitle}>

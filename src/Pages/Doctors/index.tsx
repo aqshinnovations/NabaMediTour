@@ -51,6 +51,7 @@ const Doctors = () => {
           : `${apiUrl.doctorList}?category_id=${selectedCategory}`;
 
       setLoading(true);
+      console.log("data", url);
 
       apiCallUnsecureGet(
         url,

@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { Card, CardMedia, Typography, Box } from "@mui/material";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import { styles } from "./style";
 import { colors } from "../../styles/colors";
@@ -17,6 +16,8 @@ export interface BlogCardProps {
   author: string;
   created_at: string;
   onClick?: () => void;
+  direction: "ltr" | "rtl";
+  readMore: string;
 }
 const BlogCard = ({
   id,
@@ -25,11 +26,19 @@ const BlogCard = ({
   content,
   author,
   created_at,
+  direction,
+  readMore,
 }: BlogCardProps) => {
   const navigate = useNavigate();
 
   return (
-    <Card sx={styles.card} onClick={() => navigate(`/blogs/${id}`)}>
+    <Card
+      sx={{
+        ...styles.card,
+        direction,
+      }}
+      onClick={() => navigate(`/blogs/${id}`)}
+    >
       <CardMedia component="img" image={image} alt={title} sx={styles.image} />
 
       <Box sx={styles.content}>
@@ -74,8 +83,7 @@ const BlogCard = ({
           gap={1}
           color={colors.mintGreen}
         >
-          <Typography fontWeight={600}>Read More</Typography>
-          <ArrowForwardIcon fontSize="small" sx={{ color: colors.mintGreen }} />
+          <Typography fontWeight={600}> {readMore}</Typography>
         </Box>
       </Box>
     </Card>

@@ -14,7 +14,11 @@ const apiUrl = {
   doctorList: `${baseUrl}/doctors/list/`,
   doctorDetails: `${baseUrl}/doctors/DoctorsDetails/`,
   hospitalList: `${baseUrl}/hospitals/list/`,
+
   hospitalsDetails: `${baseUrl}/hospitals/HospitalsDetails/`,
+
+  blogList: `${baseUrl}/blogs/list/`,
+  blogDetails: `${baseUrl}/blogs/blog-data/`,
 };
 
 export { baseUrl, apiUrl };

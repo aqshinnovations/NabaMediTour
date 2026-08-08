@@ -108,7 +108,8 @@
   },
   "blogs": {
     "title": "Our Blogs",
-    "description": "Stay updated with the latest healthcare insights, medical news, and wellness tips from our experts."
+    "description": "Stay updated with the latest healthcare insights, medical news, and wellness tips from our experts.",
+    "readMore": "Read More"
   },
   "blogDetails": {
     "backToBlogs": "Back to Blogs",

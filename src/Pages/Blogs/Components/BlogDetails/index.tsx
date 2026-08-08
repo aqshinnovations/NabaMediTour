@@ -13,35 +13,74 @@ import { colors } from "../../../../styles/colors";
 import { fontSizes } from "../../../../styles/fontSizes";
 import { fontWeights } from "../../../../styles/fontWeights";
 import { styles } from "./styles";
+import { useEffect, useState } from "react";
+import apiCallUnsecureGet, { apiUrl } from "../../../../utils/api";
+import i18n from "../../../../i18n";
+interface Blog {
+  id: number;
+  title: string;
+  content: string;
+  author: string;
+  cover_image: string;
+  created_at: string;
+  language: string;
+}
+interface BlogResponse {
+  code: string;
+  data: Blog;
+}
 
 const BlogDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const [blog, setBlog] = useState<Blog | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  const blog = blogs.find((item) => item.id === Number(id));
-
+  useEffect(() => {
+    if (!id) {
+      setLoading(false);
+      return;
+    }
+    apiCallUnsecureGet(
+      `${apiUrl.blogDetails}?id=${id}`,
+      (res) => {
+        console.log("Blog Details API Response:", res);
+        setBlog(res.list);
+        setLoading(false);
+      },
+      (error) => {
+        console.error("Blog Details API Error:", error);
+        setLoading(false);
+      },
+    );
+  }, [id]);
+  if (loading) {
+    return (
+      <IMCBox style={styles.container}>
+        {" "}
+        <IMCTypography> {t("common.loading")} </IMCTypography>{" "}
+      </IMCBox>
+    );
+  }
   if (!blog) {
     return (
       <IMCBox style={styles.container}>
-        <IMCTypography>{t("blogDetails.blogNotFound")}</IMCTypography>
+        {" "}
+        <IMCTypography> {t("blogDetails.blogNotFound")} </IMCTypography>{" "}
       </IMCBox>
     );
   }
 
   // Use the blog's language field
   const isArabic = blog.language === "ar";
-
+  const isAppArabic = i18n.language === "ar";
   return (
     <IMCBox
       style={{
         ...styles.container,
-
-        // RTL/LTR based on blog.language
-        direction: isArabic ? "rtl" : "ltr",
-
-        // Optional: make text alignment match language
-        textAlign: isArabic ? "right" : "left",
+        flexDirection: isAppArabic ? "row" : "row-reverse",
+        alignSelf: isAppArabic ? " flex-end" : "flex-end",
       }}
     >
       {/* Back */}
@@ -52,7 +91,7 @@ const BlogDetails = () => {
           flexDirection: isArabic ? "row-reverse" : "row",
         }}
       >
-        {isArabic ? (
+        {isAppArabic ? (
           <ArrowForwardIcon fontSize="small" sx={{ color: colors.primary }} />
         ) : (
           <ArrowBackIcon fontSize="small" sx={{ color: colors.primary }} />

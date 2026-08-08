@@ -4,13 +4,39 @@ import IMCBox from "../../components/IMCBox";
 import BlogCard from "../../components/BlogCard";
 import PageHero from "../../components/PageHero";
 
-import { blogs } from "../../data/blogs";
 import { styles } from "./styles";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import apiCallUnsecureGet, { apiUrl } from "../../utils/api";
+
+interface Blog {
+  id: number;
+  title: string;
+  content: string;
+  author: string;
+  cover_image: string;
+  created_at: string;
+  language: string;
+}
 
 const Blogs = () => {
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
+  const [blogs, setBlogs] = useState<Blog[]>([]);
 
+  useEffect(() => {
+    apiCallUnsecureGet<Blog[]>(
+      apiUrl.blogList,
+      (res) => {
+        console.log("Blogs API Response:", res);
+        console.log("Blogs Data:", res.data);
+
+        setBlogs(res.list ?? []);
+      },
+      (error) => {
+        console.error("Blogs API Error:", error);
+      },
+    );
+  }, []);
   return (
     <>
       <PageHero title={t("blogs.title")} description={t("blogs.description")} />
@@ -25,7 +51,13 @@ const Blogs = () => {
                 title={blog.title}
                 content={blog.content}
                 author={blog.author}
-                created_at={blog.created_at}
+                created_at={blog.created_at.split(" ")[0]}
+                direction={blog.language === "ar" ? "ltr" : "rtl"}
+                readMore={
+                  blog.language === "ar"
+                    ? t("blogs.readMore", { lng: "ar" })
+                    : t("blogs.readMore", { lng: "en" })
+                }
               />
             </Grid>
           ))}

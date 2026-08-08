@@ -12,7 +12,7 @@ export const styles = {
   },
 
   hero: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.primaryTeal,
   },
 
   heroContainer: {
@@ -79,10 +79,6 @@ export const styles = {
   about: {
     marginBottom: spacing.xl,
     lineHeight: 1.8,
-  },
-
-  infoTitle: {
-    marginBottom: spacing.md,
   },
 
   infoItem: {

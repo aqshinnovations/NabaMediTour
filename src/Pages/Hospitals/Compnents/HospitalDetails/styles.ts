@@ -1,108 +1,162 @@
-import { borderRadius } from "../../../../styles/borders";
+import type { SxProps, Theme } from "@mui/material";
 import { colors } from "../../../../styles/colors";
 import { fontSizes } from "../../../../styles/fontSizes";
-import { fontWeights } from "../../../../styles/fontWeights";
 import { spacing } from "../../../../styles/spacing";
+import { fontWeights } from "../../../../styles/fontWeights";
+import type { CSSProperties } from "react";
 
-export const styles = {
-  hero: (image: string) => ({
-    height: "340px",
-    backgroundImage: `linear-gradient(
-      rgba(0,0,0,.55),
-      rgba(0,0,0,.55)
-    ), url(${image})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
+export const styles: Record<string, SxProps<Theme>> = {
+  heroContainer: {
+    mx: "auto",
+    px: 3,
+    py: 5,
+    background: colors.primaryTeal,
+  },
+  alignCenter: {
     display: "flex",
     alignItems: "center",
-  }),
+    justifyContent: "center",
+  },
+  heroGrid: {
+    display: "grid",
+    gridTemplateColumns: {
+      xs: "1fr",
+      md: "400px 1fr",
+    },
+    gap: 4,
+    alignItems: "center",
+  },
 
-  heroContainer: {
+  hospitalImage: {
     width: "100%",
-    maxWidth: "1200px",
-    margin: "0 auto",
-    color: colors.white,
-    px: spacing.base,
+    height: {
+      xs: 250,
+      md: 350,
+    },
+    objectFit: "cover",
+    borderRadius: 3,
+    boxShadow: 3,
   },
 
-  backLink: {
-    color: colors.mintGreen,
-    textDecoration: "none",
+  hospitalInfo: {
+    display: "flex",
+    flexDirection: "column",
   },
 
-  heroTitle: {
+  backButton: {
+    display: "flex",
+    alignItems: "center",
+    gap: 1,
+    cursor: "pointer",
+    width: "fit-content",
+    mb: 2,
+  },
+
+  backText: {
+    cursor: "pointer",
+  },
+
+  hospitalTitle: {
     fontWeight: fontWeights.bold,
-    mt: spacing.md,
+    color: colors.white,
   },
 
   location: {
     display: "flex",
     alignItems: "center",
-    gap: spacing.xs,
-    mt: spacing.sm,
-    color: colors.white,
+    gap: 1,
+    mb: 2,
   },
 
   content: {
+    px: spacing.xxxl,
+    py: 4,
     maxWidth: "1200px",
-    margin: `${spacing.xxxl} auto`,
-    px: spacing.base,
   },
-  backButton: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: spacing.sm,
-    color: colors.white,
-    cursor: "pointer",
-    marginBottom: spacing.xl,
-  },
-  backText: {
-    opacity: 0.9,
-  },
+
   description: {
-    fontSize: fontSizes.base,
-    lineHeight: 1.8,
-    color: colors.textPrimary,
+    mb: 4,
   },
 
   grid: {
     display: "grid",
     gridTemplateColumns: {
-      xs: "1fr", // 1 column on mobile
-      sm: "repeat(2, 1fr)", // 2 columns on small screens
-      md: "repeat(3, 1fr)", // 3 columns on medium and above
+      xs: "1fr",
+      md: "1fr 1fr",
     },
-    gap: spacing.xxxl,
-    mt: spacing.xxxl,
+    gap: 4,
   },
 
   sectionTitle: {
     display: "flex",
     alignItems: "center",
-    gap: spacing.sm,
-    fontWeight: fontWeights.bold,
-    fontSize: fontSizes.lg,
-    mb: spacing.lg,
+    gap: 1,
+    mb: 2,
+  },
+
+  facilityIcon: {
+    color: colors.primaryDarkBlue,
+    fontSize: fontSizes.md,
+  },
+
+  facilityItem: {
+    display: "flex",
+    alignItems: "center",
+    gap: 1,
+    mb: 1,
+  },
+
+  facilityCheckIcon: {
+    color: colors.primary,
+    fontSize: 20,
+    flexShrink: 0,
   },
 
   facility: {
-    fontSize: fontSizes.base,
+    flex: 1,
   },
 
   chips: {
     display: "flex",
-    gap: spacing.md,
     flexWrap: "wrap",
+    gap: 1,
   },
 
   chip: {
-    bgcolor: colors.iceBlue,
-    color: colors.primaryTeal,
-    borderRadius: borderRadius.xl,
-    fontSize: fontSizes.base,
+    borderRadius: 2,
   },
 
-  facilityIcon: {
-    color: colors.primaryTeal,
+  proceduresSection: {
+    px: spacing.base,
+    py: 4,
+    background: colors.lightBlue,
   },
+
+  cardsGrid: {
+    display: "grid",
+    gridTemplateColumns: {
+      xs: "repeat(2, 1fr)",
+      sm: "repeat(3, 1fr)",
+      md: "repeat(4, 1fr)",
+      lg: "repeat(6, 1fr)",
+    },
+    gap: 2,
+    mt: 3,
+  },
+
+  doctorsSection: {
+    px: spacing.base,
+    py: 4,
+  },
+};
+export const backTextStyle: CSSProperties = {
+  cursor: "pointer",
+};
+export const backButtonStyle: CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: "8px",
+  cursor: "pointer",
+  width: "fit-content",
+  marginBottom: "16px",
 };

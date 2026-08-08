@@ -45,7 +45,7 @@ const ProcedureCard = ({ image, name, description }: ProcedureCardProps) => {
           sx={{
             mt: 0.5,
             display: "-webkit-box",
-            WebkitLineClamp: 2,
+            WebkitLineClamp: 5,
             WebkitBoxOrient: "vertical",
             overflow: "hidden",
           }}

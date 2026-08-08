@@ -139,33 +139,18 @@ const DoctorsDetails = () => {
       {/* Body */}
       <IMCBox style={styles.body}>
         <IMCBox>
-          <IMCTypography
-            variant="h3"
-            size={fontSizes.lg}
-            weight={fontWeights.bold}
-            style={styles.sectionTitle}
-          >
+          <IMCTypography style={commonStyles.sectionLabel}>
             {t("doctorsDetails.about")}
           </IMCTypography>
 
-          <IMCTypography
-            variant="body"
-            size={fontSizes.md}
-            color={colors.textSecondary}
-            style={styles.about}
-          >
+          <IMCTypography variant="body" style={styles.about}>
             {isArabic ? doctor.about_ar : doctor.about_en}
           </IMCTypography>
 
           <Grid container spacing={4}>
             {/* Qualifications */}
             <Grid size={{ xs: 12, md: 4 }}>
-              <IMCTypography
-                variant="h3"
-                weight={fontWeights.bold}
-                size="30"
-                style={styles.infoTitle}
-              >
+              <IMCTypography style={commonStyles.sectionLabel}>
                 {t("doctorsDetails.qualifications")}
               </IMCTypography>
 
@@ -190,7 +175,7 @@ const DoctorsDetails = () => {
                 variant="h3"
                 weight={fontWeights.bold}
                 size="30"
-                style={styles.infoTitle}
+                style={commonStyles.sectionLabel}
               >
                 {t("doctorsDetails.specializations")}
               </IMCTypography>
@@ -216,7 +201,7 @@ const DoctorsDetails = () => {
                 variant="h3"
                 weight={fontWeights.bold}
                 size="30"
-                style={styles.infoTitle}
+                style={commonStyles.sectionLabel}
               >
                 {t("doctorsDetails.awards")}
               </IMCTypography>

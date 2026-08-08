@@ -47,4 +47,10 @@ export const commonStyles = {
 
     padding: spacing.base,
   } satisfies CSSProperties,
+  sectionLabel: {
+    marginBottom: spacing.md,
+    color: colors.gray,
+    fontSize: fontSizes.md,
+    fontWeight: fontWeights.bold,
+  },
 };

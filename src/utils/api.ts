@@ -1,8 +1,8 @@
 import axios from "axios";
 import type { AxiosResponse, AxiosError } from "axios";
 
-const baseUrl: string = "http://localhost:8000";
-// const baseUrl: string = "https://www.indocscare.com:8000/";
+// const baseUrl: string = "http://localhost:8000";
+const baseUrl: string = "https://api.nabameditour.com";
 
 const imageBaseUrl: string = "http://localhost:8000";
 // const imageBaseUrl: string = "https://www.indocscare.com:8000";

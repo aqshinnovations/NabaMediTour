@@ -22,6 +22,7 @@ const apiUrl = {
 
   servicesList: `${baseUrl}/services/list/`,
   contactUs: `${baseUrl}/patients/patients/`,
+  Testimonials: `${baseUrl}/testimonials/testimonials/list`,
 };
 
 export { baseUrl, apiUrl };

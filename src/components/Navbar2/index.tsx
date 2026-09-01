@@ -17,7 +17,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import logo from "../../assets/images/logo.svg";
+import logo from "../../assets/images/logo.png";
 import { navItems } from "./constants";
 import LanguageSwitcher from "../LanguageSwitcher";
 import {
@@ -65,9 +65,9 @@ const Navbar = () => {
               }}
             />
 
-            <Typography fontWeight={700} color="#1F2937">
-              {t("navbar.brand")}
-            </Typography>
+            {/* <Typography fontWeight={700} color="#1F2937">
+              {t("navbar.brand")}12
+            </Typography> */}
           </Box>
 
           {!mobile && (

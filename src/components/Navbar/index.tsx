@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import { colors } from "../../styles/colors";
 import { shadows } from "../../styles/shadows";
-import IMCLogo from "../../assets/images/logo.png";
+import IMCLogo from "../../assets/images/logo.jpeg";
 import IMCTypography from "../IMCTypography";
 import { fontWeights } from "../../styles/fontWeights";
 import IMCButton from "../IMCButton";

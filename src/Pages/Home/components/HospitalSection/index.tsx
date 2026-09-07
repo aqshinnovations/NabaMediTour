@@ -54,7 +54,7 @@ const HospitalSection = () => {
           <Grid key={hospital.id} size={{ xs: 12, md: 6 }} sx={styles.gridItem}>
             <HospitalCard
               id={hospital.id}
-              image={hospital.image}
+              image={hospital.images?.[0]?.image || ""}
               name={isArabic ? hospital.name_ar : hospital.name_en}
               location={isArabic ? hospital.location_ar : hospital.location_en}
               description={

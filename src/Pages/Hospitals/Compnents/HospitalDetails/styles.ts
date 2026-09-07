@@ -1,11 +1,10 @@
-import type { SxProps, Theme } from "@mui/material";
 import { colors } from "../../../../styles/colors";
 import { fontSizes } from "../../../../styles/fontSizes";
 import { spacing } from "../../../../styles/spacing";
 import { fontWeights } from "../../../../styles/fontWeights";
 import type { CSSProperties } from "react";
-
-export const styles: Record<string, SxProps<Theme>> = {
+import type { SystemStyleObject, Theme } from "@mui/system";
+export const styles: Record<string, SystemStyleObject<Theme>> = {
   heroContainer: {
     mx: "auto",
     px: 3,
@@ -21,7 +20,7 @@ export const styles: Record<string, SxProps<Theme>> = {
     display: "grid",
     gridTemplateColumns: {
       xs: "1fr",
-      md: "400px 1fr",
+      md: "60% 2fr",
     },
     gap: 4,
     alignItems: "center",
@@ -68,7 +67,46 @@ export const styles: Record<string, SxProps<Theme>> = {
     mb: 2,
     mt: 2,
   },
+  imageGallery: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    gap: "12px",
+  },
 
+  mainHospitalImage: {
+    width: "100%",
+    height: "420px",
+    objectFit: "cover",
+    borderRadius: "12px",
+    display: "block",
+  },
+
+  thumbnailContainer: {
+    display: "flex",
+    gap: "10px",
+    overflowX: "auto",
+  },
+
+  thumbnailImage: {
+    width: "90px",
+    height: "70px",
+    objectFit: "cover",
+    borderRadius: "8px",
+    cursor: "pointer",
+    flexShrink: 0,
+    border: "2px solid transparent",
+    transition: "all 0.2s ease",
+
+    "&:hover": {
+      opacity: 0.8,
+    },
+  },
+
+  activeThumbnail: {
+    border: "2px solid",
+    borderColor: "primary.main",
+  },
   content: {
     px: spacing.xxxl,
     py: 4,

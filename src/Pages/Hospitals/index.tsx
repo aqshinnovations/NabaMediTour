@@ -46,9 +46,11 @@ const Hospitals = () => {
             >
               <HospitalCard
                 id={hospital.id}
-                image={hospital.image}
+                image={hospital.images?.[0]?.image || ""}
                 name={isArabic ? hospital.name_ar : hospital.name_en}
-                location={t("hospitals.location")}
+                location={
+                  isArabic ? hospital.location_ar : hospital.location_en
+                }
                 description={
                   isArabic ? hospital.description_ar : hospital.description_en
                 }

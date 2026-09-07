@@ -3,8 +3,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { colors } from "../../../styles/colors";
-import FavoriteImg from "../../../assets/images/logo.jpeg";
+import FavoriteImg from "../../../assets/images/logo.png";
 
 import { useTranslation } from "react-i18next";
 
@@ -21,16 +20,16 @@ const CompanyInfoSection = () => {
             src={FavoriteImg}
             alt="Favorite"
             sx={{
-              width: 22,
-              height: 22,
-              objectFit: "contain",
+              width: "300px",
+              height: "70px",
+              // objectFit: "contain",
             }}
           />
           {/* </Stack> */}
 
-          <Typography fontWeight={700} fontSize={30} color={colors.white}>
+          {/* <Typography fontWeight={700} fontSize={30} color={colors.white}>
             {t("footer.brand")}
-          </Typography>
+          </Typography> */}
         </Stack>
 
         <Typography

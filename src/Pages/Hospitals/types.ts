@@ -18,7 +18,10 @@ export interface HospitalDoctor {
   specialist_ar: string;
   image: string;
 }
-
+export interface HospitalImage {
+  id: number;
+  image: string;
+}
 export interface HospitalProcedure {
   id: number;
   name_en: string;
@@ -36,7 +39,7 @@ export interface Hospital {
   description_ar: string;
   location_en: string;
   location_ar: string;
-  image: string;
+  images: HospitalImage[];
   specializations: HospitalSpecialization[];
   facilities: HospitalFacility[];
   doctors: HospitalDoctor[];

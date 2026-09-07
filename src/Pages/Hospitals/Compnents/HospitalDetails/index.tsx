@@ -33,7 +33,7 @@ const HospitalDetails = () => {
 
   const [hospital, setHospital] = useState<Hospital | null>(null);
   const [loading, setLoading] = useState(true);
-
+  const [selectedImage, setSelectedImage] = useState<string>("");
   const isArabic = i18n.language === "ar";
 
   useEffect(() => {
@@ -43,11 +43,18 @@ const HospitalDetails = () => {
       url,
       (res) => {
         if (res?.data) {
-          setHospital(res.data as Hospital);
+          const hospitalData = res.data as Hospital;
+
+          setHospital(hospitalData);
+
+          // Show first image initially
+          if (hospitalData.images?.length > 0) {
+            setSelectedImage(hospitalData.images[0].image);
+          }
         } else {
           setHospital(null);
         }
-
+        console.log("hospital details", res);
         setLoading(false);
       },
       (error) => {
@@ -68,6 +75,9 @@ const HospitalDetails = () => {
   }
 
   const hospitalName = isArabic ? hospital.name_ar : hospital.name_en;
+  const hospitalLocation = isArabic
+    ? hospital.location_ar
+    : hospital.location_en;
 
   const hospitalDescription = isArabic
     ? hospital.description_ar
@@ -79,12 +89,32 @@ const HospitalDetails = () => {
 
       <Box sx={styles.heroContainer}>
         <Box sx={styles.heroGrid}>
-          <Box
-            component="img"
-            src={hospital.image}
-            alt={hospitalName}
-            sx={styles.hospitalImage}
-          />
+          <Box sx={styles.imageGallery}>
+            {/* Big selected image */}
+            <Box
+              component="img"
+              src={selectedImage}
+              alt={hospitalName}
+              sx={styles.mainHospitalImage}
+            />
+
+            {/* Small thumbnails */}
+            <Box sx={styles.thumbnailContainer}>
+              {hospital.images?.map((image) => (
+                <Box
+                  key={image.id}
+                  component="img"
+                  src={image.image}
+                  alt={hospitalName}
+                  onClick={() => setSelectedImage(image.image)}
+                  sx={[
+                    styles.thumbnailImage,
+                    selectedImage === image.image && styles.activeThumbnail,
+                  ]}
+                />
+              ))}
+            </Box>
+          </Box>
 
           <Box sx={styles.hospitalInfo}>
             <IMCBox
@@ -124,7 +154,7 @@ const HospitalDetails = () => {
             <Box sx={styles.location}>
               <FiMapPin color={colors.white} />
               <Typography style={{ color: colors.white }}>
-                {t("hospitalDetails.location")}
+                {hospitalLocation}
               </Typography>
             </Box>
           </Box>

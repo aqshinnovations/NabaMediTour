@@ -80,7 +80,9 @@
     "all": "الكل",
     "viewProfile": "عرض الملف الشخصي",
     "noCategory": "لا توجد فئات",
-    "noDoctor": "لم يتم العثور على أطباء"
+    "noDoctor": "لم يتم العثور على أطباء",
+    "selectCategory": "اختر التخصص",
+    "searchCategory": "ابحث عن التخصص"
   },
   "doctorsDetails": {
     "notFound": "الطبيب غير موجود.",

@@ -17,8 +17,8 @@ const DoctorsSection = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
-  // const displayedDoctors = doctors.slice(0, 4);
   const [doctors, setDoctors] = useState<Doctor[]>([]);
+  const displayedDoctors = doctors.slice(0, 6);
 
   const fetchDoctors = () => {
     apiCallUnsecureGet<Doctor[]>(
@@ -48,8 +48,8 @@ const DoctorsSection = () => {
       </IMCTypography>
 
       <Grid container spacing={4} sx={styles.grid}>
-        {doctors.map((doctor) => (
-          <Grid key={doctor.id} size={{ xs: 12, sm: 6, md: 3 }}>
+        {displayedDoctors.map((doctor) => (
+          <Grid key={doctor.id} size={{ xs: 12, sm: 6, md: 2 }}>
             <DoctorCard
               id={doctor.id}
               image={doctor.image}
@@ -67,7 +67,7 @@ const DoctorsSection = () => {
         ))}
       </Grid>
 
-      {doctors.length > 4 && (
+      {doctors.length > 6 && (
         <IMCBox style={commonStyles.exploreMoreContainer}>
           <Button
             variant="contained"

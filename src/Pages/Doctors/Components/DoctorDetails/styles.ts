@@ -46,8 +46,8 @@ export const styles = {
   },
 
   doctorImage: {
-    width: "180px",
-    height: "180px",
+    width: "220px",
+    height: "220px",
     objectFit: "cover",
     borderRadius: "50%",
   } satisfies CSSProperties,
@@ -83,7 +83,7 @@ export const styles = {
 
   infoItem: {
     display: "flex",
-    alignItems: "center",
+    alignItems: "flex-start",
     gap: spacing.sm,
     marginBottom: spacing.md,
   },

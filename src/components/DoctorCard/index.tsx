@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, Typography, Box, Link, CardMedia } from "@mui/material";
-import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
+import { Card, Typography, Box, Button, CardMedia } from "@mui/material";
 import { styles } from "./style";
 import { useTranslation } from "react-i18next";
 
@@ -39,10 +38,22 @@ const DoctorCard: React.FC<DoctorCardProps> = ({
       <Box sx={styles.content}>
         <Typography sx={styles.name}>{name}</Typography>
 
-        <Typography sx={styles.specialization}>{category}</Typography>
+        <Typography
+          sx={[
+            styles.specialization,
+            {
+              display: "-webkit-box",
+              WebkitLineClamp: 1,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+            },
+          ]}
+        >
+          {category}
+        </Typography>
 
         <Box sx={styles.experienceContainer}>
-          <AccessTimeOutlinedIcon sx={styles.icon} />
+          {/* <AccessTimeOutlinedIcon sx={styles.icon} /> */}
 
           <Typography sx={styles.experience}>
             {experience} {t("doctorCard.yearsExperience")}
@@ -51,7 +62,7 @@ const DoctorCard: React.FC<DoctorCardProps> = ({
 
         <Typography
           sx={{
-            fontSize: "0.875rem",
+            fontSize: "0.5rem",
             lineHeight: 1.5,
             display: "-webkit-box",
             WebkitLineClamp: 2,
@@ -61,24 +72,27 @@ const DoctorCard: React.FC<DoctorCardProps> = ({
         >
           {about}
         </Typography>
-
-        <Link
-          component="button"
-          underline="none"
-          onClick={(e) => {
-            e.stopPropagation();
-            onViewProfile?.();
-          }}
-          sx={styles.link}
+        <Box
+          sx={{ display: "flex", justifyContent: "center", marginTop: "5px" }}
         >
-          {t("doctorCard.viewProfile")}
-
-          {/* {isArabic ? (
-            <ArrowBackIcon fontSize="small" />
-          ) : (
-            <ArrowForwardIcon fontSize="small" />
-          )} */}
-        </Link>
+          <Button
+            variant="contained"
+            onClick={(e) => {
+              e.stopPropagation();
+              onViewProfile?.();
+            }}
+            sx={{
+              borderRadius: "6px",
+              fontSize: "0.75rem",
+              padding: "4px 12px",
+              minWidth: "auto",
+              textTransform: "none",
+              marginTop: "5px",
+            }}
+          >
+            {t("doctorCard.viewProfile")}{" "}
+          </Button>
+        </Box>
       </Box>
     </Card>
   );

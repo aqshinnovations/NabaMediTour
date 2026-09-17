@@ -6,7 +6,8 @@ export const styles = {
     boxShadow: "0px 4px 15px rgba(0,0,0,0.06)",
     transition: "0.3s",
     cursor: "pointer",
-    height: "100%",
+    width: "200px",
+    mb: "20px",
     "&:hover": {
       transform: "translateY(-5px)",
       boxShadow: "0px 10px 25px rgba(0,0,0,0.12)",
@@ -14,16 +15,18 @@ export const styles = {
   },
 
   image: {
-    height: 320,
+    width: "100%",
+    height: "200px",
     objectFit: "cover",
+    display: "block",
   },
 
   content: {
-    p: 3,
+    p: 1,
   },
 
   name: {
-    fontSize: "1.2rem",
+    fontSize: "0.8rem",
     fontWeight: 700,
     color: "#0F172A",
     mb: 0.5,
@@ -31,28 +34,28 @@ export const styles = {
 
   specialization: {
     color: "#009688",
-    fontSize: "1rem",
+    fontSize: "0.6rem",
     fontWeight: 500,
-    mb: 2,
   },
 
   experienceContainer: {
     display: "flex",
     alignItems: "center",
-    gap: 1,
     color: "#6B7280",
-    mb: 3,
+    my: 0.5,
   },
 
   icon: {
-    fontSize: 20,
+    fontSize: "0.6rem",
+    fontWeight: "800",
   },
 
   experience: {
-    fontSize: "0.95rem",
+    fontSize: "0.6rem",
+    fontWeight: "800",
   },
   about: {
-    fontSize: "0.8rem",
+    fontSize: "0.56rem",
   },
 
   link: {

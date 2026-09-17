@@ -80,7 +80,9 @@
     "all": "All",
     "viewProfile": "View Profile",
     "noCategory": "No category found",
-    "noDoctor": "No Doctors found"
+    "noDoctor": "No Doctors found",
+    "selectCategory": "Select Category",
+    "searchCategory": "Search category"
   },
   "doctorsDetails": {
     "notFound": "Doctor not found.",

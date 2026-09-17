@@ -9,5 +9,12 @@ export const styles = {
 
   grid: {
     marginTop: spacing.xl,
+    maxWidth: "1400px",
+    mx: "auto",
+
+    px: {
+      xs: spacing.none,
+      md: spacing.none,
+    },
   },
 };

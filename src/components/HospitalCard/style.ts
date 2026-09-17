@@ -122,4 +122,6 @@ export const styles = {
       borderTop: "1px solid #eee",
     },
   },
+  govtLogos: { display: "flex", alignItems: "center", gap: 1.5, marginTop: 2 },
+  govtLogo: { width: 50, height: 50, objectFit: "contain" },
 };

@@ -11,8 +11,8 @@ export interface HospitalCardProps {
   location: string;
   description: string;
   specializations: string[];
+  government_scheme_logos?: { id: number; image: string }[];
 }
-
 const HospitalCard: React.FC<HospitalCardProps> = ({
   id,
   image,
@@ -20,12 +20,13 @@ const HospitalCard: React.FC<HospitalCardProps> = ({
   location,
   description,
   specializations,
+  government_scheme_logos,
 }) => {
   const navigate = useNavigate();
 
   const visible = specializations.slice(0, 2);
   const remaining = specializations.length - visible.length;
-
+  const visibleGovernmentLogos = government_scheme_logos?.slice(0, 5) || [];
   return (
     <Box
       sx={{
@@ -96,6 +97,20 @@ const HospitalCard: React.FC<HospitalCardProps> = ({
             </Box>
           )}
         </Box>
+        {visibleGovernmentLogos.length > 0 && (
+          <Box sx={styles.govtLogos}>
+            {" "}
+            {visibleGovernmentLogos.map((logo) => (
+              <Box
+                key={logo.id}
+                component="img"
+                src={logo.image}
+                alt="Government scheme"
+                sx={styles.govtLogo}
+              />
+            ))}{" "}
+          </Box>
+        )}
       </Box>
     </Box>
   );

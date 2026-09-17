@@ -63,6 +63,7 @@ const HospitalSection = () => {
               specializations={hospital.facilities.map((facility) =>
                 isArabic ? facility.name_ar : facility.name_en,
               )}
+              government_scheme_logos={hospital.government_scheme_logos || []}
             />
           </Grid>
         ))}

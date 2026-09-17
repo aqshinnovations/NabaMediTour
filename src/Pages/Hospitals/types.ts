@@ -31,6 +31,10 @@ export interface HospitalProcedure {
   image: string;
 }
 
+export interface GovernmentSchemeLogo {
+  id: number;
+  image: string;
+}
 export interface Hospital {
   id: number;
   name_en: string;
@@ -44,6 +48,7 @@ export interface Hospital {
   facilities: HospitalFacility[];
   doctors: HospitalDoctor[];
   procedures: HospitalProcedure[];
+  government_scheme_logos: GovernmentSchemeLogo[];
   created_at: string;
   updated_at: string;
 }

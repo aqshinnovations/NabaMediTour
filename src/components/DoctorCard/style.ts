@@ -26,7 +26,7 @@ export const styles = {
   },
 
   name: {
-    fontSize: "0.8rem",
+    fontSize: "1.2rem",
     fontWeight: 700,
     color: "#0F172A",
     mb: 0.5,
@@ -34,7 +34,7 @@ export const styles = {
 
   specialization: {
     color: "#009688",
-    fontSize: "0.6rem",
+    fontSize: "0.9rem",
     fontWeight: 500,
   },
 
@@ -51,11 +51,11 @@ export const styles = {
   },
 
   experience: {
-    fontSize: "0.6rem",
+    fontSize: "0.8rem",
     fontWeight: "800",
   },
   about: {
-    fontSize: "0.56rem",
+    fontSize: "1rem",
   },
 
   link: {

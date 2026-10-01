@@ -62,7 +62,7 @@ const DoctorCard: React.FC<DoctorCardProps> = ({
 
         <Typography
           sx={{
-            fontSize: "0.5rem",
+            fontSize: "0.8rem",
             lineHeight: 1.5,
             display: "-webkit-box",
             WebkitLineClamp: 2,

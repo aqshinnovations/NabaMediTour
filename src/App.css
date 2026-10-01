@@ -4,9 +4,19 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+  font-family: "Noto Sans Arabic", sans-serif;
 }
 
 #root {
   width: 100%;
   overflow-x: hidden;
+}
+
+/* Arabic */
+html[dir="rtl"] body {
+  font-size: 105%;
+}
+
+html[dir="rtl"] {
+  font-family: "Noto Sans Arabic", sans-serif;
 }

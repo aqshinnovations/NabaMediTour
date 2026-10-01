@@ -26,7 +26,7 @@ export const styles = {
   },
 
   grid: {
-    maxWidth: "1400px",
+    maxWidth: "1200px",
     mx: "auto",
 
     px: {

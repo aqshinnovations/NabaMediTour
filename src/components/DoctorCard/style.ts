@@ -6,7 +6,7 @@ export const styles = {
     boxShadow: "0px 4px 15px rgba(0,0,0,0.06)",
     transition: "0.3s",
     cursor: "pointer",
-    width: "200px",
+    width: "250px",
     mb: "20px",
     "&:hover": {
       transform: "translateY(-5px)",
@@ -16,7 +16,7 @@ export const styles = {
 
   image: {
     width: "100%",
-    height: "200px",
+    height: "300px",
     objectFit: "cover",
     display: "block",
   },

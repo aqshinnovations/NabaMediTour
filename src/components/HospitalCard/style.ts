@@ -1,48 +1,43 @@
-// style.ts
-
 export const styles = {
   hospitalCard: {
-    width: "100%",
-    height: "100%", // <-- add
+    width: "90%",
+    height: "100%",
     display: "flex",
-    flexDirection: {
-      xs: "column",
-      md: "row",
-    },
-    alignItems: "stretch",
+    flexDirection: "column",
     background: "#fff",
     borderRadius: "18px",
     overflow: "hidden",
     border: "1px solid #ececec",
-    boxShadow: "0 5px 20px rgba(0,0,0,0.05)",
+    boxShadow: "0 5px 20px rgba(0, 0, 0, 0.05)",
+    cursor: "pointer",
+    transition: "all 0.3s ease",
+
     "&:hover": {
-      boxShadow: "0 12px 35px rgba(0,0,0,0.15)",
+      boxShadow: "0 12px 35px rgba(0, 0, 0, 0.15)",
       transform: "translateY(-4px)",
     },
   },
 
   hospitalImage: {
-    width: 300,
+    width: "100%",
+    height: {
+      xs: 220,
+      sm: 230,
+      md: 240,
+    },
+    objectFit: "cover",
+    display: "block",
     flexShrink: 0,
-
-    img: {
-      width: 250,
-      height: 200,
-      objectFit: "cover",
-    },
-
-    "@media (max-width:768px)": {
-      width: "100%",
-      height: 240,
-    },
   },
 
   hospitalContent: {
     flex: 1,
+    display: "flex",
+    flexDirection: "column",
     p: {
       xs: 2,
-      sm: 3,
-      md: 3.5,
+      sm: 2.5,
+      md: 3,
     },
   },
 
@@ -52,19 +47,26 @@ export const styles = {
     color: "#0f172a",
     fontSize: {
       xs: "1.2rem",
-      sm: "1.4rem",
-      md: "1.5rem",
+      sm: "1.3rem",
+      md: "1.4rem",
     },
+    lineHeight: 1.3,
+
+    display: "-webkit-box",
+    WebkitLineClamp: 2,
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
   },
 
   hospitalDescription: {
     color: "#475569",
-    fontSize: 10,
-    lineHeight: 1.7,
-    marginBottom: 3,
+    fontSize: "0.875rem",
+    lineHeight: 1.5,
+    margin: 0,
+    mt: 1.5,
 
     display: "-webkit-box",
-    WebkitLineClamp: 3,
+    WebkitLineClamp: 2,
     WebkitBoxOrient: "vertical",
     overflow: "hidden",
   },
@@ -74,23 +76,35 @@ export const styles = {
     alignItems: "center",
     gap: 0.75,
     color: "#64748b",
-    my: 1.5,
-    fontSize: 14,
+    mt: 1.25,
+
+    "& svg": {
+      flexShrink: 0,
+    },
+
+    "& .MuiTypography-root": {
+      fontSize: "0.875rem",
+      display: "-webkit-box",
+      WebkitLineClamp: 1,
+      WebkitBoxOrient: "vertical",
+      overflow: "hidden",
+    },
   },
 
   hospitalTags: {
     display: "flex",
     flexWrap: "wrap",
-    gap: 1.25,
+    gap: 1,
+    mt: 2,
   },
 
   tag: {
     backgroundColor: "#ecfdf5",
     color: "#0f766e",
-    px: 2.25,
-    py: 1,
+    px: 1.75,
+    py: 0.75,
     borderRadius: "50px",
-    fontSize: 14,
+    fontSize: "0.8rem",
     fontWeight: 500,
   },
 
@@ -99,29 +113,17 @@ export const styles = {
     color: "#475569",
   },
 
-  hospitalArrow: {
-    width: 70,
+  govtLogos: {
     display: "flex",
-    justifyContent: "center",
     alignItems: "center",
-    fontSize: 26,
-    color: "#94a3b8",
-    borderLeft: "1px solid #f1f5f9",
-    cursor: "pointer",
-    transition: "all 0.3s ease",
-
-    "&:hover": {
-      backgroundColor: "#f8fafc",
-      color: "#0f172a",
-    },
-
-    "@media (max-width:768px)": {
-      width: "100%",
-      height: 60,
-      borderLeft: "none",
-      borderTop: "1px solid #eee",
-    },
+    flexWrap: "wrap",
+    gap: 1,
+    mt: 2,
   },
-  govtLogos: { display: "flex", alignItems: "center", gap: 1.5, marginTop: 2 },
-  govtLogo: { width: 50, height: 50, objectFit: "contain" },
+
+  govtLogo: {
+    width: 45,
+    height: 45,
+    objectFit: "contain",
+  },
 };

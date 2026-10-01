@@ -51,7 +51,7 @@ const HospitalSection = () => {
 
       <Grid container spacing={2} sx={styles.grid}>
         {hospitals.slice(0, 4).map((hospital) => (
-          <Grid key={hospital.id} size={{ xs: 12, md: 6 }} sx={styles.gridItem}>
+          <Grid key={hospital.id} size={{ xs: 12, md: 4 }} sx={styles.gridItem}>
             <HospitalCard
               id={hospital.id}
               image={hospital.images?.[0]?.image || ""}

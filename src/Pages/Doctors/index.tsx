@@ -123,7 +123,7 @@ const Doctors = () => {
                 size={{
                   xs: 6,
                   sm: 4,
-                  md: 2,
+                  md: 3,
                 }}
               >
                 <DoctorCard

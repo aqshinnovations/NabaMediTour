@@ -10,6 +10,10 @@ export interface HospitalSpecialization {
   name_ar: string;
 }
 
+export interface GovernmentSchemeLogo {
+  id: number;
+  image: string;
+}
 export interface HospitalImage {
   id: number;
   image: string;
@@ -45,4 +49,5 @@ export interface Hospital {
   specializations: HospitalSpecialization[];
   procedures: HospitalProcedure[];
   doctors: HospitalDoctor[];
+  government_scheme_logos: GovernmentSchemeLogo[];
 }

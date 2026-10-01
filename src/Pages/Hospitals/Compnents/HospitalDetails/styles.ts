@@ -187,6 +187,23 @@ export const styles: Record<string, SystemStyleObject<Theme>> = {
     px: spacing.base,
     py: 4,
   },
+  governmentLogos: {
+    display: "flex",
+    alignItems: "center",
+    gap: "12px",
+    flexWrap: "wrap",
+    marginTop: "18px",
+  },
+
+  governmentLogo: {
+    width: "50px",
+    height: "50px",
+    objectFit: "contain",
+    backgroundColor: colors.white,
+    // borderRadius: "8px",
+    padding: "5px",
+    borderRadius: "50%",
+  },
 };
 export const backTextStyle: CSSProperties = {
   cursor: "pointer",

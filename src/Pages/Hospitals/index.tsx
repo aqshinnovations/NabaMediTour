@@ -36,13 +36,27 @@ const Hospitals = () => {
         title={t("hospitals.title")}
         description={t("hospitals.description")}
       />
-      <Grid container spacing={3} sx={styles.grid}>
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          ...styles.grid,
+          justifyContent: "center",
+          marginInlineStart: {
+            xs: 0,
+            md: 2,
+          },
+        }}
+      >
+        {" "}
         {hospitals.length > 0 ? (
           hospitals.map((hospital) => (
             <Grid
               key={hospital.id}
-              size={{ xs: 12, md: 6 }}
-              sx={{ display: "flex" }}
+              size={{ xs: 12, sm: 6, md: 4 }}
+              sx={{
+                display: "flex",
+              }}
             >
               <HospitalCard
                 id={hospital.id}

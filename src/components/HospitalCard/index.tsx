@@ -13,6 +13,7 @@ export interface HospitalCardProps {
   specializations: string[];
   government_scheme_logos?: { id: number; image: string }[];
 }
+
 const HospitalCard: React.FC<HospitalCardProps> = ({
   id,
   image,
@@ -26,34 +27,15 @@ const HospitalCard: React.FC<HospitalCardProps> = ({
 
   const visible = specializations.slice(0, 2);
   const remaining = specializations.length - visible.length;
-  const visibleGovernmentLogos = government_scheme_logos?.slice(0, 5) || [];
-  return (
-    <Box
-      sx={{
-        ...styles.hospitalCard,
-        cursor: "pointer",
-      }}
-      onClick={() => navigate(`/hospitals/${id}`)}
-    >
-      <Box
-        component="img"
-        src={image}
-        alt={name}
-        sx={{
-          width: {
-            xs: "100%",
-            md: 300,
-          },
-          height: {
-            xs: 220,
-            md: "100%",
-          },
-          objectFit: "cover",
-          display: "block",
-          flexShrink: 0,
-        }}
-      />
 
+  const visibleGovernmentLogos = government_scheme_logos?.slice(0, 5) || [];
+
+  return (
+    <Box sx={styles.hospitalCard} onClick={() => navigate(`/hospitals/${id}`)}>
+      {/* Hospital Image */}
+      <Box component="img" src={image} alt={name} sx={styles.hospitalImage} />
+
+      {/* Hospital Details */}
       <Box sx={styles.hospitalContent}>
         <Typography component="h2" sx={styles.hospitalTitle}>
           {name}
@@ -64,42 +46,36 @@ const HospitalCard: React.FC<HospitalCardProps> = ({
           <Typography variant="body2">{location}</Typography>
         </Box>
 
-        <Typography
-          component="p"
-          sx={{
-            fontSize: "0.875rem",
-            lineHeight: 1.5,
-            display: "-webkit-box",
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-          }}
-        >
+        <Typography component="p" sx={styles.hospitalDescription}>
           {description}
         </Typography>
 
-        <Box sx={styles.hospitalTags}>
-          {visible.map((item) => (
-            <Box key={item} component="span" sx={styles.tag}>
-              {item}
-            </Box>
-          ))}
+        {/* Specializations */}
+        {visible.length > 0 && (
+          <Box sx={styles.hospitalTags}>
+            {visible.map((item) => (
+              <Box key={item} component="span" sx={styles.tag}>
+                {item}
+              </Box>
+            ))}
 
-          {remaining > 0 && (
-            <Box
-              component="span"
-              sx={{
-                ...styles.tag,
-                ...styles.count,
-              }}
-            >
-              +{remaining}
-            </Box>
-          )}
-        </Box>
+            {remaining > 0 && (
+              <Box
+                component="span"
+                sx={{
+                  ...styles.tag,
+                  ...styles.count,
+                }}
+              >
+                +{remaining}
+              </Box>
+            )}
+          </Box>
+        )}
+
+        {/* Government Scheme Logos */}
         {visibleGovernmentLogos.length > 0 && (
           <Box sx={styles.govtLogos}>
-            {" "}
             {visibleGovernmentLogos.map((logo) => (
               <Box
                 key={logo.id}
@@ -108,7 +84,7 @@ const HospitalCard: React.FC<HospitalCardProps> = ({
                 alt="Government scheme"
                 sx={styles.govtLogo}
               />
-            ))}{" "}
+            ))}
           </Box>
         )}
       </Box>

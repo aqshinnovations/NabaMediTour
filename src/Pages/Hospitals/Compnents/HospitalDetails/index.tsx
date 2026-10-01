@@ -157,6 +157,21 @@ const HospitalDetails = () => {
                 {hospitalLocation}
               </Typography>
             </Box>
+
+            {/* Government Scheme Logos */}
+            {hospital.government_scheme_logos?.length > 0 && (
+              <Box sx={styles.governmentLogos}>
+                {hospital.government_scheme_logos.map((logo) => (
+                  <Box
+                    key={logo.id}
+                    component="img"
+                    src={logo.image}
+                    alt="Government scheme"
+                    sx={styles.governmentLogo}
+                  />
+                ))}
+              </Box>
+            )}
           </Box>
         </Box>
       </Box>

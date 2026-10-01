@@ -49,7 +49,7 @@ const DoctorsSection = () => {
 
       <Grid container spacing={4} sx={styles.grid}>
         {displayedDoctors.map((doctor) => (
-          <Grid key={doctor.id} size={{ xs: 12, sm: 6, md: 2 }}>
+          <Grid key={doctor.id} size={{ xs: 12, sm: 6, md: 3 }}>
             <DoctorCard
               id={doctor.id}
               image={doctor.image}
